@@ -1,0 +1,2459 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Jupyter Notebook Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <meta name="robots" content="noindex,nofollow">
+  
+
+  <!--NEW RELIC Start Perf Measurement-->
+  
+  <!--NREND-->
+
+  <!-- Le styles -->
+  <script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"abd1269b22bee152eab75bba2e8d4c35",petok:"3eb4959888115f6492b6d941471f377de68046f6-1491587522-3600",zone:"jupyter.org",rocket:"0",apps:{"ga_key":{"ua":"UA-52617120-1","ga_bs":"2"}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<link href="/static/build/styles.css?v=c18d49652a516277e15114bbd447f1c1" rel="stylesheet">
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Le fav and touch icons -->
+  <link rel="shortcut icon" href="/static/ico/ipynb_icon_16x16.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+        href="/static/ico/apple-touch-icon-144-precomposed.png?v=5a3c9ede93e2a8b8ea9e3f8f3da1a905">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114"
+        href="/static/ico/apple-touch-icon-114-precomposed.png?v=45d86fc8f24dc00638035e1dd7a6d898">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72"
+        href="/static/ico/apple-touch-icon-72-precomposed.png?v=540b5eb0f3cfd25f1439d1c9bd30e15f">
+  <link rel="apple-touch-icon-precomposed"
+        href="/static/ico/apple-touch-icon-57-precomposed.png?v=225f0590e187e1458625654f10a28f56">
+  
+  
+
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Notebook on nbviewer">
+  <meta name="twitter:description" content="Check out this Jupyter notebook!">
+
+  
+  <meta name="twitter:domain" content="nbviewer.ipython.org">
+  <meta name="twitter:image:src" content="http://ipython.org/ipython-doc/dev/_images/ipynb_icon_128x128.png">
+
+  
+    <link href="/static/build/notebook.css?v=d05748bef7d8f0edbc1e0133b9a41fe0" rel="stylesheet">
+  
+
+  
+
+  
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      init_mathjax = function() {
+        if (window.MathJax) {
+          // MathJax loaded
+          MathJax.Hub.Config({
+            TeX: {
+              equationNumbers: {
+                autoNumber: "AMS",
+                useLabelIds: true
+              }
+            },
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+              processEscapes: true,
+              processEnvironments: true
+            },
+            displayAlign: 'center',
+            "HTML-CSS": {
+              styles: {'.MathJax_Display': {"margin": 0}},
+              linebreaks: { automatic: true }
+            }
+          });
+          MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        }
+      }
+      init_mathjax();
+    </script>
+  
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-52617120-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+</head>
+
+<body class="nbviewer">
+
+  <!-- These are loaded at the top of the body so they are available to
+       notebook cells when they are loaded below. -->
+  <script src="/static/components/jquery/dist/jquery.min.js?v=e071abda8fe61194711cfc2ab99fe104"></script>
+  <script src="/static/components/requirejs/require.js?v=6da8be361b9ee26c5e721e76c6d4afce"></script>
+  <script src="/static/components/moment/min/moment.min.js?v=89f87298ad94aa1e6b92f42eb66da043"></script>
+
+<!-- Navbar
+================================================== -->
+  <nav id="menubar" class="navbar navbar-default navbar-fixed-top" data-spy="affix">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img src="/static/img/nav_logo.svg?v=479cefe8d932fb14a67b93911b97d70f" width="159"/>
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="active" href="http://jupyter.org">JUPYTER</a>
+          </li>
+          <li>
+    <a href="/faq" title="FAQ" >
+      
+        <span>FAQ</span>
+      
+    </a>
+  </li>
+
+          
+  
+    
+  
+    
+      
+        <li>
+    <a href="/format/script/github/sagemanifolds/SageManifolds/blob/master/Worksheets/v1.0/SM_Simon-Mars_Kerr.ipynb" title="View as Code" >
+      <span class="fa fa-code fa-2x menu-icon"></span>
+      <span class="menu-text">View as Code</span>
+    </a>
+  </li>
+      
+    
+  
+
+  
+    <li>
+    <a href="#" title="SageMath 7.5.1 Kernel" >
+      <span class="fa fa-server fa-2x menu-icon"></span>
+      <span class="menu-text">SageMath 7.5.1 Kernel</span>
+    </a>
+  </li>
+  
+
+  
+    <li>
+    <a href="https://github.com/sagemanifolds/SageManifolds/blob/master/Worksheets/v1.0/SM_Simon-Mars_Kerr.ipynb" title="View on GitHub" >
+      <span class="fa fa-github fa-2x menu-icon"></span>
+      <span class="menu-text">View on GitHub</span>
+    </a>
+  </li>
+  
+
+  <li>
+    <a href="https://raw.githubusercontent.com/sagemanifolds/SageManifolds/master/Worksheets/v1.0/SM_Simon-Mars_Kerr.ipynb" title="Download Notebook" download>
+      <span class="fa fa-download fa-2x menu-icon"></span>
+      <span class="menu-text">Download Notebook</span>
+    </a>
+  </li>
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+      
+      
+    </div>
+  </nav>
+
+  <div class="container container-main">
+    
+  
+  <ol class="breadcrumb">
+    
+      <li>
+        <a href="/github/sagemanifolds/SageManifolds/tree/master">SageManifolds</a>
+      </li>
+    
+      <li>
+        <a href="/github/sagemanifolds/SageManifolds/tree/master/Worksheets">Worksheets</a>
+      </li>
+    
+      <li>
+        <a href="/github/sagemanifolds/SageManifolds/tree/master/Worksheets/v1.0">v1.0</a>
+      </li>
+    
+  </ol>
+  
+  <div id="notebook">
+    <div id="notebook-container">
+      
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Simon-Mars-tensor-and-Kerr-spacetime">Simon-Mars tensor and Kerr spacetime<a class="anchor-link" href="#Simon-Mars-tensor-and-Kerr-spacetime">&#182;</a></h1><p>This worksheet demonstrates a few capabilities of <a href="http://sagemanifolds.obspm.fr">SageManifolds</a> (version 1.0, as included in SageMath 7.5) regarding the computation of the Simon-Mars tensor.</p>
+<p>Click <a href="https://raw.githubusercontent.com/sagemanifolds/SageManifolds/master/Worksheets/v1.0/SM_Simon-Mars_Kerr.ipynb">here</a> to download the worksheet file (ipynb format). To run it, you must start SageMath within the Jupyter notebook, via the command <code>sage -n jupyter</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>NB:</em> a version of SageMath at least equal to 7.5 is required to run this worksheet:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">version</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[1]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;SageMath version 7.5.1, Release Date: 2017-01-15&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First we set up the notebook to display mathematical objects using LaTeX rendering:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">display</span> latex
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since some computations are quite long, we ask for running them in parallel on 8 cores:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Parallelism</span><span class="p">()</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">nproc</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Spacetime-manifold">Spacetime manifold<a class="anchor-link" href="#Spacetime-manifold">&#182;</a></h2><p>We declare the Kerr spacetime (or more precisely the part of the Kerr spacetime covered by Boyer-Lindquist coordinates) as a 4-dimensional manifold $\mathcal{M}$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">Manifold</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">latex_name</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\mathcal{M}&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The standard <strong>Boyer-Lindquist coordinates</strong> $(t,r,\theta,\phi)$ are introduced by declaring a chart $X$ on $\mathcal{M}$, via the method <code>chart()</code>, the argument of which is a string expressing the coordinates names, their ranges (the default is $(-\infty,+\infty)$) and their LaTeX symbols:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">X</span><span class="o">.&lt;</span><span class="n">t</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">ph</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">chart</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;t r:(0,+oo) th:(0,pi):\theta ph:(0,2*pi):\phi&#39;</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="p">;</span> <span class="n">X</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Chart (M, (t, r, th, ph))
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(\mathcal{M},(t, r, {\theta}, {\phi})\right)</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2>Metric tensor</h2><p>The 2 parameters $m$ and $a$ of the Kerr spacetime are declared as symbolic variables:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;m, a&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="s1">&#39;real&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(m, a\right)</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let us introduce the spacetime metric $g$ and set its components in the coordinate frame associated with Boyer-Lindquist coordinates, which is the current manifold's default frame:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">lorentzian_metric</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">rho2</span> <span class="o">=</span> <span class="n">r</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">th</span><span class="p">))</span><span class="o">^</span><span class="mi">2</span>
+<span class="n">Delta</span> <span class="o">=</span> <span class="n">r</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">r</span> <span class="o">+</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span>
+<span class="n">g</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">r</span><span class="o">/</span><span class="n">rho2</span><span class="p">)</span>
+<span class="n">g</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="n">rho2</span>
+<span class="n">g</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">g</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">rho2</span><span class="o">/</span><span class="n">Delta</span><span class="p">,</span> <span class="n">rho2</span>
+<span class="n">g</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">))</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="n">rho2</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span>
+<span class="n">g</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}g = \left( \frac{2 \, m r}{a^{2} \cos\left({\theta}\right)^{2} + r^{2}} - 1 \right) \mathrm{d} t\otimes \mathrm{d} t + \left( -\frac{2 \, a m r \sin\left({\theta}\right)^{2}}{a^{2} \cos\left({\theta}\right)^{2} + r^{2}} \right) \mathrm{d} t\otimes \mathrm{d} {\phi} + \left( \frac{a^{2} \cos\left({\theta}\right)^{2} + r^{2}}{a^{2} - 2 \, m r + r^{2}} \right) \mathrm{d} r\otimes \mathrm{d} r + \left( a^{2} \cos\left({\theta}\right)^{2} + r^{2} \right) \mathrm{d} {\theta}\otimes \mathrm{d} {\theta} + \left( -\frac{2 \, a m r \sin\left({\theta}\right)^{2}}{a^{2} \cos\left({\theta}\right)^{2} + r^{2}} \right) \mathrm{d} {\phi}\otimes \mathrm{d} t + {\left(\frac{2 \, a^{2} m r \sin\left({\theta}\right)^{2}}{a^{2} \cos\left({\theta}\right)^{2} + r^{2}} + a^{2} + r^{2}\right)} \sin\left({\theta}\right)^{2} \mathrm{d} {\phi}\otimes \mathrm{d} {\phi}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">g</span><span class="p">[:]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(\begin{array}{rrrr}
+\frac{2 \, m r}{a^{2} \cos\left({\theta}\right)^{2} + r^{2}} - 1 & 0 & 0 & -\frac{2 \, a m r \sin\left({\theta}\right)^{2}}{a^{2} \cos\left({\theta}\right)^{2} + r^{2}} \\
+0 & \frac{a^{2} \cos\left({\theta}\right)^{2} + r^{2}}{a^{2} - 2 \, m r + r^{2}} & 0 & 0 \\
+0 & 0 & a^{2} \cos\left({\theta}\right)^{2} + r^{2} & 0 \\
+-\frac{2 \, a m r \sin\left({\theta}\right)^{2}}{a^{2} \cos\left({\theta}\right)^{2} + r^{2}} & 0 & 0 & {\left(\frac{2 \, a^{2} m r \sin\left({\theta}\right)^{2}}{a^{2} \cos\left({\theta}\right)^{2} + r^{2}} + a^{2} + r^{2}\right)} \sin\left({\theta}\right)^{2}
+\end{array}\right)</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Levi-Civita connection $\nabla$ associated with $g$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nabla</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">connection</span><span class="p">()</span> <span class="p">;</span> <span class="k">print</span><span class="p">(</span><span class="n">nabla</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Levi-Civita connection nabla_g associated with the Lorentzian metric g on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As a check, we verify that the covariant derivative of $g$ with respect to $\nabla$ vanishes identically:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nabla</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\nabla_{g} g = 0</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h2>Killing vector</h2></p>
+<p>The default vector frame on the spacetime manifold is the coordinate basis associated with Boyer-Lindquist coordinates:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">M</span><span class="o">.</span><span class="n">default_frame</span><span class="p">()</span> <span class="ow">is</span> <span class="n">X</span><span class="o">.</span><span class="n">frame</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">X</span><span class="o">.</span><span class="n">frame</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(\mathcal{M}, \left(\frac{\partial}{\partial t },\frac{\partial}{\partial r },\frac{\partial}{\partial {\theta} },\frac{\partial}{\partial {\phi} }\right)\right)</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let us consider the first vector field of this frame:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">xi</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">frame</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="p">;</span> <span class="n">xi</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{\partial}{\partial t }</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Vector field d/dt on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The 1-form associated to it by metric duality is</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">xi_form</span> <span class="o">=</span> <span class="n">xi</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="n">xi_form</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;xi_form&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\underline{\xi}&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">xi_form</span><span class="p">)</span> <span class="p">;</span> <span class="n">xi_form</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1-form xi_form on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\underline{\xi} = \left( -\frac{a^{2} \cos\left({\theta}\right)^{2} - 2 \, m r + r^{2}}{a^{2} \cos\left({\theta}\right)^{2} + r^{2}} \right) \mathrm{d} t + \left( -\frac{2 \, a m r \sin\left({\theta}\right)^{2}}{a^{2} \cos\left({\theta}\right)^{2} + r^{2}} \right) \mathrm{d} {\phi}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Its covariant derivative is</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nab_xi</span> <span class="o">=</span> <span class="n">nabla</span><span class="p">(</span><span class="n">xi_form</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">nab_xi</span><span class="p">)</span> <span class="p">;</span> <span class="n">nab_xi</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field nabla_g(xi_form) of type (0,2) on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\nabla_{g} \underline{\xi} = \left( \frac{a^{2} m \cos\left({\theta}\right)^{2} - m r^{2}}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} t\otimes \mathrm{d} r + \left( \frac{2 \, a^{2} m r \cos\left({\theta}\right) \sin\left({\theta}\right)}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} t\otimes \mathrm{d} {\theta} + \left( -\frac{a^{2} m \cos\left({\theta}\right)^{2} - m r^{2}}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} r\otimes \mathrm{d} t + \left( \frac{{\left(a^{3} m \cos\left({\theta}\right)^{2} - a m r^{2}\right)} \sin\left({\theta}\right)^{2}}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} r\otimes \mathrm{d} {\phi} + \left( -\frac{2 \, a^{2} m r \cos\left({\theta}\right) \sin\left({\theta}\right)}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} {\theta}\otimes \mathrm{d} t + \left( \frac{2 \, {\left(a^{3} m r + a m r^{3}\right)} \cos\left({\theta}\right) \sin\left({\theta}\right)}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} {\theta}\otimes \mathrm{d} {\phi} + \left( -\frac{{\left(a^{3} m \cos\left({\theta}\right)^{2} - a m r^{2}\right)} \sin\left({\theta}\right)^{2}}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} {\phi}\otimes \mathrm{d} r + \left( -\frac{2 \, {\left(a^{3} m r + a m r^{3}\right)} \cos\left({\theta}\right) \sin\left({\theta}\right)}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} {\phi}\otimes \mathrm{d} {\theta}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let us check that the Killing equation is satisfied:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nab_xi</span><span class="o">.</span><span class="n">symmetrize</span><span class="p">()</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[17]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}0</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Equivalently, we check that the Lie derivative of the metric along $\xi$ vanishes:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">g</span><span class="o">.</span><span class="n">lie_der</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}0</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Thank to Killing equation, $\nabla_g \underline{\xi}$ is antisymmetric. We may therefore define a 2-form by $F := - \nabla_g \xi$. Here we enforce the antisymmetry by calling the function <span style="font-family: courier new,courier;">antisymmetrize()</span> on <span style="font-family: courier new,courier;">nab_xi</span>:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">F</span> <span class="o">=</span> <span class="o">-</span> <span class="n">nab_xi</span><span class="o">.</span><span class="n">antisymmetrize</span><span class="p">()</span>
+<span class="n">F</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
+<span class="n">F</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2-form F on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[19]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}F = \left( -\frac{a^{2} m \cos\left({\theta}\right)^{2} - m r^{2}}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} t\wedge \mathrm{d} r + \left( -\frac{2 \, a^{2} m r \cos\left({\theta}\right) \sin\left({\theta}\right)}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} t\wedge \mathrm{d} {\theta} + \left( -\frac{{\left(a^{3} m \cos\left({\theta}\right)^{2} - a m r^{2}\right)} \sin\left({\theta}\right)^{2}}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} r\wedge \mathrm{d} {\phi} + \left( -\frac{2 \, {\left(a^{3} m r + a m r^{3}\right)} \cos\left({\theta}\right) \sin\left({\theta}\right)}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} {\theta}\wedge \mathrm{d} {\phi}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We check that</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">F</span> <span class="o">==</span> <span class="o">-</span> <span class="n">nab_xi</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[20]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The squared norm of the Killing vector is:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">lamb</span> <span class="o">=</span> <span class="o">-</span> <span class="n">g</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span><span class="n">xi</span><span class="p">)</span>
+<span class="n">lamb</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;lambda&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\lambda&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lamb</span><span class="p">)</span>
+<span class="n">lamb</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Scalar field lambda on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[21]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{llcl} \lambda:& \mathcal{M} & \longrightarrow & \mathbb{R} \\ & \left(t, r, {\theta}, {\phi}\right) & \longmapsto & \frac{a^{2} \cos\left({\theta}\right)^{2} - 2 \, m r + r^{2}}{a^{2} \cos\left({\theta}\right)^{2} + r^{2}} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Instead of invoking $g(\xi,\xi)$, we could have evaluated $\lambda$ by means of the 1-form $\underline{\xi}$ acting on the vector field $\xi$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">lamb</span> <span class="o">==</span> <span class="o">-</span> <span class="n">xi_form</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[22]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>or, using index notation as $\lambda = - \xi_a \xi^a$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">lamb</span> <span class="o">==</span> <span class="o">-</span> <span class="p">(</span> <span class="n">xi_form</span><span class="p">[</span><span class="s1">&#39;_a&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">xi</span><span class="p">[</span><span class="s1">&#39;^a&#39;</span><span class="p">]</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[23]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h2>Curvature</h2></p>
+<p>The Riemann curvature tensor associated with $g$ is</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Riem</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">riemann</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Riem</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field Riem(g) of type (1,3) on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The component $R^0_{\ \, 123} = R^t_{\ \, r\theta\phi}$ is</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Riem</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[25]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}-\frac{{\left(a^{7} m - 2 \, a^{5} m^{2} r + a^{5} m r^{2}\right)} \cos\left({\theta}\right) \sin\left({\theta}\right)^{5} + {\left(a^{7} m + 2 \, a^{5} m^{2} r + 6 \, a^{5} m r^{2} - 6 \, a^{3} m^{2} r^{3} + 5 \, a^{3} m r^{4}\right)} \cos\left({\theta}\right) \sin\left({\theta}\right)^{3} - 2 \, {\left(a^{7} m - a^{5} m r^{2} - 5 \, a^{3} m r^{4} - 3 \, a m r^{6}\right)} \cos\left({\theta}\right) \sin\left({\theta}\right)}{a^{2} r^{6} - 2 \, m r^{7} + r^{8} + {\left(a^{8} - 2 \, a^{6} m r + a^{6} r^{2}\right)} \cos\left({\theta}\right)^{6} + 3 \, {\left(a^{6} r^{2} - 2 \, a^{4} m r^{3} + a^{4} r^{4}\right)} \cos\left({\theta}\right)^{4} + 3 \, {\left(a^{4} r^{4} - 2 \, a^{2} m r^{5} + a^{2} r^{6}\right)} \cos\left({\theta}\right)^{2}}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Ricci tensor:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Ric</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">ricci</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Ric</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Field of symmetric bilinear forms Ric(g) on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let us check that the Kerr metric is a vacuum solution of Einstein equation, i.e. that the Ricci tensor vanishes identically:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Ric</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[27]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{Ric}\left(g\right) = 0</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><span id="cell_outer_24">The Weyl conformal curvature tensor is<br /></span></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">weyl</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field C(g) of type (1,3) on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let us exhibit two of its components $C^0_{\ \, 123}$ and $C^0_{\ \, 101}$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">C</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[29]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}-\frac{{\left(a^{7} m - 2 \, a^{5} m^{2} r + a^{5} m r^{2}\right)} \cos\left({\theta}\right) \sin\left({\theta}\right)^{5} + {\left(a^{7} m + 2 \, a^{5} m^{2} r + 6 \, a^{5} m r^{2} - 6 \, a^{3} m^{2} r^{3} + 5 \, a^{3} m r^{4}\right)} \cos\left({\theta}\right) \sin\left({\theta}\right)^{3} - 2 \, {\left(a^{7} m - a^{5} m r^{2} - 5 \, a^{3} m r^{4} - 3 \, a m r^{6}\right)} \cos\left({\theta}\right) \sin\left({\theta}\right)}{a^{2} r^{6} - 2 \, m r^{7} + r^{8} + {\left(a^{8} - 2 \, a^{6} m r + a^{6} r^{2}\right)} \cos\left({\theta}\right)^{6} + 3 \, {\left(a^{6} r^{2} - 2 \, a^{4} m r^{3} + a^{4} r^{4}\right)} \cos\left({\theta}\right)^{4} + 3 \, {\left(a^{4} r^{4} - 2 \, a^{2} m r^{5} + a^{2} r^{6}\right)} \cos\left({\theta}\right)^{2}}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">C</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[30]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{3 \, a^{4} m r \cos\left({\theta}\right)^{4} + 3 \, a^{2} m r^{3} + 2 \, m r^{5} - {\left(9 \, a^{4} m r + 7 \, a^{2} m r^{3}\right)} \cos\left({\theta}\right)^{2}}{a^{2} r^{6} - 2 \, m r^{7} + r^{8} + {\left(a^{8} - 2 \, a^{6} m r + a^{6} r^{2}\right)} \cos\left({\theta}\right)^{6} + 3 \, {\left(a^{6} r^{2} - 2 \, a^{4} m r^{3} + a^{4} r^{4}\right)} \cos\left({\theta}\right)^{4} + 3 \, {\left(a^{4} r^{4} - 2 \, a^{2} m r^{5} + a^{2} r^{6}\right)} \cos\left({\theta}\right)^{2}}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To form the Simon-Mars tensor, we need the fully covariant (type-(0,4) tensor) form of the Weyl tensor (i.e. $C_{\alpha\beta\mu\nu} = g_{\alpha\sigma} C^\sigma_{\ \, \beta\mu\nu}$); we get it by lowering the first index with the metric:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Cd</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Cd</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field of type (0,4) on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The (monoterm) symmetries of this tensor are those inherited from the Weyl tensor, i.e. the antisymmetry on the last two indices (position 2 and 3, the first index being at position 0):</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Cd</span><span class="o">.</span><span class="n">symmetries</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>no symmetry; antisymmetry: (2, 3)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Actually, Cd is also antisymmetric with respect to the first two indices (positions 0 and 1), as we can check:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Cd</span> <span class="o">==</span> <span class="n">Cd</span><span class="o">.</span><span class="n">antisymmetrize</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[33]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To take this symmetry into account explicitely, we set</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Cd</span> <span class="o">=</span> <span class="n">Cd</span><span class="o">.</span><span class="n">antisymmetrize</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hence we have now</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Cd</span><span class="o">.</span><span class="n">symmetries</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>no symmetry; antisymmetries: [(0, 1), (2, 3)]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h2>Simon-Mars tensor</h2></p>
+<p>The Simon-Mars tensor with respect to the Killing vector $\xi$ is a rank-3 tensor introduced by Marc Mars in 1999 (<a href="http://iopscience.iop.org/0264-9381/16/7/323/">Class. Quantum Grav. <strong>16</strong>, 2507</a>). It has the remarkable property to vanish identically if, and only if, the spacetime $(\mathcal{M},g)$ is locally isometric to a Kerr spacetime.</p>
+<p>Let us evaluate the Simon-Mars tensor by following the formulas given in Mars' article. The starting point is the self-dual complex 2-form associated with the Killing 2-form $F$, i.e. the object $\mathcal{F} := F + i \, {}^* F$, where ${}^*F$ is the Hodge dual of $F$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">FF</span> <span class="o">=</span> <span class="n">F</span> <span class="o">+</span> <span class="n">I</span> <span class="o">*</span> <span class="n">F</span><span class="o">.</span><span class="n">hodge_dual</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="n">FF</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;FF&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\mathcal{F}&#39;</span><span class="p">)</span> <span class="p">;</span> <span class="k">print</span><span class="p">(</span><span class="n">FF</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2-form FF on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">FF</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[37]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathcal{F} = \left( -\frac{a^{2} m \cos\left({\theta}\right)^{2} + 2 i \, a m r \cos\left({\theta}\right) - m r^{2}}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} t\wedge \mathrm{d} r + \left( \frac{{\left(i \, a^{3} m \cos\left({\theta}\right)^{2} - 2 \, a^{2} m r \cos\left({\theta}\right) - i \, a m r^{2}\right)} \sin\left({\theta}\right)}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} t\wedge \mathrm{d} {\theta} + \left( \frac{-4 i \, a^{4} m^{2} r^{2} \cos\left({\theta}\right) \sin\left({\theta}\right)^{4} + {\left(a^{3} m r^{4} - 2 \, a m^{2} r^{5} + a m r^{6} - {\left(a^{7} m - 2 \, a^{5} m^{2} r + a^{5} m r^{2}\right)} \cos\left({\theta}\right)^{4} - {\left(2 i \, a^{6} m r + 2 i \, a^{4} m r^{3}\right)} \cos\left({\theta}\right)^{3} - {\left(-4 i \, a^{4} m^{2} r^{2} + 2 i \, a^{4} m r^{3} - 4 i \, a^{2} m^{2} r^{4} + 2 i \, a^{2} m r^{5}\right)} \cos\left({\theta}\right)\right)} \sin\left({\theta}\right)^{2}}{a^{2} r^{6} - 2 \, m r^{7} + r^{8} + {\left(a^{8} - 2 \, a^{6} m r + a^{6} r^{2}\right)} \cos\left({\theta}\right)^{6} + 3 \, {\left(a^{6} r^{2} - 2 \, a^{4} m r^{3} + a^{4} r^{4}\right)} \cos\left({\theta}\right)^{4} + 3 \, {\left(a^{4} r^{4} - 2 \, a^{2} m r^{5} + a^{2} r^{6}\right)} \cos\left({\theta}\right)^{2}} \right) \mathrm{d} r\wedge \mathrm{d} {\phi} + \left( -\frac{{\left(i \, a^{4} m + i \, a^{2} m r^{2}\right)} \sin\left({\theta}\right)^{3} + {\left(-i \, a^{4} m + i \, m r^{4} + 2 \, {\left(a^{3} m r + a m r^{3}\right)} \cos\left({\theta}\right)\right)} \sin\left({\theta}\right)}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} {\theta}\wedge \mathrm{d} {\phi}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let us check that $\mathcal{F}$ is self-dual, i.e. that it obeys ${}^* \mathcal{F} = -i \mathcal{F}$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">FF</span><span class="o">.</span><span class="n">hodge_dual</span><span class="p">(</span><span class="n">g</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span> <span class="n">I</span> <span class="o">*</span> <span class="n">FF</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[38]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let us form the right self-dual of the Weyl tensor as follows
+$$\mathcal{C}_{\alpha\beta\mu\nu} = C_{\alpha\beta\mu\nu} + \frac{i}{2} \epsilon^{\rho\sigma}_{\ \ \ \mu\nu} \, C_{\alpha\beta\rho\sigma},$$
+where $\epsilon^{\rho\sigma}_{\ \ \ \mu\nu}$ is associated to the Levi-Civita tensor $\epsilon_{\rho\sigma\mu\nu}$ and is obtained by</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">eps</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">volume_form</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># 2 = the first 2 indices are contravariant</span>
+<span class="k">print</span><span class="p">(</span><span class="n">eps</span><span class="p">)</span>
+<span class="n">eps</span><span class="o">.</span><span class="n">symmetries</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field of type (2,2) on the 4-dimensional differentiable manifold M
+no symmetry; antisymmetries: [(0, 1), (2, 3)]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The right self-dual Weyl tensor is then</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">CC</span> <span class="o">=</span> <span class="n">Cd</span> <span class="o">+</span> <span class="n">I</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span> <span class="n">eps</span><span class="p">[</span><span class="s1">&#39;^rs_..&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">Cd</span><span class="p">[</span><span class="s1">&#39;_..rs&#39;</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">CC</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;CC&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\mathcal{C}&#39;</span><span class="p">)</span> <span class="p">;</span> <span class="k">print</span><span class="p">(</span><span class="n">CC</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field CC of type (0,4) on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">CC</span><span class="o">.</span><span class="n">symmetries</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>no symmetry; antisymmetries: [(0, 1), (2, 3)]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">CC</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[42]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{{\left(a^{5} m \cos\left({\theta}\right)^{5} + 3 i \, a^{4} m r \cos\left({\theta}\right)^{4} + 3 i \, a^{2} m r^{3} + 2 i \, m r^{5} - {\left(3 \, a^{5} m + 5 \, a^{3} m r^{2}\right)} \cos\left({\theta}\right)^{3} + {\left(-9 i \, a^{4} m r - 7 i \, a^{2} m r^{3}\right)} \cos\left({\theta}\right)^{2} + 3 \, {\left(3 \, a^{3} m r^{2} + 2 \, a m r^{4}\right)} \cos\left({\theta}\right)\right)} \sin\left({\theta}\right)}{a^{6} \cos\left({\theta}\right)^{6} + 3 \, a^{4} r^{2} \cos\left({\theta}\right)^{4} + 3 \, a^{2} r^{4} \cos\left({\theta}\right)^{2} + r^{6}}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Ernst 1-form $\sigma_\alpha = 2 \mathcal{F}_{\mu\alpha} \, \xi^\mu$ (0 = contraction on the first index of $\mathcal{F}$):</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">sigma</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">FF</span><span class="o">.</span><span class="n">contract</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">xi</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Instead of invoking the function <span style="font-family: courier new,courier;">contract()</span>, we could have used the index notation to denote the contraction:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">sigma</span> <span class="o">==</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span> <span class="n">FF</span><span class="p">[</span><span class="s1">&#39;_ma&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">xi</span><span class="p">[</span><span class="s1">&#39;^m&#39;</span><span class="p">]</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[44]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">sigma</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;sigma&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\sigma&#39;</span><span class="p">)</span> <span class="p">;</span> <span class="k">print</span><span class="p">(</span><span class="n">sigma</span><span class="p">)</span>
+<span class="n">sigma</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1-form sigma on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[45]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\sigma = \left( -\frac{2 \, a^{2} m \cos\left({\theta}\right)^{2} + 4 i \, a m r \cos\left({\theta}\right) - 2 \, m r^{2}}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} r + \left( \frac{{\left(2 i \, a^{3} m \cos\left({\theta}\right)^{2} - 4 \, a^{2} m r \cos\left({\theta}\right) - 2 i \, a m r^{2}\right)} \sin\left({\theta}\right)}{a^{4} \cos\left({\theta}\right)^{4} + 2 \, a^{2} r^{2} \cos\left({\theta}\right)^{2} + r^{4}} \right) \mathrm{d} {\theta}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The symmetric bilinear form $\gamma = \lambda \, g + \underline{\xi}\otimes\underline{\xi}$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">gamma</span> <span class="o">=</span> <span class="n">lamb</span><span class="o">*</span><span class="n">g</span> <span class="o">+</span> <span class="n">xi_form</span> <span class="o">*</span> <span class="n">xi_form</span>
+<span class="n">gamma</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;gamma&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\gamma&#39;</span><span class="p">)</span> <span class="p">;</span> <span class="k">print</span><span class="p">(</span><span class="n">gamma</span><span class="p">)</span>
+<span class="n">gamma</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Field of symmetric bilinear forms gamma on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[46]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\gamma = \left( \frac{a^{2} \cos\left({\theta}\right)^{2} - 2 \, m r + r^{2}}{a^{2} - 2 \, m r + r^{2}} \right) \mathrm{d} r\otimes \mathrm{d} r + \left( a^{2} \cos\left({\theta}\right)^{2} - 2 \, m r + r^{2} \right) \mathrm{d} {\theta}\otimes \mathrm{d} {\theta} + \left( \frac{2 \, a^{2} m r \sin\left({\theta}\right)^{4} - {\left(2 \, a^{2} m r - a^{2} r^{2} + 2 \, m r^{3} - r^{4} - {\left(a^{4} + a^{2} r^{2}\right)} \cos\left({\theta}\right)^{2}\right)} \sin\left({\theta}\right)^{2}}{a^{2} \cos\left({\theta}\right)^{2} + r^{2}} \right) \mathrm{d} {\phi}\otimes \mathrm{d} {\phi}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Final-computation-leading-to-the-Simon-Mars-tensor:">Final computation leading to the Simon-Mars tensor:<a class="anchor-link" href="#Final-computation-leading-to-the-Simon-Mars-tensor:">&#182;</a></h3><p>First we evaluate
+$$ S^{(1)}_{\alpha\beta\gamma} = 4 \mathcal{C}_{\mu\alpha\nu\beta} \, \xi^\mu \, \xi^\nu \, \sigma_\gamma $$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S1</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="p">(</span> <span class="n">CC</span><span class="o">.</span><span class="n">contract</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">xi</span><span class="p">)</span><span class="o">.</span><span class="n">contract</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">xi</span><span class="p">)</span> <span class="p">)</span> <span class="o">*</span> <span class="n">sigma</span>
+<span class="k">print</span><span class="p">(</span><span class="n">S1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field of type (0,3) on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Then we form the tensor
+$$ S^{(2)}_{\alpha\beta\gamma} = - \gamma_{\alpha\beta} \, \mathcal{C}_{\rho\gamma\mu\nu} \, \xi^\rho \, \mathcal{F}^{\mu\nu} $$
+by first computing $\mathcal{C}_{\rho\gamma\mu\nu} \, \xi^\rho$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">xiCC</span> <span class="o">=</span> <span class="n">CC</span><span class="p">[</span><span class="s1">&#39;_.r..&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">xi</span><span class="p">[</span><span class="s1">&#39;^r&#39;</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">xiCC</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field of type (0,3) on the 4-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We use the index notation to perform the double contraction $\mathcal{C}_{\gamma\rho\mu\nu} \mathcal{F}^{\mu\nu}$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">FFuu</span> <span class="o">=</span> <span class="n">FF</span><span class="o">.</span><span class="n">up</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S2</span> <span class="o">=</span> <span class="n">gamma</span> <span class="o">*</span> <span class="p">(</span> <span class="n">xiCC</span><span class="p">[</span><span class="s1">&#39;_.mn&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">FFuu</span><span class="p">[</span><span class="s1">&#39;^mn&#39;</span><span class="p">]</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">S2</span><span class="p">)</span>
+<span class="n">S2</span><span class="o">.</span><span class="n">symmetries</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field of type (0,3) on the 4-dimensional differentiable manifold M
+symmetry: (0, 1); no antisymmetry
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Simon-Mars tensor with respect to $\xi$ is obtained by antisymmetrizing $S^{(1)}$ and $S^{(2)}$ on their last two indices and adding them:
+$$ S_{\alpha\beta\gamma} = S^{(1)}_{\alpha[\beta\gamma]} + S^{(2)}_{\alpha[\beta\gamma]} $$
+We use the index notation for the antisymmetrization:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S1A</span> <span class="o">=</span> <span class="n">S1</span><span class="p">[</span><span class="s1">&#39;_a[bc]&#39;</span><span class="p">]</span>
+<span class="n">S2A</span> <span class="o">=</span> <span class="n">S2</span><span class="p">[</span><span class="s1">&#39;_a[bc]&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>An equivalent writing would have been (the last two indices being in position 1 and 2):</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># S1A = S1.antisymmetrize(1,2)</span>
+<span class="c1"># S2A = S2.antisymmetrize(1,2)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Simon-Mars tensor is</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">S1A</span> <span class="o">+</span> <span class="n">S2A</span>
+<span class="n">S</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">)</span> <span class="p">;</span> <span class="k">print</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+<span class="n">S</span><span class="o">.</span><span class="n">symmetries</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field S of type (0,3) on the 4-dimensional differentiable manifold M
+no symmetry; antisymmetry: (1, 2)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[54]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}S = 0</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>We thus recover the fact that the Simon-Mars tensor vanishes identically in Kerr spacetime.</strong></p>
+<p>To check that the above computation was not trival, here is the component 112=$rr\theta$ for each of the two parts of the Simon-Mars tensor:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S1A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[55]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}-\frac{{\left(8 \, a^{8} m^{2} \cos\left({\theta}\right)^{7} + 40 i \, a^{7} m^{2} r \cos\left({\theta}\right)^{6} - 16 i \, a m^{3} r^{6} + 8 i \, a m^{2} r^{7} - 8 \, {\left(2 \, a^{6} m^{3} r + 9 \, a^{6} m^{2} r^{2}\right)} \cos\left({\theta}\right)^{5} + {\left(-80 i \, a^{5} m^{3} r^{2} - 40 i \, a^{5} m^{2} r^{3}\right)} \cos\left({\theta}\right)^{4} + 40 \, {\left(4 \, a^{4} m^{3} r^{3} - a^{4} m^{2} r^{4}\right)} \cos\left({\theta}\right)^{3} + {\left(160 i \, a^{3} m^{3} r^{4} - 72 i \, a^{3} m^{2} r^{5}\right)} \cos\left({\theta}\right)^{2} - 40 \, {\left(2 \, a^{2} m^{3} r^{5} - a^{2} m^{2} r^{6}\right)} \cos\left({\theta}\right)\right)} \sin\left({\theta}\right)}{2 \, {\left(a^{2} r^{10} - 2 \, m r^{11} + r^{12} + {\left(a^{12} - 2 \, a^{10} m r + a^{10} r^{2}\right)} \cos\left({\theta}\right)^{10} + 5 \, {\left(a^{10} r^{2} - 2 \, a^{8} m r^{3} + a^{8} r^{4}\right)} \cos\left({\theta}\right)^{8} + 10 \, {\left(a^{8} r^{4} - 2 \, a^{6} m r^{5} + a^{6} r^{6}\right)} \cos\left({\theta}\right)^{6} + 10 \, {\left(a^{6} r^{6} - 2 \, a^{4} m r^{7} + a^{4} r^{8}\right)} \cos\left({\theta}\right)^{4} + 5 \, {\left(a^{4} r^{8} - 2 \, a^{2} m r^{9} + a^{2} r^{10}\right)} \cos\left({\theta}\right)^{2}\right)}}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S2A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[56]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{{\left(8 \, a^{8} m^{2} \cos\left({\theta}\right)^{7} + 40 i \, a^{7} m^{2} r \cos\left({\theta}\right)^{6} - 16 i \, a m^{3} r^{6} + 8 i \, a m^{2} r^{7} - 8 \, {\left(2 \, a^{6} m^{3} r + 9 \, a^{6} m^{2} r^{2}\right)} \cos\left({\theta}\right)^{5} + {\left(-80 i \, a^{5} m^{3} r^{2} - 40 i \, a^{5} m^{2} r^{3}\right)} \cos\left({\theta}\right)^{4} + 40 \, {\left(4 \, a^{4} m^{3} r^{3} - a^{4} m^{2} r^{4}\right)} \cos\left({\theta}\right)^{3} + {\left(160 i \, a^{3} m^{3} r^{4} - 72 i \, a^{3} m^{2} r^{5}\right)} \cos\left({\theta}\right)^{2} - 40 \, {\left(2 \, a^{2} m^{3} r^{5} - a^{2} m^{2} r^{6}\right)} \cos\left({\theta}\right)\right)} \sin\left({\theta}\right)}{2 \, {\left(a^{2} r^{10} - 2 \, m r^{11} + r^{12} + {\left(a^{12} - 2 \, a^{10} m r + a^{10} r^{2}\right)} \cos\left({\theta}\right)^{10} + 5 \, {\left(a^{10} r^{2} - 2 \, a^{8} m r^{3} + a^{8} r^{4}\right)} \cos\left({\theta}\right)^{8} + 10 \, {\left(a^{8} r^{4} - 2 \, a^{6} m r^{5} + a^{6} r^{6}\right)} \cos\left({\theta}\right)^{6} + 10 \, {\left(a^{6} r^{6} - 2 \, a^{4} m r^{7} + a^{4} r^{8}\right)} \cos\left({\theta}\right)^{4} + 5 \, {\left(a^{4} r^{8} - 2 \, a^{2} m r^{9} + a^{2} r^{10}\right)} \cos\left({\theta}\right)^{2}\right)}}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S1A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">S2A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[57]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}0</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+ 
+
+
+    </div>
+  </div>
+
+  </div>
+
+
+  
+    <footer class="footer hidden-print">
+      <div class="container">
+        <div class="col-md-4">
+          <p>
+            This website does not host notebooks, it only renders notebooks
+            available on other websites.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <p>
+            Delivered by <a href="http://www.fastly.com/">Fastly</a>,
+            Rendered by <a href="https://developer.rackspace.com/?nbviewer=awesome">Rackspace</a>
+          </p>
+          <p>
+            nbviewer GitHub <a href="https://github.com/jupyter/nbviewer">repository</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          
+  
+            
+              <p>
+                nbviewer version:
+                <a href="https://github.com/jupyter/nbviewer/commit/4f5d1d8a2539c1c8dc92873d3a775d34f0a3d417">
+                  4f5d1d8
+                </a>
+              </p>
+            
+          
+  
+  <p>
+    nbconvert version: <a href="https://github.com/jupyter/nbconvert/releases/tag/5.1.1">
+      5.1.1
+    </a>
+  </p>
+  
+
+          
+  
+  
+  <p>
+    Rendered
+    <span class='date' data-date='Fri, 07 Apr 2017 17:52:01 UTC' title='Fri, 07 Apr 2017 17:52:01 UTC'>(Fri, 07 Apr 2017 17:52:01 UTC)</span>
+  </p>
+  
+
+        </div>
+      </div>
+    </footer>
+  
+
+  <script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script>
+  <script src="/static/components/bootstrap/js/bootstrap.min.js?v=5869c96cc8f19086aee625d670d741f9"></script>
+  <script src="/static/components/headroom.js/dist/headroom.min.js?v=b0a311ea668f8e768ea375f4a7abb81c"></script>
+  <script src="/static/components/headroom.js/dist/jQuery.headroom.min.js?v=f3a1bae118315d0c234afc74dc6aab71"></script>
+
+  
+  
+  <script>
+    $(function(){ $("#menubar").headroom({
+      tolerance: 5,
+      offset: 205,
+      classes: {
+        initial: "animated",
+        pinned: "slideInDown",
+        unpinned: "slideOutUp"
+      }
+    })});
+  </script>
+
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-52617120-5', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+  <script>
+    require({
+        paths: {
+          moment: "/static/components/moment/min/moment.min.js?v=89f87298ad94aa1e6b92f42eb66da043"
+        }
+      }, ["moment"], function(moment){
+      var date = $("footer .date"),
+        m = moment(new Date(date.data('date'))),
+        update = function(){ date.text(m.fromNow()); };
+      setInterval(update, 61*1000);
+      update();
+      var w = $(window).scroll(function(event){
+        $("body").toggleClass("scrolled", w.scrollTop() > 0);
+      });
+    });
+  </script>
+  <!--NEW RELIC Stop Perf Measurement-->
+  
+  <!--NEW RELIC End-->
+</body>
+</html>

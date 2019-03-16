@@ -1,0 +1,1560 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Jupyter Notebook Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <meta name="robots" content="noindex,nofollow">
+  
+
+  <!--NEW RELIC Start Perf Measurement-->
+  
+  <!--NREND-->
+
+  <!-- Le styles -->
+  <script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"abd1269b22bee152eab75bba2e8d4c35",petok:"9e96a3eea8921e84f502efae87acca60013dcf52-1491587597-3600",zone:"jupyter.org",rocket:"0",apps:{"ga_key":{"ua":"UA-52617120-1","ga_bs":"2"}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<link href="/static/build/styles.css?v=c18d49652a516277e15114bbd447f1c1" rel="stylesheet">
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Le fav and touch icons -->
+  <link rel="shortcut icon" href="/static/ico/ipynb_icon_16x16.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+        href="/static/ico/apple-touch-icon-144-precomposed.png?v=5a3c9ede93e2a8b8ea9e3f8f3da1a905">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114"
+        href="/static/ico/apple-touch-icon-114-precomposed.png?v=45d86fc8f24dc00638035e1dd7a6d898">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72"
+        href="/static/ico/apple-touch-icon-72-precomposed.png?v=540b5eb0f3cfd25f1439d1c9bd30e15f">
+  <link rel="apple-touch-icon-precomposed"
+        href="/static/ico/apple-touch-icon-57-precomposed.png?v=225f0590e187e1458625654f10a28f56">
+  
+  
+
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Notebook on nbviewer">
+  <meta name="twitter:description" content="Check out this Jupyter notebook!">
+
+  
+  <meta name="twitter:domain" content="nbviewer.ipython.org">
+  <meta name="twitter:image:src" content="http://ipython.org/ipython-doc/dev/_images/ipynb_icon_128x128.png">
+
+  
+    <link href="/static/build/notebook.css?v=d05748bef7d8f0edbc1e0133b9a41fe0" rel="stylesheet">
+  
+
+  
+
+  
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      init_mathjax = function() {
+        if (window.MathJax) {
+          // MathJax loaded
+          MathJax.Hub.Config({
+            TeX: {
+              equationNumbers: {
+                autoNumber: "AMS",
+                useLabelIds: true
+              }
+            },
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+              processEscapes: true,
+              processEnvironments: true
+            },
+            displayAlign: 'center',
+            "HTML-CSS": {
+              styles: {'.MathJax_Display': {"margin": 0}},
+              linebreaks: { automatic: true }
+            }
+          });
+          MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        }
+      }
+      init_mathjax();
+    </script>
+  
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-52617120-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+</head>
+
+<body class="nbviewer">
+
+  <!-- These are loaded at the top of the body so they are available to
+       notebook cells when they are loaded below. -->
+  <script src="/static/components/jquery/dist/jquery.min.js?v=e071abda8fe61194711cfc2ab99fe104"></script>
+  <script src="/static/components/requirejs/require.js?v=6da8be361b9ee26c5e721e76c6d4afce"></script>
+  <script src="/static/components/moment/min/moment.min.js?v=89f87298ad94aa1e6b92f42eb66da043"></script>
+
+<!-- Navbar
+================================================== -->
+  <nav id="menubar" class="navbar navbar-default navbar-fixed-top" data-spy="affix">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img src="/static/img/nav_logo.svg?v=479cefe8d932fb14a67b93911b97d70f" width="159"/>
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="active" href="http://jupyter.org">JUPYTER</a>
+          </li>
+          <li>
+    <a href="/faq" title="FAQ" >
+      
+        <span>FAQ</span>
+      
+    </a>
+  </li>
+
+          
+  
+    
+      
+        <li>
+    <a href="/format/script/github/sagemanifolds/SageManifolds/blob/master/Worksheets/v1.0/SM_elasticity_Cartesian.ipynb" title="View as Code" >
+      <span class="fa fa-code fa-2x menu-icon"></span>
+      <span class="menu-text">View as Code</span>
+    </a>
+  </li>
+      
+    
+  
+    
+  
+
+  
+    <li>
+    <a href="#" title="SageMath 7.5.1 Kernel" >
+      <span class="fa fa-server fa-2x menu-icon"></span>
+      <span class="menu-text">SageMath 7.5.1 Kernel</span>
+    </a>
+  </li>
+  
+
+  
+    <li>
+    <a href="https://github.com/sagemanifolds/SageManifolds/blob/master/Worksheets/v1.0/SM_elasticity_Cartesian.ipynb" title="View on GitHub" >
+      <span class="fa fa-github fa-2x menu-icon"></span>
+      <span class="menu-text">View on GitHub</span>
+    </a>
+  </li>
+  
+
+  <li>
+    <a href="https://raw.githubusercontent.com/sagemanifolds/SageManifolds/master/Worksheets/v1.0/SM_elasticity_Cartesian.ipynb" title="Download Notebook" download>
+      <span class="fa fa-download fa-2x menu-icon"></span>
+      <span class="menu-text">Download Notebook</span>
+    </a>
+  </li>
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+      
+      
+    </div>
+  </nav>
+
+  <div class="container container-main">
+    
+  
+  <ol class="breadcrumb">
+    
+      <li>
+        <a href="/github/sagemanifolds/SageManifolds/tree/master">SageManifolds</a>
+      </li>
+    
+      <li>
+        <a href="/github/sagemanifolds/SageManifolds/tree/master/Worksheets">Worksheets</a>
+      </li>
+    
+      <li>
+        <a href="/github/sagemanifolds/SageManifolds/tree/master/Worksheets/v1.0">v1.0</a>
+      </li>
+    
+  </ol>
+  
+  <div id="notebook">
+    <div id="notebook-container">
+      
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Strain-and-stress-tensors-in-Cartesian-coordinates">Strain and stress tensors in Cartesian coordinates<a class="anchor-link" href="#Strain-and-stress-tensors-in-Cartesian-coordinates">&#182;</a></h1><p>This worksheet demonstrates a few capabilities of <a href="http://sagemanifolds.obspm.fr/">SageManifolds</a> (version 1.0, as included in SageMath 7.5) in computations regarding elasticity theory in Cartesian coordinates.</p>
+<p>Click <a href="https://raw.githubusercontent.com/sagemanifolds/SageManifolds/master/Worksheets/v1.0/SM_elasticity_Cartesian.ipynb">here</a> to download the worksheet file (ipynb format). To run it, you must start SageMath with the Jupyter notebook, via the command <code>sage -n jupyter</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>NB:</em> a version of SageMath at least equal to 7.5 is required to run this worksheet:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">version</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[1]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;SageMath version 7.5.1, Release Date: 2017-01-15&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First we set up the notebook to display mathematical objects using LaTeX rendering:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">display</span> latex
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Euclidean-3-space-and-Cartesian-coordinates">Euclidean 3-space and Cartesian coordinates<a class="anchor-link" href="#Euclidean-3-space-and-Cartesian-coordinates">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We introduce the Euclidean space as a 3-dimensional differentiable manifold:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">Manifold</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">start_index</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We then introduce the Cartesian coordinates $(x,y,z)$ as a chart $X$ on $M$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">X</span><span class="o">.&lt;</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">chart</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">X</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Chart (M, (x, y, z))
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(M,(x, y, z)\right)</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The associated vector frame is</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">X</span><span class="o">.</span><span class="n">frame</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(M, \left(\frac{\partial}{\partial x },\frac{\partial}{\partial y },\frac{\partial}{\partial z }\right)\right)</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We shall expand vector and tensor fields not on this frame, which is the default one on $M$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">M</span><span class="o">.</span><span class="n">default_frame</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(M, \left(\frac{\partial}{\partial x },\frac{\partial}{\partial y },\frac{\partial}{\partial z }\right)\right)</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Displacement-vector-and-strain-tensor">Displacement vector and strain tensor<a class="anchor-link" href="#Displacement-vector-and-strain-tensor">&#182;</a></h2><p>Let us define the <strong>displacement vector</strong> $U$ in terms of its components w.r.t. the orthonormal Cartesian frame:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">U</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">vector_field</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;U&#39;</span><span class="p">)</span>
+<span class="n">U</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">function</span><span class="p">(</span><span class="s1">&#39;U_x&#39;</span><span class="p">)(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">),</span> <span class="n">function</span><span class="p">(</span><span class="s1">&#39;U_y&#39;</span><span class="p">)(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">),</span> 
+        <span class="n">function</span><span class="p">(</span><span class="s1">&#39;U_z&#39;</span><span class="p">)(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)]</span>
+<span class="n">U</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}U = U_{x}\left(x, y, z\right) \frac{\partial}{\partial x } + U_{y}\left(x, y, z\right) \frac{\partial}{\partial y } + U_{z}\left(x, y, z\right) \frac{\partial}{\partial z }</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The following computations will involve the metric $g$ of the Euclidean space. At the current stage of SageManifolds, we need to introduce it explicitly, as a Riemannian metric on the manifold $M$ (in a future version of SageManifolds, one shall to declare $M$ as an Euclidean space, and not merely as a manifold, so that it will come equipped with $g$):</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">riemannian_metric</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Riemannian metric g on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We initialize $g$ by declaring that its components with respect to the frame of Cartesian coordinates are
+$\mathrm{diag}(1,1,1)$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">g</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">g</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">g</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+<span class="n">g</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}g = \mathrm{d} x\otimes \mathrm{d} x+\mathrm{d} y\otimes \mathrm{d} y+\mathrm{d} z\otimes \mathrm{d} z</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The covariant derivative operator $\nabla$ is introduced as the (Levi-Civita) connection associated with $g$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nabla</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">connection</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">nabla</span><span class="p">)</span>
+<span class="n">nabla</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Levi-Civita connection nabla_g associated with the Riemannian metric g on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\nabla_{g}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The covariant derivative of the displacement vector $U$ is</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nabU</span> <span class="o">=</span> <span class="n">nabla</span><span class="p">(</span><span class="n">U</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">nabU</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field nabla_g(U) of type (1,1) on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nabU</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\nabla_{g} U = \frac{\partial\,U_{x}}{\partial x} \frac{\partial}{\partial x }\otimes \mathrm{d} x + \frac{\partial\,U_{x}}{\partial y} \frac{\partial}{\partial x }\otimes \mathrm{d} y + \frac{\partial\,U_{x}}{\partial z} \frac{\partial}{\partial x }\otimes \mathrm{d} z + \frac{\partial\,U_{y}}{\partial x} \frac{\partial}{\partial y }\otimes \mathrm{d} x + \frac{\partial\,U_{y}}{\partial y} \frac{\partial}{\partial y }\otimes \mathrm{d} y + \frac{\partial\,U_{y}}{\partial z} \frac{\partial}{\partial y }\otimes \mathrm{d} z + \frac{\partial\,U_{z}}{\partial x} \frac{\partial}{\partial z }\otimes \mathrm{d} x + \frac{\partial\,U_{z}}{\partial y} \frac{\partial}{\partial z }\otimes \mathrm{d} y + \frac{\partial\,U_{z}}{\partial z} \frac{\partial}{\partial z }\otimes \mathrm{d} z</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We convert it to a tensor field of type (0,2) (i.e. a bilinear form) by lowering the upper index with $g$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nabU_form</span> <span class="o">=</span> <span class="n">nabU</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">nabU_form</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field of type (0,2) on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nabU_form</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{\partial\,U_{x}}{\partial x} \mathrm{d} x\otimes \mathrm{d} x + \frac{\partial\,U_{x}}{\partial y} \mathrm{d} x\otimes \mathrm{d} y + \frac{\partial\,U_{x}}{\partial z} \mathrm{d} x\otimes \mathrm{d} z + \frac{\partial\,U_{y}}{\partial x} \mathrm{d} y\otimes \mathrm{d} x + \frac{\partial\,U_{y}}{\partial y} \mathrm{d} y\otimes \mathrm{d} y + \frac{\partial\,U_{y}}{\partial z} \mathrm{d} y\otimes \mathrm{d} z + \frac{\partial\,U_{z}}{\partial x} \mathrm{d} z\otimes \mathrm{d} x + \frac{\partial\,U_{z}}{\partial y} \mathrm{d} z\otimes \mathrm{d} y + \frac{\partial\,U_{z}}{\partial z} \mathrm{d} z\otimes \mathrm{d} z</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>strain tensor</strong> $\varepsilon$ is defined as the symmetrized part of this tensor:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="n">nabU_form</span><span class="o">.</span><span class="n">symmetrize</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Field of symmetric bilinear forms on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">E</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="n">latex_name</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\varepsilon&#39;</span><span class="p">)</span>
+<span class="n">E</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\varepsilon = \frac{\partial\,U_{x}}{\partial x} \mathrm{d} x\otimes \mathrm{d} x + \left( \frac{1}{2} \, \frac{\partial\,U_{x}}{\partial y} + \frac{1}{2} \, \frac{\partial\,U_{y}}{\partial x} \right) \mathrm{d} x\otimes \mathrm{d} y + \left( \frac{1}{2} \, \frac{\partial\,U_{x}}{\partial z} + \frac{1}{2} \, \frac{\partial\,U_{z}}{\partial x} \right) \mathrm{d} x\otimes \mathrm{d} z + \left( \frac{1}{2} \, \frac{\partial\,U_{x}}{\partial y} + \frac{1}{2} \, \frac{\partial\,U_{y}}{\partial x} \right) \mathrm{d} y\otimes \mathrm{d} x + \frac{\partial\,U_{y}}{\partial y} \mathrm{d} y\otimes \mathrm{d} y + \left( \frac{1}{2} \, \frac{\partial\,U_{y}}{\partial z} + \frac{1}{2} \, \frac{\partial\,U_{z}}{\partial y} \right) \mathrm{d} y\otimes \mathrm{d} z + \left( \frac{1}{2} \, \frac{\partial\,U_{x}}{\partial z} + \frac{1}{2} \, \frac{\partial\,U_{z}}{\partial x} \right) \mathrm{d} z\otimes \mathrm{d} x + \left( \frac{1}{2} \, \frac{\partial\,U_{y}}{\partial z} + \frac{1}{2} \, \frac{\partial\,U_{z}}{\partial y} \right) \mathrm{d} z\otimes \mathrm{d} y + \frac{\partial\,U_{z}}{\partial z} \mathrm{d} z\otimes \mathrm{d} z</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let us display the components of $\varepsilon$, skipping those that can be deduced by symmetry:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">E</span><span class="o">.</span><span class="n">display_comp</span><span class="p">(</span><span class="n">only_nonredundant</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[17]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{lcl} \varepsilon_{ \, x \, x }^{ \phantom{\, x}\phantom{\, x} } & = & \frac{\partial\,U_{x}}{\partial x} \\ \varepsilon_{ \, x \, y }^{ \phantom{\, x}\phantom{\, y} } & = & \frac{1}{2} \, \frac{\partial\,U_{x}}{\partial y} + \frac{1}{2} \, \frac{\partial\,U_{y}}{\partial x} \\ \varepsilon_{ \, x \, z }^{ \phantom{\, x}\phantom{\, z} } & = & \frac{1}{2} \, \frac{\partial\,U_{x}}{\partial z} + \frac{1}{2} \, \frac{\partial\,U_{z}}{\partial x} \\ \varepsilon_{ \, y \, y }^{ \phantom{\, y}\phantom{\, y} } & = & \frac{\partial\,U_{y}}{\partial y} \\ \varepsilon_{ \, y \, z }^{ \phantom{\, y}\phantom{\, z} } & = & \frac{1}{2} \, \frac{\partial\,U_{y}}{\partial z} + \frac{1}{2} \, \frac{\partial\,U_{z}}{\partial y} \\ \varepsilon_{ \, z \, z }^{ \phantom{\, z}\phantom{\, z} } & = & \frac{\partial\,U_{z}}{\partial z} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Stress-tensor-and-Hooke's-law">Stress tensor and Hooke's law<a class="anchor-link" href="#Stress-tensor-and-Hooke's-law">&#182;</a></h2><p>To form the stress tensor according to Hooke's law, we introduce first the Lamé constants:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;ll&#39;</span><span class="p">,</span> <span class="n">latex_name</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\lambda&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}{\lambda}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;mu&#39;</span><span class="p">,</span> <span class="n">latex_name</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\mu&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[19]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}{\mu}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The trace (with respect to $g$) of the bilinear form $\varepsilon$ is obtained by (i) raising the first index (<code>pos=0</code>) by means of $g$ and (ii) by taking the trace of the resulting endomorphism:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">trE</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">up</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">trace</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">trE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Scalar field on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">trE</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[21]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{llcl} & M & \longrightarrow & \mathbb{R} \\ & \left(x, y, z\right) & \longmapsto & \frac{\partial\,U_{x}}{\partial x} + \frac{\partial\,U_{y}}{\partial y} + \frac{\partial\,U_{z}}{\partial z} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>stress tensor</strong> $S$ is obtained via Hooke's law for isotropic material:
+$$ S = \lambda \, \mathrm{tr}\varepsilon \; g + 2\mu \, \varepsilon$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">ll</span><span class="o">*</span><span class="n">trE</span><span class="o">*</span><span class="n">g</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">mu</span><span class="o">*</span><span class="n">E</span>
+<span class="k">print</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Field of symmetric bilinear forms on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">)</span>
+<span class="n">S</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[23]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}S = \left( {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{x}}{\partial x} + {\lambda} \frac{\partial\,U_{y}}{\partial y} + {\lambda} \frac{\partial\,U_{z}}{\partial z} \right) \mathrm{d} x\otimes \mathrm{d} x + \left( {\mu} \frac{\partial\,U_{x}}{\partial y} + {\mu} \frac{\partial\,U_{y}}{\partial x} \right) \mathrm{d} x\otimes \mathrm{d} y + \left( {\mu} \frac{\partial\,U_{x}}{\partial z} + {\mu} \frac{\partial\,U_{z}}{\partial x} \right) \mathrm{d} x\otimes \mathrm{d} z + \left( {\mu} \frac{\partial\,U_{x}}{\partial y} + {\mu} \frac{\partial\,U_{y}}{\partial x} \right) \mathrm{d} y\otimes \mathrm{d} x + \left( {\lambda} \frac{\partial\,U_{x}}{\partial x} + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{y}}{\partial y} + {\lambda} \frac{\partial\,U_{z}}{\partial z} \right) \mathrm{d} y\otimes \mathrm{d} y + \left( {\mu} \frac{\partial\,U_{y}}{\partial z} + {\mu} \frac{\partial\,U_{z}}{\partial y} \right) \mathrm{d} y\otimes \mathrm{d} z + \left( {\mu} \frac{\partial\,U_{x}}{\partial z} + {\mu} \frac{\partial\,U_{z}}{\partial x} \right) \mathrm{d} z\otimes \mathrm{d} x + \left( {\mu} \frac{\partial\,U_{y}}{\partial z} + {\mu} \frac{\partial\,U_{z}}{\partial y} \right) \mathrm{d} z\otimes \mathrm{d} y + \left( {\lambda} \frac{\partial\,U_{x}}{\partial x} + {\lambda} \frac{\partial\,U_{y}}{\partial y} + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{z}}{\partial z} \right) \mathrm{d} z\otimes \mathrm{d} z</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S</span><span class="o">.</span><span class="n">display_comp</span><span class="p">(</span><span class="n">only_nonredundant</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[24]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{lcl} S_{ \, x \, x }^{ \phantom{\, x}\phantom{\, x} } & = & {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{x}}{\partial x} + {\lambda} \frac{\partial\,U_{y}}{\partial y} + {\lambda} \frac{\partial\,U_{z}}{\partial z} \\ S_{ \, x \, y }^{ \phantom{\, x}\phantom{\, y} } & = & {\mu} \frac{\partial\,U_{x}}{\partial y} + {\mu} \frac{\partial\,U_{y}}{\partial x} \\ S_{ \, x \, z }^{ \phantom{\, x}\phantom{\, z} } & = & {\mu} \frac{\partial\,U_{x}}{\partial z} + {\mu} \frac{\partial\,U_{z}}{\partial x} \\ S_{ \, y \, y }^{ \phantom{\, y}\phantom{\, y} } & = & {\lambda} \frac{\partial\,U_{x}}{\partial x} + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{y}}{\partial y} + {\lambda} \frac{\partial\,U_{z}}{\partial z} \\ S_{ \, y \, z }^{ \phantom{\, y}\phantom{\, z} } & = & {\mu} \frac{\partial\,U_{y}}{\partial z} + {\mu} \frac{\partial\,U_{z}}{\partial y} \\ S_{ \, z \, z }^{ \phantom{\, z}\phantom{\, z} } & = & {\lambda} \frac{\partial\,U_{x}}{\partial x} + {\lambda} \frac{\partial\,U_{y}}{\partial y} + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{z}}{\partial z} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Each component can be accessed individually:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[25]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}{\mu} \frac{\partial\,U_{x}}{\partial y} + {\mu} \frac{\partial\,U_{y}}{\partial x}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Divergence-of-the-stress-tensor">Divergence of the stress tensor<a class="anchor-link" href="#Divergence-of-the-stress-tensor">&#182;</a></h2><p>The divergence of the stress tensor is the 1-form:
+$$ f_i = \nabla_j S^j_{\ \, i} $$
+In a next version of SageManifolds, there will be a function <code>divergence()</code>. For the moment, to evaluate $f$, 
+we first form the tensor $S^j_{\ \, i}$ by raising the first index (<code>pos=0</code>) of $S$ with $g$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">SU</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">up</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">SU</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field of type (1,1) on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The divergence is obtained by taking the trace on the first index (<code>0</code>) and the third one (<code>2</code>) of the tensor
+$(\nabla S)^j_{\ \, ik} = \nabla_k S^j_{\ \, i}$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">divS</span> <span class="o">=</span> <span class="n">nabla</span><span class="p">(</span><span class="n">SU</span><span class="p">)</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">divS</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1-form on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">divS</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+<span class="n">divS</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[28]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}f = \left( {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial^2\,U_{x}}{\partial x ^ 2} + {\mu} \frac{\partial^2\,U_{x}}{\partial y ^ 2} + {\mu} \frac{\partial^2\,U_{x}}{\partial z ^ 2} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{y}}{\partial x\partial y} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{z}}{\partial x\partial z} \right) \mathrm{d} x + \left( {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{x}}{\partial x\partial y} + {\mu} \frac{\partial^2\,U_{y}}{\partial x ^ 2} + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial^2\,U_{y}}{\partial y ^ 2} + {\mu} \frac{\partial^2\,U_{y}}{\partial z ^ 2} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{z}}{\partial y\partial z} \right) \mathrm{d} y + \left( {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{x}}{\partial x\partial z} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{y}}{\partial y\partial z} + {\mu} \frac{\partial^2\,U_{z}}{\partial x ^ 2} + {\mu} \frac{\partial^2\,U_{z}}{\partial y ^ 2} + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial^2\,U_{z}}{\partial z ^ 2} \right) \mathrm{d} z</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">divS</span><span class="o">.</span><span class="n">display_comp</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[29]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{lcl} f_{ \, x }^{ \phantom{\, x} } & = & {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial^2\,U_{x}}{\partial x ^ 2} + {\mu} \frac{\partial^2\,U_{x}}{\partial y ^ 2} + {\mu} \frac{\partial^2\,U_{x}}{\partial z ^ 2} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{y}}{\partial x\partial y} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{z}}{\partial x\partial z} \\ f_{ \, y }^{ \phantom{\, y} } & = & {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{x}}{\partial x\partial y} + {\mu} \frac{\partial^2\,U_{y}}{\partial x ^ 2} + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial^2\,U_{y}}{\partial y ^ 2} + {\mu} \frac{\partial^2\,U_{y}}{\partial z ^ 2} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{z}}{\partial y\partial z} \\ f_{ \, z }^{ \phantom{\, z} } & = & {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{x}}{\partial x\partial z} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{y}}{\partial y\partial z} + {\mu} \frac{\partial^2\,U_{z}}{\partial x ^ 2} + {\mu} \frac{\partial^2\,U_{z}}{\partial y ^ 2} + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial^2\,U_{z}}{\partial z ^ 2} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Displaying the components one by one:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">divS</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[30]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}{\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial^2\,U_{x}}{\partial x ^ 2} + {\mu} \frac{\partial^2\,U_{x}}{\partial y ^ 2} + {\mu} \frac{\partial^2\,U_{x}}{\partial z ^ 2} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{y}}{\partial x\partial y} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{z}}{\partial x\partial z}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">divS</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[31]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}{\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{x}}{\partial x\partial y} + {\mu} \frac{\partial^2\,U_{y}}{\partial x ^ 2} + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial^2\,U_{y}}{\partial y ^ 2} + {\mu} \frac{\partial^2\,U_{y}}{\partial z ^ 2} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{z}}{\partial y\partial z}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">divS</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[32]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}{\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{x}}{\partial x\partial z} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{y}}{\partial y\partial z} + {\mu} \frac{\partial^2\,U_{z}}{\partial x ^ 2} + {\mu} \frac{\partial^2\,U_{z}}{\partial y ^ 2} + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial^2\,U_{z}}{\partial z ^ 2}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+ 
+
+
+    </div>
+  </div>
+
+  </div>
+
+
+  
+    <footer class="footer hidden-print">
+      <div class="container">
+        <div class="col-md-4">
+          <p>
+            This website does not host notebooks, it only renders notebooks
+            available on other websites.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <p>
+            Delivered by <a href="http://www.fastly.com/">Fastly</a>,
+            Rendered by <a href="https://developer.rackspace.com/?nbviewer=awesome">Rackspace</a>
+          </p>
+          <p>
+            nbviewer GitHub <a href="https://github.com/jupyter/nbviewer">repository</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          
+  
+            
+              <p>
+                nbviewer version:
+                <a href="https://github.com/jupyter/nbviewer/commit/4f5d1d8a2539c1c8dc92873d3a775d34f0a3d417">
+                  4f5d1d8
+                </a>
+              </p>
+            
+          
+  
+  <p>
+    nbconvert version: <a href="https://github.com/jupyter/nbconvert/releases/tag/5.1.1">
+      5.1.1
+    </a>
+  </p>
+  
+
+          
+  
+  
+  <p>
+    Rendered
+    <span class='date' data-date='Fri, 07 Apr 2017 17:53:17 UTC' title='Fri, 07 Apr 2017 17:53:17 UTC'>(Fri, 07 Apr 2017 17:53:17 UTC)</span>
+  </p>
+  
+
+        </div>
+      </div>
+    </footer>
+  
+
+  <script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script>
+  <script src="/static/components/bootstrap/js/bootstrap.min.js?v=5869c96cc8f19086aee625d670d741f9"></script>
+  <script src="/static/components/headroom.js/dist/headroom.min.js?v=b0a311ea668f8e768ea375f4a7abb81c"></script>
+  <script src="/static/components/headroom.js/dist/jQuery.headroom.min.js?v=f3a1bae118315d0c234afc74dc6aab71"></script>
+
+  
+  
+  <script>
+    $(function(){ $("#menubar").headroom({
+      tolerance: 5,
+      offset: 205,
+      classes: {
+        initial: "animated",
+        pinned: "slideInDown",
+        unpinned: "slideOutUp"
+      }
+    })});
+  </script>
+
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-52617120-5', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+  <script>
+    require({
+        paths: {
+          moment: "/static/components/moment/min/moment.min.js?v=89f87298ad94aa1e6b92f42eb66da043"
+        }
+      }, ["moment"], function(moment){
+      var date = $("footer .date"),
+        m = moment(new Date(date.data('date'))),
+        update = function(){ date.text(m.fromNow()); };
+      setInterval(update, 61*1000);
+      update();
+      var w = $(window).scroll(function(event){
+        $("body").toggleClass("scrolled", w.scrollTop() > 0);
+      });
+    });
+  </script>
+  <!--NEW RELIC Stop Perf Measurement-->
+  
+  <!--NEW RELIC End-->
+</body>
+</html>

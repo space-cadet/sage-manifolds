@@ -1,0 +1,1999 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Jupyter Notebook Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <meta name="robots" content="noindex,nofollow">
+  
+
+  <!--NEW RELIC Start Perf Measurement-->
+  
+  <!--NREND-->
+
+  <!-- Le styles -->
+  <script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"abd1269b22bee152eab75bba2e8d4c35",petok:"b370a5083e854eccfdfbc3b2f833c6f42f30f8ad-1491587601-3600",zone:"jupyter.org",rocket:"0",apps:{"ga_key":{"ua":"UA-52617120-1","ga_bs":"2"}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<link href="/static/build/styles.css?v=c18d49652a516277e15114bbd447f1c1" rel="stylesheet">
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Le fav and touch icons -->
+  <link rel="shortcut icon" href="/static/ico/ipynb_icon_16x16.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+        href="/static/ico/apple-touch-icon-144-precomposed.png?v=5a3c9ede93e2a8b8ea9e3f8f3da1a905">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114"
+        href="/static/ico/apple-touch-icon-114-precomposed.png?v=45d86fc8f24dc00638035e1dd7a6d898">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72"
+        href="/static/ico/apple-touch-icon-72-precomposed.png?v=540b5eb0f3cfd25f1439d1c9bd30e15f">
+  <link rel="apple-touch-icon-precomposed"
+        href="/static/ico/apple-touch-icon-57-precomposed.png?v=225f0590e187e1458625654f10a28f56">
+  
+  
+
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Notebook on nbviewer">
+  <meta name="twitter:description" content="Check out this Jupyter notebook!">
+
+  
+  <meta name="twitter:domain" content="nbviewer.ipython.org">
+  <meta name="twitter:image:src" content="http://ipython.org/ipython-doc/dev/_images/ipynb_icon_128x128.png">
+
+  
+    <link href="/static/build/notebook.css?v=d05748bef7d8f0edbc1e0133b9a41fe0" rel="stylesheet">
+  
+
+  
+
+  
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      init_mathjax = function() {
+        if (window.MathJax) {
+          // MathJax loaded
+          MathJax.Hub.Config({
+            TeX: {
+              equationNumbers: {
+                autoNumber: "AMS",
+                useLabelIds: true
+              }
+            },
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+              processEscapes: true,
+              processEnvironments: true
+            },
+            displayAlign: 'center',
+            "HTML-CSS": {
+              styles: {'.MathJax_Display': {"margin": 0}},
+              linebreaks: { automatic: true }
+            }
+          });
+          MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        }
+      }
+      init_mathjax();
+    </script>
+  
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-52617120-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+</head>
+
+<body class="nbviewer">
+
+  <!-- These are loaded at the top of the body so they are available to
+       notebook cells when they are loaded below. -->
+  <script src="/static/components/jquery/dist/jquery.min.js?v=e071abda8fe61194711cfc2ab99fe104"></script>
+  <script src="/static/components/requirejs/require.js?v=6da8be361b9ee26c5e721e76c6d4afce"></script>
+  <script src="/static/components/moment/min/moment.min.js?v=89f87298ad94aa1e6b92f42eb66da043"></script>
+
+<!-- Navbar
+================================================== -->
+  <nav id="menubar" class="navbar navbar-default navbar-fixed-top" data-spy="affix">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img src="/static/img/nav_logo.svg?v=479cefe8d932fb14a67b93911b97d70f" width="159"/>
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="active" href="http://jupyter.org">JUPYTER</a>
+          </li>
+          <li>
+    <a href="/faq" title="FAQ" >
+      
+        <span>FAQ</span>
+      
+    </a>
+  </li>
+
+          
+  
+    
+      
+        <li>
+    <a href="/format/script/github/sagemanifolds/SageManifolds/blob/master/Worksheets/v1.0/SM_elasticity_spher.ipynb" title="View as Code" >
+      <span class="fa fa-code fa-2x menu-icon"></span>
+      <span class="menu-text">View as Code</span>
+    </a>
+  </li>
+      
+    
+  
+    
+  
+
+  
+    <li>
+    <a href="#" title="SageMath 7.5.1 Kernel" >
+      <span class="fa fa-server fa-2x menu-icon"></span>
+      <span class="menu-text">SageMath 7.5.1 Kernel</span>
+    </a>
+  </li>
+  
+
+  
+    <li>
+    <a href="https://github.com/sagemanifolds/SageManifolds/blob/master/Worksheets/v1.0/SM_elasticity_spher.ipynb" title="View on GitHub" >
+      <span class="fa fa-github fa-2x menu-icon"></span>
+      <span class="menu-text">View on GitHub</span>
+    </a>
+  </li>
+  
+
+  <li>
+    <a href="https://raw.githubusercontent.com/sagemanifolds/SageManifolds/master/Worksheets/v1.0/SM_elasticity_spher.ipynb" title="Download Notebook" download>
+      <span class="fa fa-download fa-2x menu-icon"></span>
+      <span class="menu-text">Download Notebook</span>
+    </a>
+  </li>
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+      
+      
+    </div>
+  </nav>
+
+  <div class="container container-main">
+    
+  
+  <ol class="breadcrumb">
+    
+      <li>
+        <a href="/github/sagemanifolds/SageManifolds/tree/master">SageManifolds</a>
+      </li>
+    
+      <li>
+        <a href="/github/sagemanifolds/SageManifolds/tree/master/Worksheets">Worksheets</a>
+      </li>
+    
+      <li>
+        <a href="/github/sagemanifolds/SageManifolds/tree/master/Worksheets/v1.0">v1.0</a>
+      </li>
+    
+  </ol>
+  
+  <div id="notebook">
+    <div id="notebook-container">
+      
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Strain-and-stress-tensors-in-spherical-coordinates">Strain and stress tensors in spherical coordinates<a class="anchor-link" href="#Strain-and-stress-tensors-in-spherical-coordinates">&#182;</a></h1><p>This worksheet demonstrates a few capabilities of <a href="http://sagemanifolds.obspm.fr/">SageManifolds</a> (version 1.0, as included in SageMath 7.5) in computations regarding elasticity theory in Cartesian coordinates.</p>
+<p>Click <a href="https://raw.githubusercontent.com/sagemanifolds/SageManifolds/master/Worksheets/v1.0/SM_elasticity_spher.ipynb">here</a> to download the worksheet file (ipynb format). To run it, you must start SageMath with the Jupyter notebook, via the command <code>sage -n jupyter</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>NB:</em> a version of SageMath at least equal to 7.5 is required to run this worksheet:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">version</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[1]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;SageMath version 7.5.1, Release Date: 2017-01-15&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First we set up the notebook to display mathematical objects using LaTeX rendering:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">display</span> latex
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Euclidean-3-space-and-spherical-coordinates">Euclidean 3-space and spherical coordinates<a class="anchor-link" href="#Euclidean-3-space-and-spherical-coordinates">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We introduce the Euclidean space as a 3-dimensional differentiable manifold:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">Manifold</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="n">start_index</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We shall make use of spherical coordinates $(r,\theta,\phi)$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">spher</span><span class="o">.&lt;</span><span class="n">r</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">ph</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">chart</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;r:(0,+oo) th:(0,pi):\theta ph:(0,2*pi):\phi&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">spher</span><span class="p">)</span>
+<span class="n">spher</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Chart (M, (r, th, ph))
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(M,(r, {\theta}, {\phi})\right)</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Spherical coordinates do not form a regular coordinate system of the Euclidean space. So declaring that they span $M$ means that, strictly speaking, the manifold $M$ is not the whole Euclidean space, but the Euclidean space minus some half plane (the azimuthal origin). However, in this worksheet, this difference will not matter.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The natural vector frame of spherical coordinates is</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">spher</span><span class="o">.</span><span class="n">frame</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(M, \left(\frac{\partial}{\partial r },\frac{\partial}{\partial {\theta} },\frac{\partial}{\partial {\phi} }\right)\right)</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We shall expand vector and tensor fields on the orthonormal frame $(e_1, e_2, e_3)$ associated with spherical coordinates, which is related to the natural frame $(\partial/\partial r, \partial/\partial\theta, \partial/\partial\phi)$ displayed above by means of the following field of automorphisms:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">to_orthonormal</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">automorphism_field</span><span class="p">()</span>
+<span class="n">to_orthonormal</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">to_orthonormal</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">r</span>
+<span class="n">to_orthonormal</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">th</span><span class="p">))</span>
+<span class="n">to_orthonormal</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{\partial}{\partial r }\otimes \mathrm{d} r + \frac{1}{r} \frac{\partial}{\partial {\theta} }\otimes \mathrm{d} {\theta} + \frac{1}{r \sin\left({\theta}\right)} \frac{\partial}{\partial {\phi} }\otimes \mathrm{d} {\phi}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In other words, the change-of-basis matrix is</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">to_orthonormal</span><span class="p">[:]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(\begin{array}{rrr}
+1 & 0 & 0 \\
+0 & \frac{1}{r} & 0 \\
+0 & 0 & \frac{1}{r \sin\left({\theta}\right)}
+\end{array}\right)</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We construct the orthonormal frame from the natural frame of spherical coordinates by this change of basis:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">spher</span><span class="o">.</span><span class="n">frame</span><span class="p">()</span><span class="o">.</span><span class="n">new_frame</span><span class="p">(</span><span class="n">to_orthonormal</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">)</span>
+<span class="n">e</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(M, \left(e_1,e_2,e_3\right)\right)</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}e_1 = \frac{\partial}{\partial r }</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">e</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}e_2 = \frac{1}{r} \frac{\partial}{\partial {\theta} }</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">e</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}e_3 = \frac{1}{r \sin\left({\theta}\right)} \frac{\partial}{\partial {\phi} }</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>At this stage, the default vector frame on $M$ is the first one introduced, namely the natural frame of spherical coordinates:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">M</span><span class="o">.</span><span class="n">default_frame</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(M, \left(\frac{\partial}{\partial r },\frac{\partial}{\partial {\theta} },\frac{\partial}{\partial {\phi} }\right)\right)</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since we prefer the orthonormal frame, we declare</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">M</span><span class="o">.</span><span class="n">set_default_frame</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Then, by default, all vector and tensor fields are displayed with respect to that frame:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">e</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}e_3 = e_3</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To get the same output as in <code>Out[10]</code>, one should specify the frame for display, since this is no longer the default one:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">e</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">spher</span><span class="o">.</span><span class="n">frame</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}e_3 = \frac{1}{r \sin\left({\theta}\right)} \frac{\partial}{\partial {\phi} }</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Displacement-vector-and-strain-tensor">Displacement vector and strain tensor<a class="anchor-link" href="#Displacement-vector-and-strain-tensor">&#182;</a></h2><p>Let us define the <strong>displacement vector</strong> $U$ in terms of its components w.r.t. the orthonormal spherical frame:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">U</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">vector_field</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;U&#39;</span><span class="p">)</span>
+<span class="n">U</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">function</span><span class="p">(</span><span class="s1">&#39;U_1&#39;</span><span class="p">)(</span><span class="n">r</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">ph</span><span class="p">),</span> <span class="n">function</span><span class="p">(</span><span class="s1">&#39;U_2&#39;</span><span class="p">)(</span><span class="n">r</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">ph</span><span class="p">),</span>
+        <span class="n">function</span><span class="p">(</span><span class="s1">&#39;U_3&#39;</span><span class="p">)(</span><span class="n">r</span><span class="p">,</span><span class="n">th</span><span class="p">,</span><span class="n">ph</span><span class="p">)]</span>
+<span class="n">U</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}U = U_{1}\left(r, {\theta}, {\phi}\right) e_1 + U_{2}\left(r, {\theta}, {\phi}\right) e_2 + U_{3}\left(r, {\theta}, {\phi}\right) e_3</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The following computations will involve the metric $g$ of the Euclidean space. At the current stage of SageManifolds, we need to introduce it explicitly, as a Riemannian metric on the manifold $M$ (in a future version of SageManifolds, one shall to declare $M$ as an Euclidean space, and not merely as a manifold, so that it will come equipped with $g$):</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">riemannian_metric</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Riemannian metric g on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since $e$ is supposed to be an orthonormal frame, we declare that the components of $g$ with respect to it are
+$\mathrm{diag}(1,1,1)$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">g</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">g</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">g</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+<span class="n">g</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}g = e^1\otimes e^1+e^2\otimes e^2+e^3\otimes e^3</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The expression of $g$ with respect to the natural frame of spherical coordinates is then</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">g</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">spher</span><span class="o">.</span><span class="n">frame</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[19]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}g = \mathrm{d} r\otimes \mathrm{d} r + r^{2} \mathrm{d} {\theta}\otimes \mathrm{d} {\theta} + r^{2} \sin\left({\theta}\right)^{2} \mathrm{d} {\phi}\otimes \mathrm{d} {\phi}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The covariant derivative operator $\nabla$ is introduced as the (Levi-Civita) connection associated with $g$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nabla</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">connection</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">nabla</span><span class="p">)</span>
+<span class="n">nabla</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Levi-Civita connection nabla_g associated with the Riemannian metric g on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[20]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\nabla_{g}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The connection coefficients with respect to the spherical orthonormal frame $e$ are</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nabla</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[21]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{lcl} \Gamma_{\phantom{\, 1}\,2\,2}^{\,1\phantom{\, 2}\phantom{\, 2}} & = & -\frac{1}{r} \\ \Gamma_{\phantom{\, 1}\,3\,3}^{\,1\phantom{\, 3}\phantom{\, 3}} & = & -\frac{1}{r} \\ \Gamma_{\phantom{\, 2}\,1\,2}^{\,2\phantom{\, 1}\phantom{\, 2}} & = & \frac{1}{r} \\ \Gamma_{\phantom{\, 2}\,3\,3}^{\,2\phantom{\, 3}\phantom{\, 3}} & = & -\frac{\cos\left({\theta}\right)}{r \sin\left({\theta}\right)} \\ \Gamma_{\phantom{\, 3}\,1\,3}^{\,3\phantom{\, 1}\phantom{\, 3}} & = & \frac{1}{r} \\ \Gamma_{\phantom{\, 3}\,2\,3}^{\,3\phantom{\, 2}\phantom{\, 3}} & = & \frac{\cos\left({\theta}\right)}{r \sin\left({\theta}\right)} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>while those with respect to the natural frame of spherical coordinates (Christoffel symbols) are:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nabla</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">spher</span><span class="o">.</span><span class="n">frame</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[22]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{lcl} \Gamma_{ \phantom{\, r} \, {\theta} \, {\theta} }^{ \, r \phantom{\, {\theta}} \phantom{\, {\theta}} } & = & -r \\ \Gamma_{ \phantom{\, r} \, {\phi} \, {\phi} }^{ \, r \phantom{\, {\phi}} \phantom{\, {\phi}} } & = & -r \sin\left({\theta}\right)^{2} \\ \Gamma_{ \phantom{\, {\theta}} \, r \, {\theta} }^{ \, {\theta} \phantom{\, r} \phantom{\, {\theta}} } & = & \frac{1}{r} \\ \Gamma_{ \phantom{\, {\theta}} \, {\theta} \, r }^{ \, {\theta} \phantom{\, {\theta}} \phantom{\, r} } & = & \frac{1}{r} \\ \Gamma_{ \phantom{\, {\theta}} \, {\phi} \, {\phi} }^{ \, {\theta} \phantom{\, {\phi}} \phantom{\, {\phi}} } & = & -\cos\left({\theta}\right) \sin\left({\theta}\right) \\ \Gamma_{ \phantom{\, {\phi}} \, r \, {\phi} }^{ \, {\phi} \phantom{\, r} \phantom{\, {\phi}} } & = & \frac{1}{r} \\ \Gamma_{ \phantom{\, {\phi}} \, {\theta} \, {\phi} }^{ \, {\phi} \phantom{\, {\theta}} \phantom{\, {\phi}} } & = & \frac{\cos\left({\theta}\right)}{\sin\left({\theta}\right)} \\ \Gamma_{ \phantom{\, {\phi}} \, {\phi} \, r }^{ \, {\phi} \phantom{\, {\phi}} \phantom{\, r} } & = & \frac{1}{r} \\ \Gamma_{ \phantom{\, {\phi}} \, {\phi} \, {\theta} }^{ \, {\phi} \phantom{\, {\phi}} \phantom{\, {\theta}} } & = & \frac{\cos\left({\theta}\right)}{\sin\left({\theta}\right)} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The covariant derivative of the displacement vector $U$ is</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nabU</span> <span class="o">=</span> <span class="n">nabla</span><span class="p">(</span><span class="n">U</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">nabU</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field nabla_g(U) of type (1,1) on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nabU</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[24]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\nabla_{g} U = \frac{\partial\,U_{1}}{\partial r} e_1\otimes e^1 + \left( -\frac{U_{2}\left(r, {\theta}, {\phi}\right) - \frac{\partial\,U_{1}}{\partial {\theta}}}{r} \right) e_1\otimes e^2 + \left( -\frac{U_{3}\left(r, {\theta}, {\phi}\right) \sin\left({\theta}\right) - \frac{\partial\,U_{1}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \right) e_1\otimes e^3 + \frac{\partial\,U_{2}}{\partial r} e_2\otimes e^1 + \left( \frac{U_{1}\left(r, {\theta}, {\phi}\right) + \frac{\partial\,U_{2}}{\partial {\theta}}}{r} \right) e_2\otimes e^2 + \left( -\frac{U_{3}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) - \frac{\partial\,U_{2}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \right) e_2\otimes e^3 + \frac{\partial\,U_{3}}{\partial r} e_3\otimes e^1 + \frac{\frac{\partial\,U_{3}}{\partial {\theta}}}{r} e_3\otimes e^2 + \left( \frac{U_{2}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) + U_{1}\left(r, {\theta}, {\phi}\right) \sin\left({\theta}\right) + \frac{\partial\,U_{3}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \right) e_3\otimes e^3</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We convert it to a tensor field of type (0,2) (i.e. a bilinear form) by lowering the upper index with $g$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nabU_form</span> <span class="o">=</span> <span class="n">nabU</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">nabU_form</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field of type (0,2) on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">nabU_form</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[26]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{\partial\,U_{1}}{\partial r} e^1\otimes e^1 + \left( -\frac{U_{2}\left(r, {\theta}, {\phi}\right) - \frac{\partial\,U_{1}}{\partial {\theta}}}{r} \right) e^1\otimes e^2 + \left( -\frac{U_{3}\left(r, {\theta}, {\phi}\right) \sin\left({\theta}\right) - \frac{\partial\,U_{1}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \right) e^1\otimes e^3 + \frac{\partial\,U_{2}}{\partial r} e^2\otimes e^1 + \left( \frac{U_{1}\left(r, {\theta}, {\phi}\right) + \frac{\partial\,U_{2}}{\partial {\theta}}}{r} \right) e^2\otimes e^2 + \left( -\frac{U_{3}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) - \frac{\partial\,U_{2}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \right) e^2\otimes e^3 + \frac{\partial\,U_{3}}{\partial r} e^3\otimes e^1 + \frac{\frac{\partial\,U_{3}}{\partial {\theta}}}{r} e^3\otimes e^2 + \left( \frac{U_{2}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) + U_{1}\left(r, {\theta}, {\phi}\right) \sin\left({\theta}\right) + \frac{\partial\,U_{3}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \right) e^3\otimes e^3</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>strain tensor</strong> $\varepsilon$ is defined as the symmetrized part of this tensor:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="n">nabU_form</span><span class="o">.</span><span class="n">symmetrize</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Field of symmetric bilinear forms on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">E</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="n">latex_name</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\varepsilon&#39;</span><span class="p">)</span>
+<span class="n">E</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[28]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\varepsilon = \frac{\partial\,U_{1}}{\partial r} e^1\otimes e^1 + \left( \frac{r \frac{\partial\,U_{2}}{\partial r} - U_{2}\left(r, {\theta}, {\phi}\right) + \frac{\partial\,U_{1}}{\partial {\theta}}}{2 \, r} \right) e^1\otimes e^2 + \left( \frac{{\left(r \frac{\partial\,U_{3}}{\partial r} - U_{3}\left(r, {\theta}, {\phi}\right)\right)} \sin\left({\theta}\right) + \frac{\partial\,U_{1}}{\partial {\phi}}}{2 \, r \sin\left({\theta}\right)} \right) e^1\otimes e^3 + \left( \frac{r \frac{\partial\,U_{2}}{\partial r} - U_{2}\left(r, {\theta}, {\phi}\right) + \frac{\partial\,U_{1}}{\partial {\theta}}}{2 \, r} \right) e^2\otimes e^1 + \left( \frac{U_{1}\left(r, {\theta}, {\phi}\right) + \frac{\partial\,U_{2}}{\partial {\theta}}}{r} \right) e^2\otimes e^2 + \left( -\frac{U_{3}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) - \sin\left({\theta}\right) \frac{\partial\,U_{3}}{\partial {\theta}} - \frac{\partial\,U_{2}}{\partial {\phi}}}{2 \, r \sin\left({\theta}\right)} \right) e^2\otimes e^3 + \left( \frac{{\left(r \frac{\partial\,U_{3}}{\partial r} - U_{3}\left(r, {\theta}, {\phi}\right)\right)} \sin\left({\theta}\right) + \frac{\partial\,U_{1}}{\partial {\phi}}}{2 \, r \sin\left({\theta}\right)} \right) e^3\otimes e^1 + \left( -\frac{U_{3}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) - \sin\left({\theta}\right) \frac{\partial\,U_{3}}{\partial {\theta}} - \frac{\partial\,U_{2}}{\partial {\phi}}}{2 \, r \sin\left({\theta}\right)} \right) e^3\otimes e^2 + \left( \frac{U_{2}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) + U_{1}\left(r, {\theta}, {\phi}\right) \sin\left({\theta}\right) + \frac{\partial\,U_{3}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \right) e^3\otimes e^3</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let us display the components of $\varepsilon$, skipping those that can be deduced by symmetry:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">E</span><span class="o">.</span><span class="n">display_comp</span><span class="p">(</span><span class="n">only_nonredundant</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[29]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{lcl} \varepsilon_{\,1\,1}^{\phantom{\, 1}\phantom{\, 1}} & = & \frac{\partial\,U_{1}}{\partial r} \\ \varepsilon_{\,1\,2}^{\phantom{\, 1}\phantom{\, 2}} & = & \frac{r \frac{\partial\,U_{2}}{\partial r} - U_{2}\left(r, {\theta}, {\phi}\right) + \frac{\partial\,U_{1}}{\partial {\theta}}}{2 \, r} \\ \varepsilon_{\,1\,3}^{\phantom{\, 1}\phantom{\, 3}} & = & \frac{{\left(r \frac{\partial\,U_{3}}{\partial r} - U_{3}\left(r, {\theta}, {\phi}\right)\right)} \sin\left({\theta}\right) + \frac{\partial\,U_{1}}{\partial {\phi}}}{2 \, r \sin\left({\theta}\right)} \\ \varepsilon_{\,2\,2}^{\phantom{\, 2}\phantom{\, 2}} & = & \frac{U_{1}\left(r, {\theta}, {\phi}\right) + \frac{\partial\,U_{2}}{\partial {\theta}}}{r} \\ \varepsilon_{\,2\,3}^{\phantom{\, 2}\phantom{\, 3}} & = & -\frac{U_{3}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) - \sin\left({\theta}\right) \frac{\partial\,U_{3}}{\partial {\theta}} - \frac{\partial\,U_{2}}{\partial {\phi}}}{2 \, r \sin\left({\theta}\right)} \\ \varepsilon_{\,3\,3}^{\phantom{\, 3}\phantom{\, 3}} & = & \frac{U_{2}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) + U_{1}\left(r, {\theta}, {\phi}\right) \sin\left({\theta}\right) + \frac{\partial\,U_{3}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Stress-tensor-and-Hooke's-law">Stress tensor and Hooke's law<a class="anchor-link" href="#Stress-tensor-and-Hooke's-law">&#182;</a></h2><p>To form the stress tensor according to Hooke's law, we introduce first the Lamé constants:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;ll&#39;</span><span class="p">,</span> <span class="n">latex_name</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\lambda&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[30]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}{\lambda}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;mu&#39;</span><span class="p">,</span> <span class="n">latex_name</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\mu&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[31]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}{\mu}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The trace (with respect to $g$) of the bilinear form $\varepsilon$ is obtained by (i) raising the first index (<code>pos=0</code>) by means of $g$ and (ii) by taking the trace of the resulting endomorphism:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">trE</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">up</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">trace</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">trE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Scalar field on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">trE</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[33]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{llcl} & M & \longrightarrow & \mathbb{R} \\ & \left(r, {\theta}, {\phi}\right) & \longmapsto & \frac{U_{2}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) + {\left(r \frac{\partial\,U_{1}}{\partial r} + 2 \, U_{1}\left(r, {\theta}, {\phi}\right) + \frac{\partial\,U_{2}}{\partial {\theta}}\right)} \sin\left({\theta}\right) + \frac{\partial\,U_{3}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>stress tensor</strong> $S$ is obtained via Hooke's law for isotropic material:
+$$ S = \lambda \, \mathrm{tr}\varepsilon \; g + 2\mu \, \varepsilon$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">ll</span><span class="o">*</span><span class="n">trE</span><span class="o">*</span><span class="n">g</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">mu</span><span class="o">*</span><span class="n">E</span>
+<span class="k">print</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Field of symmetric bilinear forms on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">)</span>
+<span class="n">S</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[35]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}S = \left( \frac{{\lambda} U_{2}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) + {\left({\left({\lambda} + 2 \, {\mu}\right)} r \frac{\partial\,U_{1}}{\partial r} + 2 \, {\lambda} U_{1}\left(r, {\theta}, {\phi}\right) + {\lambda} \frac{\partial\,U_{2}}{\partial {\theta}}\right)} \sin\left({\theta}\right) + {\lambda} \frac{\partial\,U_{3}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \right) e^1\otimes e^1 + \left( \frac{{\mu} r \frac{\partial\,U_{2}}{\partial r} - {\mu} U_{2}\left(r, {\theta}, {\phi}\right) + {\mu} \frac{\partial\,U_{1}}{\partial {\theta}}}{r} \right) e^1\otimes e^2 + \left( \frac{{\left({\mu} r \frac{\partial\,U_{3}}{\partial r} - {\mu} U_{3}\left(r, {\theta}, {\phi}\right)\right)} \sin\left({\theta}\right) + {\mu} \frac{\partial\,U_{1}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \right) e^1\otimes e^3 + \left( \frac{{\mu} r \frac{\partial\,U_{2}}{\partial r} - {\mu} U_{2}\left(r, {\theta}, {\phi}\right) + {\mu} \frac{\partial\,U_{1}}{\partial {\theta}}}{r} \right) e^2\otimes e^1 + \left( \frac{{\lambda} U_{2}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) + {\left({\lambda} r \frac{\partial\,U_{1}}{\partial r} + 2 \, {\left({\lambda} + {\mu}\right)} U_{1}\left(r, {\theta}, {\phi}\right) + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{2}}{\partial {\theta}}\right)} \sin\left({\theta}\right) + {\lambda} \frac{\partial\,U_{3}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \right) e^2\otimes e^2 + \left( -\frac{{\mu} U_{3}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) - {\mu} \sin\left({\theta}\right) \frac{\partial\,U_{3}}{\partial {\theta}} - {\mu} \frac{\partial\,U_{2}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \right) e^2\otimes e^3 + \left( \frac{{\left({\mu} r \frac{\partial\,U_{3}}{\partial r} - {\mu} U_{3}\left(r, {\theta}, {\phi}\right)\right)} \sin\left({\theta}\right) + {\mu} \frac{\partial\,U_{1}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \right) e^3\otimes e^1 + \left( -\frac{{\mu} U_{3}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) - {\mu} \sin\left({\theta}\right) \frac{\partial\,U_{3}}{\partial {\theta}} - {\mu} \frac{\partial\,U_{2}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \right) e^3\otimes e^2 + \left( \frac{{\left({\lambda} + 2 \, {\mu}\right)} U_{2}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) + {\left({\lambda} r \frac{\partial\,U_{1}}{\partial r} + 2 \, {\left({\lambda} + {\mu}\right)} U_{1}\left(r, {\theta}, {\phi}\right) + {\lambda} \frac{\partial\,U_{2}}{\partial {\theta}}\right)} \sin\left({\theta}\right) + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{3}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \right) e^3\otimes e^3</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S</span><span class="o">.</span><span class="n">display_comp</span><span class="p">(</span><span class="n">only_nonredundant</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[36]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{lcl} S_{\,1\,1}^{\phantom{\, 1}\phantom{\, 1}} & = & \frac{{\lambda} U_{2}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) + {\left({\left({\lambda} + 2 \, {\mu}\right)} r \frac{\partial\,U_{1}}{\partial r} + 2 \, {\lambda} U_{1}\left(r, {\theta}, {\phi}\right) + {\lambda} \frac{\partial\,U_{2}}{\partial {\theta}}\right)} \sin\left({\theta}\right) + {\lambda} \frac{\partial\,U_{3}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \\ S_{\,1\,2}^{\phantom{\, 1}\phantom{\, 2}} & = & \frac{{\mu} r \frac{\partial\,U_{2}}{\partial r} - {\mu} U_{2}\left(r, {\theta}, {\phi}\right) + {\mu} \frac{\partial\,U_{1}}{\partial {\theta}}}{r} \\ S_{\,1\,3}^{\phantom{\, 1}\phantom{\, 3}} & = & \frac{{\left({\mu} r \frac{\partial\,U_{3}}{\partial r} - {\mu} U_{3}\left(r, {\theta}, {\phi}\right)\right)} \sin\left({\theta}\right) + {\mu} \frac{\partial\,U_{1}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \\ S_{\,2\,2}^{\phantom{\, 2}\phantom{\, 2}} & = & \frac{{\lambda} U_{2}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) + {\left({\lambda} r \frac{\partial\,U_{1}}{\partial r} + 2 \, {\left({\lambda} + {\mu}\right)} U_{1}\left(r, {\theta}, {\phi}\right) + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{2}}{\partial {\theta}}\right)} \sin\left({\theta}\right) + {\lambda} \frac{\partial\,U_{3}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \\ S_{\,2\,3}^{\phantom{\, 2}\phantom{\, 3}} & = & -\frac{{\mu} U_{3}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) - {\mu} \sin\left({\theta}\right) \frac{\partial\,U_{3}}{\partial {\theta}} - {\mu} \frac{\partial\,U_{2}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \\ S_{\,3\,3}^{\phantom{\, 3}\phantom{\, 3}} & = & \frac{{\left({\lambda} + 2 \, {\mu}\right)} U_{2}\left(r, {\theta}, {\phi}\right) \cos\left({\theta}\right) + {\left({\lambda} r \frac{\partial\,U_{1}}{\partial r} + 2 \, {\left({\lambda} + {\mu}\right)} U_{1}\left(r, {\theta}, {\phi}\right) + {\lambda} \frac{\partial\,U_{2}}{\partial {\theta}}\right)} \sin\left({\theta}\right) + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{3}}{\partial {\phi}}}{r \sin\left({\theta}\right)} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Each component can be accessed individually:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">S</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[37]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{{\mu} r \frac{\partial\,U_{2}}{\partial r} - {\mu} U_{2}\left(r, {\theta}, {\phi}\right) + {\mu} \frac{\partial\,U_{1}}{\partial {\theta}}}{r}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Divergence-of-the-stress-tensor">Divergence of the stress tensor<a class="anchor-link" href="#Divergence-of-the-stress-tensor">&#182;</a></h2><p>The divergence of the stress tensor (with respect to $g$) is the 1-form:
+$$ f_i = \nabla_j S^j_{\ \, i} $$
+In a next version of SageManifolds, there will be a function <code>divergence()</code>. For the moment, to evaluate $f$, 
+we first form the tensor $S^j_{\ \, i}$ by raising the first index (<code>pos=0</code>) of $S$ with $g$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">SU</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">up</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">SU</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field of type (1,1) on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The divergence is obtained by taking the trace on the first index (<code>0</code>) and the third one (<code>2</code>) of the tensor
+$(\nabla S)^j_{\ \, ik} = \nabla_k S^j_{\ \, i}$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">divS</span> <span class="o">=</span> <span class="n">nabla</span><span class="p">(</span><span class="n">SU</span><span class="p">)</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">divS</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1-form on the 3-dimensional differentiable manifold M
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">divS</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+<span class="n">divS</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[40]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}f = \left( \frac{{\left({\left({\lambda} + 2 \, {\mu}\right)} r^{2} \frac{\partial^2\,U_{1}}{\partial r ^ 2} + 2 \, {\left({\lambda} + 2 \, {\mu}\right)} r \frac{\partial\,U_{1}}{\partial r} + {\left({\lambda} + {\mu}\right)} r \frac{\partial^2\,U_{2}}{\partial r\partial {\theta}} - 2 \, {\left({\lambda} + 2 \, {\mu}\right)} U_{1}\left(r, {\theta}, {\phi}\right) + {\mu} \frac{\partial^2\,U_{1}}{\partial {\theta} ^ 2} - {\left({\lambda} + 3 \, {\mu}\right)} \frac{\partial\,U_{2}}{\partial {\theta}}\right)} \sin\left({\theta}\right)^{2} + {\left({\left({\lambda} + {\mu}\right)} r \frac{\partial^2\,U_{3}}{\partial r\partial {\phi}} + {\left({\left({\lambda} + {\mu}\right)} r \frac{\partial\,U_{2}}{\partial r} - {\left({\lambda} + 3 \, {\mu}\right)} U_{2}\left(r, {\theta}, {\phi}\right) + {\mu} \frac{\partial\,U_{1}}{\partial {\theta}}\right)} \cos\left({\theta}\right) - {\left({\lambda} + 3 \, {\mu}\right)} \frac{\partial\,U_{3}}{\partial {\phi}}\right)} \sin\left({\theta}\right) + {\mu} \frac{\partial^2\,U_{1}}{\partial {\phi} ^ 2}}{r^{2} \sin\left({\theta}\right)^{2}} \right) e^1 + \left( \frac{{\left({\mu} r^{2} \frac{\partial^2\,U_{2}}{\partial r ^ 2} + {\left({\lambda} + {\mu}\right)} r \frac{\partial^2\,U_{1}}{\partial r\partial {\theta}} + 2 \, {\mu} r \frac{\partial\,U_{2}}{\partial r} + 2 \, {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{1}}{\partial {\theta}} + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial^2\,U_{2}}{\partial {\theta} ^ 2}\right)} \sin\left({\theta}\right)^{2} - {\left({\lambda} + 3 \, {\mu}\right)} \cos\left({\theta}\right) \frac{\partial\,U_{3}}{\partial {\phi}} - {\left({\lambda} + 2 \, {\mu}\right)} U_{2}\left(r, {\theta}, {\phi}\right) + {\left({\left({\lambda} + 2 \, {\mu}\right)} \cos\left({\theta}\right) \frac{\partial\,U_{2}}{\partial {\theta}} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{3}}{\partial {\theta}\partial {\phi}}\right)} \sin\left({\theta}\right) + {\mu} \frac{\partial^2\,U_{2}}{\partial {\phi} ^ 2}}{r^{2} \sin\left({\theta}\right)^{2}} \right) e^2 + \left( \frac{{\left({\mu} r^{2} \frac{\partial^2\,U_{3}}{\partial r ^ 2} + 2 \, {\mu} r \frac{\partial\,U_{3}}{\partial r} + {\mu} \frac{\partial^2\,U_{3}}{\partial {\theta} ^ 2}\right)} \sin\left({\theta}\right)^{2} + {\left({\lambda} + 3 \, {\mu}\right)} \cos\left({\theta}\right) \frac{\partial\,U_{2}}{\partial {\phi}} - {\mu} U_{3}\left(r, {\theta}, {\phi}\right) + {\left({\left({\lambda} + {\mu}\right)} r \frac{\partial^2\,U_{1}}{\partial r\partial {\phi}} + {\mu} \cos\left({\theta}\right) \frac{\partial\,U_{3}}{\partial {\theta}} + 2 \, {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{1}}{\partial {\phi}} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{2}}{\partial {\theta}\partial {\phi}}\right)} \sin\left({\theta}\right) + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial^2\,U_{3}}{\partial {\phi} ^ 2}}{r^{2} \sin\left({\theta}\right)^{2}} \right) e^3</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">divS</span><span class="o">.</span><span class="n">display_comp</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[41]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{lcl} f_{\,1}^{\phantom{\, 1}} & = & \frac{{\left({\left({\lambda} + 2 \, {\mu}\right)} r^{2} \frac{\partial^2\,U_{1}}{\partial r ^ 2} + 2 \, {\left({\lambda} + 2 \, {\mu}\right)} r \frac{\partial\,U_{1}}{\partial r} + {\left({\lambda} + {\mu}\right)} r \frac{\partial^2\,U_{2}}{\partial r\partial {\theta}} - 2 \, {\left({\lambda} + 2 \, {\mu}\right)} U_{1}\left(r, {\theta}, {\phi}\right) + {\mu} \frac{\partial^2\,U_{1}}{\partial {\theta} ^ 2} - {\left({\lambda} + 3 \, {\mu}\right)} \frac{\partial\,U_{2}}{\partial {\theta}}\right)} \sin\left({\theta}\right)^{2} + {\left({\left({\lambda} + {\mu}\right)} r \frac{\partial^2\,U_{3}}{\partial r\partial {\phi}} + {\left({\left({\lambda} + {\mu}\right)} r \frac{\partial\,U_{2}}{\partial r} - {\left({\lambda} + 3 \, {\mu}\right)} U_{2}\left(r, {\theta}, {\phi}\right) + {\mu} \frac{\partial\,U_{1}}{\partial {\theta}}\right)} \cos\left({\theta}\right) - {\left({\lambda} + 3 \, {\mu}\right)} \frac{\partial\,U_{3}}{\partial {\phi}}\right)} \sin\left({\theta}\right) + {\mu} \frac{\partial^2\,U_{1}}{\partial {\phi} ^ 2}}{r^{2} \sin\left({\theta}\right)^{2}} \\ f_{\,2}^{\phantom{\, 2}} & = & \frac{{\left({\mu} r^{2} \frac{\partial^2\,U_{2}}{\partial r ^ 2} + {\left({\lambda} + {\mu}\right)} r \frac{\partial^2\,U_{1}}{\partial r\partial {\theta}} + 2 \, {\mu} r \frac{\partial\,U_{2}}{\partial r} + 2 \, {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{1}}{\partial {\theta}} + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial^2\,U_{2}}{\partial {\theta} ^ 2}\right)} \sin\left({\theta}\right)^{2} - {\left({\lambda} + 3 \, {\mu}\right)} \cos\left({\theta}\right) \frac{\partial\,U_{3}}{\partial {\phi}} - {\left({\lambda} + 2 \, {\mu}\right)} U_{2}\left(r, {\theta}, {\phi}\right) + {\left({\left({\lambda} + 2 \, {\mu}\right)} \cos\left({\theta}\right) \frac{\partial\,U_{2}}{\partial {\theta}} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{3}}{\partial {\theta}\partial {\phi}}\right)} \sin\left({\theta}\right) + {\mu} \frac{\partial^2\,U_{2}}{\partial {\phi} ^ 2}}{r^{2} \sin\left({\theta}\right)^{2}} \\ f_{\,3}^{\phantom{\, 3}} & = & \frac{{\left({\mu} r^{2} \frac{\partial^2\,U_{3}}{\partial r ^ 2} + 2 \, {\mu} r \frac{\partial\,U_{3}}{\partial r} + {\mu} \frac{\partial^2\,U_{3}}{\partial {\theta} ^ 2}\right)} \sin\left({\theta}\right)^{2} + {\left({\lambda} + 3 \, {\mu}\right)} \cos\left({\theta}\right) \frac{\partial\,U_{2}}{\partial {\phi}} - {\mu} U_{3}\left(r, {\theta}, {\phi}\right) + {\left({\left({\lambda} + {\mu}\right)} r \frac{\partial^2\,U_{1}}{\partial r\partial {\phi}} + {\mu} \cos\left({\theta}\right) \frac{\partial\,U_{3}}{\partial {\theta}} + 2 \, {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{1}}{\partial {\phi}} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{2}}{\partial {\theta}\partial {\phi}}\right)} \sin\left({\theta}\right) + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial^2\,U_{3}}{\partial {\phi} ^ 2}}{r^{2} \sin\left({\theta}\right)^{2}} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that $f_1$ is quite badly displayed. We get a better view by displaying the components one by one:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">divS</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[42]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{{\left({\left({\lambda} + 2 \, {\mu}\right)} r^{2} \frac{\partial^2\,U_{1}}{\partial r ^ 2} + 2 \, {\left({\lambda} + 2 \, {\mu}\right)} r \frac{\partial\,U_{1}}{\partial r} + {\left({\lambda} + {\mu}\right)} r \frac{\partial^2\,U_{2}}{\partial r\partial {\theta}} - 2 \, {\left({\lambda} + 2 \, {\mu}\right)} U_{1}\left(r, {\theta}, {\phi}\right) + {\mu} \frac{\partial^2\,U_{1}}{\partial {\theta} ^ 2} - {\left({\lambda} + 3 \, {\mu}\right)} \frac{\partial\,U_{2}}{\partial {\theta}}\right)} \sin\left({\theta}\right)^{2} + {\left({\left({\lambda} + {\mu}\right)} r \frac{\partial^2\,U_{3}}{\partial r\partial {\phi}} + {\left({\left({\lambda} + {\mu}\right)} r \frac{\partial\,U_{2}}{\partial r} - {\left({\lambda} + 3 \, {\mu}\right)} U_{2}\left(r, {\theta}, {\phi}\right) + {\mu} \frac{\partial\,U_{1}}{\partial {\theta}}\right)} \cos\left({\theta}\right) - {\left({\lambda} + 3 \, {\mu}\right)} \frac{\partial\,U_{3}}{\partial {\phi}}\right)} \sin\left({\theta}\right) + {\mu} \frac{\partial^2\,U_{1}}{\partial {\phi} ^ 2}}{r^{2} \sin\left({\theta}\right)^{2}}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">divS</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[43]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{{\left({\mu} r^{2} \frac{\partial^2\,U_{2}}{\partial r ^ 2} + {\left({\lambda} + {\mu}\right)} r \frac{\partial^2\,U_{1}}{\partial r\partial {\theta}} + 2 \, {\mu} r \frac{\partial\,U_{2}}{\partial r} + 2 \, {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{1}}{\partial {\theta}} + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial^2\,U_{2}}{\partial {\theta} ^ 2}\right)} \sin\left({\theta}\right)^{2} - {\left({\lambda} + 3 \, {\mu}\right)} \cos\left({\theta}\right) \frac{\partial\,U_{3}}{\partial {\phi}} - {\left({\lambda} + 2 \, {\mu}\right)} U_{2}\left(r, {\theta}, {\phi}\right) + {\left({\left({\lambda} + 2 \, {\mu}\right)} \cos\left({\theta}\right) \frac{\partial\,U_{2}}{\partial {\theta}} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{3}}{\partial {\theta}\partial {\phi}}\right)} \sin\left({\theta}\right) + {\mu} \frac{\partial^2\,U_{2}}{\partial {\phi} ^ 2}}{r^{2} \sin\left({\theta}\right)^{2}}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">divS</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[44]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{{\left({\mu} r^{2} \frac{\partial^2\,U_{3}}{\partial r ^ 2} + 2 \, {\mu} r \frac{\partial\,U_{3}}{\partial r} + {\mu} \frac{\partial^2\,U_{3}}{\partial {\theta} ^ 2}\right)} \sin\left({\theta}\right)^{2} + {\left({\lambda} + 3 \, {\mu}\right)} \cos\left({\theta}\right) \frac{\partial\,U_{2}}{\partial {\phi}} - {\mu} U_{3}\left(r, {\theta}, {\phi}\right) + {\left({\left({\lambda} + {\mu}\right)} r \frac{\partial^2\,U_{1}}{\partial r\partial {\phi}} + {\mu} \cos\left({\theta}\right) \frac{\partial\,U_{3}}{\partial {\theta}} + 2 \, {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial\,U_{1}}{\partial {\phi}} + {\left({\lambda} + {\mu}\right)} \frac{\partial^2\,U_{2}}{\partial {\theta}\partial {\phi}}\right)} \sin\left({\theta}\right) + {\left({\lambda} + 2 \, {\mu}\right)} \frac{\partial^2\,U_{3}}{\partial {\phi} ^ 2}}{r^{2} \sin\left({\theta}\right)^{2}}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+ 
+
+
+    </div>
+  </div>
+
+  </div>
+
+
+  
+    <footer class="footer hidden-print">
+      <div class="container">
+        <div class="col-md-4">
+          <p>
+            This website does not host notebooks, it only renders notebooks
+            available on other websites.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <p>
+            Delivered by <a href="http://www.fastly.com/">Fastly</a>,
+            Rendered by <a href="https://developer.rackspace.com/?nbviewer=awesome">Rackspace</a>
+          </p>
+          <p>
+            nbviewer GitHub <a href="https://github.com/jupyter/nbviewer">repository</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          
+  
+            
+              <p>
+                nbviewer version:
+                <a href="https://github.com/jupyter/nbviewer/commit/4f5d1d8a2539c1c8dc92873d3a775d34f0a3d417">
+                  4f5d1d8
+                </a>
+              </p>
+            
+          
+  
+  <p>
+    nbconvert version: <a href="https://github.com/jupyter/nbconvert/releases/tag/5.1.1">
+      5.1.1
+    </a>
+  </p>
+  
+
+          
+  
+  
+  <p>
+    Rendered
+    <span class='date' data-date='Fri, 07 Apr 2017 17:53:21 UTC' title='Fri, 07 Apr 2017 17:53:21 UTC'>(Fri, 07 Apr 2017 17:53:21 UTC)</span>
+  </p>
+  
+
+        </div>
+      </div>
+    </footer>
+  
+
+  <script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script>
+  <script src="/static/components/bootstrap/js/bootstrap.min.js?v=5869c96cc8f19086aee625d670d741f9"></script>
+  <script src="/static/components/headroom.js/dist/headroom.min.js?v=b0a311ea668f8e768ea375f4a7abb81c"></script>
+  <script src="/static/components/headroom.js/dist/jQuery.headroom.min.js?v=f3a1bae118315d0c234afc74dc6aab71"></script>
+
+  
+  
+  <script>
+    $(function(){ $("#menubar").headroom({
+      tolerance: 5,
+      offset: 205,
+      classes: {
+        initial: "animated",
+        pinned: "slideInDown",
+        unpinned: "slideOutUp"
+      }
+    })});
+  </script>
+
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-52617120-5', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+  <script>
+    require({
+        paths: {
+          moment: "/static/components/moment/min/moment.min.js?v=89f87298ad94aa1e6b92f42eb66da043"
+        }
+      }, ["moment"], function(moment){
+      var date = $("footer .date"),
+        m = moment(new Date(date.data('date'))),
+        update = function(){ date.text(m.fromNow()); };
+      setInterval(update, 61*1000);
+      update();
+      var w = $(window).scroll(function(event){
+        $("body").toggleClass("scrolled", w.scrollTop() > 0);
+      });
+    });
+  </script>
+  <!--NEW RELIC Stop Perf Measurement-->
+  
+  <!--NEW RELIC End-->
+</body>
+</html>

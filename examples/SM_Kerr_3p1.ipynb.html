@@ -1,0 +1,2146 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Jupyter Notebook Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <meta name="robots" content="noindex,nofollow">
+  
+
+  <!--NEW RELIC Start Perf Measurement-->
+  
+  <!--NREND-->
+
+  <!-- Le styles -->
+  <script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"abd1269b22bee152eab75bba2e8d4c35",petok:"4649e2bd68689bd393b1bad758b77e2c344a81a2-1491587516-3600",zone:"jupyter.org",rocket:"0",apps:{"ga_key":{"ua":"UA-52617120-1","ga_bs":"2"}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=f2befc48d1/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<link href="/static/build/styles.css?v=c18d49652a516277e15114bbd447f1c1" rel="stylesheet">
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Le fav and touch icons -->
+  <link rel="shortcut icon" href="/static/ico/ipynb_icon_16x16.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+        href="/static/ico/apple-touch-icon-144-precomposed.png?v=5a3c9ede93e2a8b8ea9e3f8f3da1a905">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114"
+        href="/static/ico/apple-touch-icon-114-precomposed.png?v=45d86fc8f24dc00638035e1dd7a6d898">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72"
+        href="/static/ico/apple-touch-icon-72-precomposed.png?v=540b5eb0f3cfd25f1439d1c9bd30e15f">
+  <link rel="apple-touch-icon-precomposed"
+        href="/static/ico/apple-touch-icon-57-precomposed.png?v=225f0590e187e1458625654f10a28f56">
+  
+  
+
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Notebook on nbviewer">
+  <meta name="twitter:description" content="Check out this Jupyter notebook!">
+
+  
+  <meta name="twitter:domain" content="nbviewer.ipython.org">
+  <meta name="twitter:image:src" content="http://ipython.org/ipython-doc/dev/_images/ipynb_icon_128x128.png">
+
+  
+    <link href="/static/build/notebook.css?v=d05748bef7d8f0edbc1e0133b9a41fe0" rel="stylesheet">
+  
+
+  
+
+  
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      init_mathjax = function() {
+        if (window.MathJax) {
+          // MathJax loaded
+          MathJax.Hub.Config({
+            TeX: {
+              equationNumbers: {
+                autoNumber: "AMS",
+                useLabelIds: true
+              }
+            },
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+              processEscapes: true,
+              processEnvironments: true
+            },
+            displayAlign: 'center',
+            "HTML-CSS": {
+              styles: {'.MathJax_Display': {"margin": 0}},
+              linebreaks: { automatic: true }
+            }
+          });
+          MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        }
+      }
+      init_mathjax();
+    </script>
+  
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-52617120-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+</head>
+
+<body class="nbviewer">
+
+  <!-- These are loaded at the top of the body so they are available to
+       notebook cells when they are loaded below. -->
+  <script src="/static/components/jquery/dist/jquery.min.js?v=e071abda8fe61194711cfc2ab99fe104"></script>
+  <script src="/static/components/requirejs/require.js?v=6da8be361b9ee26c5e721e76c6d4afce"></script>
+  <script src="/static/components/moment/min/moment.min.js?v=89f87298ad94aa1e6b92f42eb66da043"></script>
+
+<!-- Navbar
+================================================== -->
+  <nav id="menubar" class="navbar navbar-default navbar-fixed-top" data-spy="affix">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img src="/static/img/nav_logo.svg?v=479cefe8d932fb14a67b93911b97d70f" width="159"/>
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="active" href="http://jupyter.org">JUPYTER</a>
+          </li>
+          <li>
+    <a href="/faq" title="FAQ" >
+      
+        <span>FAQ</span>
+      
+    </a>
+  </li>
+
+          
+  
+    
+      
+        <li>
+    <a href="/format/script/github/sagemanifolds/SageManifolds/blob/master/Worksheets/v1.0/SM_Kerr_3p1.ipynb" title="View as Code" >
+      <span class="fa fa-code fa-2x menu-icon"></span>
+      <span class="menu-text">View as Code</span>
+    </a>
+  </li>
+      
+    
+  
+    
+  
+
+  
+    <li>
+    <a href="#" title="SageMath 7.5.1 Kernel" >
+      <span class="fa fa-server fa-2x menu-icon"></span>
+      <span class="menu-text">SageMath 7.5.1 Kernel</span>
+    </a>
+  </li>
+  
+
+  
+    <li>
+    <a href="https://github.com/sagemanifolds/SageManifolds/blob/master/Worksheets/v1.0/SM_Kerr_3p1.ipynb" title="View on GitHub" >
+      <span class="fa fa-github fa-2x menu-icon"></span>
+      <span class="menu-text">View on GitHub</span>
+    </a>
+  </li>
+  
+
+  <li>
+    <a href="https://raw.githubusercontent.com/sagemanifolds/SageManifolds/master/Worksheets/v1.0/SM_Kerr_3p1.ipynb" title="Download Notebook" download>
+      <span class="fa fa-download fa-2x menu-icon"></span>
+      <span class="menu-text">Download Notebook</span>
+    </a>
+  </li>
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+      
+      
+    </div>
+  </nav>
+
+  <div class="container container-main">
+    
+  
+  <ol class="breadcrumb">
+    
+      <li>
+        <a href="/github/sagemanifolds/SageManifolds/tree/master">SageManifolds</a>
+      </li>
+    
+      <li>
+        <a href="/github/sagemanifolds/SageManifolds/tree/master/Worksheets">Worksheets</a>
+      </li>
+    
+      <li>
+        <a href="/github/sagemanifolds/SageManifolds/tree/master/Worksheets/v1.0">v1.0</a>
+      </li>
+    
+  </ol>
+  
+  <div id="notebook">
+    <div id="notebook-container">
+      
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3+1-slicing-of-Kerr-spacetime">3+1 slicing of Kerr spacetime<a class="anchor-link" href="#3+1-slicing-of-Kerr-spacetime">&#182;</a></h1><p>This worksheet demonstrates a few capabilities of <a href="http://sagemanifolds.obspm.fr/">SageManifolds</a> (version 1.0, as included in SageMath 7.5) in computations regarding the 3+1 slicing of Kerr spacetime.</p>
+<p>Click <a href="https://raw.githubusercontent.com/sagemanifolds/SageManifolds/master/Worksheets/v1.0/SM_Kerr_3p1.ipynb">here</a> to download the worksheet file (ipynb format). To run it, you must start SageMath within the Jupyter notebook, via the command <code>sage -n jupyter</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>NB:</em> a version of SageMath at least equal to 7.5 is required to run this worksheet:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">version</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[1]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;SageMath version 7.5.1, Release Date: 2017-01-15&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First we set up the notebook to display mathematical objects using LaTeX rendering:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">display</span> latex
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since some computations are quite long, we ask for running them in parallel on 8 cores:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Parallelism</span><span class="p">()</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">nproc</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Spacelike-hypersurface">Spacelike hypersurface<a class="anchor-link" href="#Spacelike-hypersurface">&#182;</a></h2><p>We consider some hypersurface $\Sigma$ of a spacelike foliation $(\Sigma_t)_{t\in\mathbb{R}}$ of Kerr spacetime; we declare $\Sigma_t$ as a 3-dimensional manifold:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Sig</span> <span class="o">=</span> <span class="n">Manifold</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Sigma&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\Sigma&#39;</span><span class="p">,</span> <span class="n">start_index</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Sig</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On $\Sigma$, we consider the <span id="cell_outer_1">"rational-polynomial" coordinates</span> $(r,y,\phi)$ inheritated from the standard Boyer-Lindquist coordinates $(t,r,\theta,\phi)$ of Kerr spacetime, via $y=\cos\theta$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">X</span><span class="o">.&lt;</span><span class="n">r</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">ph</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">Sig</span><span class="o">.</span><span class="n">chart</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;r:(1,+oo) y:(-1,1) ph:(0,2*pi):\phi&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="p">;</span> <span class="n">X</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Chart (Sigma, (r, y, ph))
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(\Sigma,(r, y, {\phi})\right)</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Riemannian metric on $\Sigma$</h3><p>First the two Kerr parameters:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s1">&#39;m, a&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="s1">&#39;real&#39;</span><span class="p">)</span>
+<span class="n">assume</span><span class="p">(</span><span class="n">m</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">assume</span><span class="p">(</span><span class="n">a</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">assumptions</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left[\verb|r|\phantom{\verb!x!}\verb|is|\phantom{\verb!x!}\verb|real|, r > 1, \verb|y|\phantom{\verb!x!}\verb|is|\phantom{\verb!x!}\verb|real|, y > \left(-1\right), y < 1, \verb|ph|\phantom{\verb!x!}\verb|is|\phantom{\verb!x!}\verb|real|, {\phi} > 0, {\phi} < 2 \, \pi, \verb|m|\phantom{\verb!x!}\verb|is|\phantom{\verb!x!}\verb|real|, \verb|a|\phantom{\verb!x!}\verb|is|\phantom{\verb!x!}\verb|real|, m > 0, a > 0\right]</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For dealing with extreme Kerr, the following must be uncommented:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># m = 1 ; a = 1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Some shortcut notations:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">rho2</span> <span class="o">=</span> <span class="n">r</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">^</span><span class="mi">2</span> 
+<span class="n">Del</span> <span class="o">=</span> <span class="n">r</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">r</span> <span class="o">+</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span>
+<span class="n">AA2</span> <span class="o">=</span> <span class="n">rho2</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">BB2</span> <span class="o">=</span> <span class="n">r</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">rho2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The metric $\gamma$ induced by the spacetime metric $g$ on $\Sigma$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">gam</span> <span class="o">=</span> <span class="n">Sig</span><span class="o">.</span><span class="n">riemannian_metric</span><span class="p">(</span><span class="s1">&#39;gam&#39;</span><span class="p">,</span> <span class="n">latex_name</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\gamma&#39;</span><span class="p">)</span> 
+<span class="n">gam</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">rho2</span><span class="o">/</span><span class="n">Del</span>
+<span class="n">gam</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">rho2</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">gam</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">BB2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">gam</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\gamma = \left( \frac{a^{2} y^{2} + r^{2}}{a^{2} - 2 \, m r + r^{2}} \right) \mathrm{d} r\otimes \mathrm{d} r + \left( -\frac{a^{2} y^{2} + r^{2}}{y^{2} - 1} \right) \mathrm{d} y\otimes \mathrm{d} y + {\left(\frac{2 \, {\left(y^{2} - 1\right)} a^{2} m r}{a^{2} y^{2} + r^{2}} - a^{2} - r^{2}\right)} {\left(y^{2} - 1\right)} \mathrm{d} {\phi}\otimes \mathrm{d} {\phi}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A matrix view of the components w.r.t. coordinates $(r,y,\phi)$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">gam</span><span class="p">[:]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left(\begin{array}{rrr}
+\frac{a^{2} y^{2} + r^{2}}{a^{2} - 2 \, m r + r^{2}} & 0 & 0 \\
+0 & -\frac{a^{2} y^{2} + r^{2}}{y^{2} - 1} & 0 \\
+0 & 0 & {\left(\frac{2 \, {\left(y^{2} - 1\right)} a^{2} m r}{a^{2} y^{2} + r^{2}} - a^{2} - r^{2}\right)} {\left(y^{2} - 1\right)}
+\end{array}\right)</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Lapse function and shift vector</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="n">Sig</span><span class="o">.</span><span class="n">scalar_field</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Del</span> <span class="o">/</span> <span class="n">BB2</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;N&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">N</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Scalar field N on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{llcl} N:& \Sigma & \longrightarrow & \mathbb{R} \\ & \left(r, y, {\phi}\right) & \longmapsto & \sqrt{-\frac{a^{2} - 2 \, m r + r^{2}}{\frac{2 \, {\left(y^{2} - 1\right)} a^{2} m r}{a^{2} y^{2} + r^{2}} - a^{2} - r^{2}}} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">Sig</span><span class="o">.</span><span class="n">vector_field</span><span class="p">(</span><span class="s1">&#39;beta&#39;</span><span class="p">,</span> <span class="n">latex_name</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\beta&#39;</span><span class="p">)</span> 
+<span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="n">a</span><span class="o">/</span><span class="n">AA2</span>   
+<span class="c1"># unset components are zero </span>
+<span class="n">b</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\beta = \left( \frac{2 \, a m r}{2 \, {\left(y^{2} - 1\right)} a^{2} m r - {\left(a^{2} y^{2} + r^{2}\right)} {\left(a^{2} + r^{2}\right)}} \right) \frac{\partial}{\partial {\phi} }</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Extrinsic-curvature-of-$\Sigma$">Extrinsic curvature of $\Sigma$<a class="anchor-link" href="#Extrinsic-curvature-of-$\Sigma$">&#182;</a></h3><p>We use the formula
+$$ K_{ij} = \frac{1}{2N} \mathcal{L}_{\beta} \gamma_{ij} $$
+which is valid for any stationary spacetime:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">K</span> <span class="o">=</span> <span class="n">gam</span><span class="o">.</span><span class="n">lie_der</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">N</span><span class="p">)</span>
+<span class="n">K</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;K&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">K</span><span class="p">)</span> <span class="p">;</span> <span class="n">K</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Field of symmetric bilinear forms K on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}K = \left( \frac{{\left(a^{3} m r^{2} + 3 \, a m r^{4} + {\left(a^{5} m - a^{3} m r^{2}\right)} y^{4} - {\left(a^{5} m + 3 \, a m r^{4}\right)} y^{2}\right)} \sqrt{2 \, a^{2} m r + a^{2} r^{2} + r^{4} + {\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{2}}}{{\left(2 \, a^{2} m r^{3} + a^{2} r^{4} + r^{6} + {\left(a^{6} - 2 \, a^{4} m r + a^{4} r^{2}\right)} y^{4} + 2 \, {\left(a^{4} m r + a^{4} r^{2} - a^{2} m r^{3} + a^{2} r^{4}\right)} y^{2}\right)} \sqrt{a^{2} y^{2} + r^{2}} \sqrt{a^{2} - 2 \, m r + r^{2}}} \right) \mathrm{d} r\otimes \mathrm{d} {\phi} + \left( -\frac{2 \, \sqrt{2 \, a^{2} m r + a^{2} r^{2} + r^{4} + {\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{2}} {\left({\left(a^{5} m r - 2 \, a^{3} m^{2} r^{2} + a^{3} m r^{3}\right)} y^{3} - {\left(a^{5} m r - 2 \, a^{3} m^{2} r^{2} + a^{3} m r^{3}\right)} y\right)}}{{\left(2 \, a^{2} m r^{3} + a^{2} r^{4} + r^{6} + {\left(a^{6} - 2 \, a^{4} m r + a^{4} r^{2}\right)} y^{4} + 2 \, {\left(a^{4} m r + a^{4} r^{2} - a^{2} m r^{3} + a^{2} r^{4}\right)} y^{2}\right)} \sqrt{a^{2} y^{2} + r^{2}} \sqrt{a^{2} - 2 \, m r + r^{2}}} \right) \mathrm{d} y\otimes \mathrm{d} {\phi} + \left( \frac{{\left(a^{3} m r^{2} + 3 \, a m r^{4} + {\left(a^{5} m - a^{3} m r^{2}\right)} y^{4} - {\left(a^{5} m + 3 \, a m r^{4}\right)} y^{2}\right)} \sqrt{2 \, a^{2} m r + a^{2} r^{2} + r^{4} + {\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{2}}}{{\left(2 \, a^{2} m r^{3} + a^{2} r^{4} + r^{6} + {\left(a^{6} - 2 \, a^{4} m r + a^{4} r^{2}\right)} y^{4} + 2 \, {\left(a^{4} m r + a^{4} r^{2} - a^{2} m r^{3} + a^{2} r^{4}\right)} y^{2}\right)} \sqrt{a^{2} y^{2} + r^{2}} \sqrt{a^{2} - 2 \, m r + r^{2}}} \right) \mathrm{d} {\phi}\otimes \mathrm{d} r + \left( -\frac{2 \, \sqrt{2 \, a^{2} m r + a^{2} r^{2} + r^{4} + {\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{2}} {\left({\left(a^{5} m r - 2 \, a^{3} m^{2} r^{2} + a^{3} m r^{3}\right)} y^{3} - {\left(a^{5} m r - 2 \, a^{3} m^{2} r^{2} + a^{3} m r^{3}\right)} y\right)}}{{\left(2 \, a^{2} m r^{3} + a^{2} r^{4} + r^{6} + {\left(a^{6} - 2 \, a^{4} m r + a^{4} r^{2}\right)} y^{4} + 2 \, {\left(a^{4} m r + a^{4} r^{2} - a^{2} m r^{3} + a^{2} r^{4}\right)} y^{2}\right)} \sqrt{a^{2} y^{2} + r^{2}} \sqrt{a^{2} - 2 \, m r + r^{2}}} \right) \mathrm{d} {\phi}\otimes \mathrm{d} y</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Check (comparison with known formulas):</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Krp</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">r</span><span class="o">^</span><span class="mi">4</span><span class="o">+</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">r</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">rho2</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Del</span><span class="o">*</span><span class="n">BB2</span><span class="p">)</span>
+<span class="n">Krp</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{{\left({\left(a^{2} - r^{2}\right)} a^{2} y^{2} - a^{2} r^{2} - 3 \, r^{4}\right)} {\left(y^{2} - 1\right)} a m}{{\left(a^{2} y^{2} + r^{2}\right)}^{2} \sqrt{-{\left(\frac{2 \, {\left(y^{2} - 1\right)} a^{2} m r}{a^{2} y^{2} + r^{2}} - a^{2} - r^{2}\right)} {\left(a^{2} - 2 \, m r + r^{2}\right)}}}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">K</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">Krp</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}0</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Kyp</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="n">a</span><span class="o">^</span><span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Del</span><span class="p">)</span><span class="o">/</span><span class="n">rho2</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">BB2</span><span class="p">)</span>
+<span class="n">Kyp</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}-\frac{2 \, \sqrt{a^{2} - 2 \, m r + r^{2}} {\left(y^{2} - 1\right)} a^{3} m r y}{\sqrt{-\frac{2 \, {\left(y^{2} - 1\right)} a^{2} m r}{a^{2} y^{2} + r^{2}} + a^{2} + r^{2}} {\left(a^{2} y^{2} + r^{2}\right)}^{2}}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">K</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">Kyp</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[17]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}0</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For now on, we use the expressions Krp and Kyp above for $K_{r\phi}$ and $K_{ry}$, respectively:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">K1</span> <span class="o">=</span> <span class="n">Sig</span><span class="o">.</span><span class="n">sym_bilin_form_field</span><span class="p">(</span><span class="s1">&#39;K&#39;</span><span class="p">)</span>
+<span class="n">K1</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">Krp</span>
+<span class="n">K1</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">Kyp</span>
+<span class="n">K</span> <span class="o">=</span> <span class="n">K1</span>
+<span class="n">K</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}K = \left( \frac{{\left({\left(a^{2} - r^{2}\right)} a^{2} y^{2} - a^{2} r^{2} - 3 \, r^{4}\right)} {\left(y^{2} - 1\right)} a m}{{\left(a^{2} y^{2} + r^{2}\right)}^{2} \sqrt{-{\left(\frac{2 \, {\left(y^{2} - 1\right)} a^{2} m r}{a^{2} y^{2} + r^{2}} - a^{2} - r^{2}\right)} {\left(a^{2} - 2 \, m r + r^{2}\right)}}} \right) \mathrm{d} r\otimes \mathrm{d} {\phi} + \left( -\frac{2 \, \sqrt{a^{2} - 2 \, m r + r^{2}} {\left(y^{2} - 1\right)} a^{3} m r y}{\sqrt{-\frac{2 \, {\left(y^{2} - 1\right)} a^{2} m r}{a^{2} y^{2} + r^{2}} + a^{2} + r^{2}} {\left(a^{2} y^{2} + r^{2}\right)}^{2}} \right) \mathrm{d} y\otimes \mathrm{d} {\phi} + \left( \frac{{\left({\left(a^{2} - r^{2}\right)} a^{2} y^{2} - a^{2} r^{2} - 3 \, r^{4}\right)} {\left(y^{2} - 1\right)} a m}{{\left(a^{2} y^{2} + r^{2}\right)}^{2} \sqrt{-{\left(\frac{2 \, {\left(y^{2} - 1\right)} a^{2} m r}{a^{2} y^{2} + r^{2}} - a^{2} - r^{2}\right)} {\left(a^{2} - 2 \, m r + r^{2}\right)}}} \right) \mathrm{d} {\phi}\otimes \mathrm{d} r + \left( -\frac{2 \, \sqrt{a^{2} - 2 \, m r + r^{2}} {\left(y^{2} - 1\right)} a^{3} m r y}{\sqrt{-\frac{2 \, {\left(y^{2} - 1\right)} a^{2} m r}{a^{2} y^{2} + r^{2}} + a^{2} + r^{2}} {\left(a^{2} y^{2} + r^{2}\right)}^{2}} \right) \mathrm{d} {\phi}\otimes \mathrm{d} y</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">K</span><span class="o">.</span><span class="n">display_comp</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[19]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{lcl} K_{ \, r \, {\phi} }^{ \phantom{\, r}\phantom{\, {\phi}} } & = & \frac{{\left({\left(a^{2} - r^{2}\right)} a^{2} y^{2} - a^{2} r^{2} - 3 \, r^{4}\right)} {\left(y^{2} - 1\right)} a m}{{\left(a^{2} y^{2} + r^{2}\right)}^{2} \sqrt{-{\left(\frac{2 \, {\left(y^{2} - 1\right)} a^{2} m r}{a^{2} y^{2} + r^{2}} - a^{2} - r^{2}\right)} {\left(a^{2} - 2 \, m r + r^{2}\right)}}} \\ K_{ \, y \, {\phi} }^{ \phantom{\, y}\phantom{\, {\phi}} } & = & -\frac{2 \, \sqrt{a^{2} - 2 \, m r + r^{2}} {\left(y^{2} - 1\right)} a^{3} m r y}{\sqrt{-\frac{2 \, {\left(y^{2} - 1\right)} a^{2} m r}{a^{2} y^{2} + r^{2}} + a^{2} + r^{2}} {\left(a^{2} y^{2} + r^{2}\right)}^{2}} \\ K_{ \, {\phi} \, r }^{ \phantom{\, {\phi}}\phantom{\, r} } & = & \frac{{\left({\left(a^{2} - r^{2}\right)} a^{2} y^{2} - a^{2} r^{2} - 3 \, r^{4}\right)} {\left(y^{2} - 1\right)} a m}{{\left(a^{2} y^{2} + r^{2}\right)}^{2} \sqrt{-{\left(\frac{2 \, {\left(y^{2} - 1\right)} a^{2} m r}{a^{2} y^{2} + r^{2}} - a^{2} - r^{2}\right)} {\left(a^{2} - 2 \, m r + r^{2}\right)}}} \\ K_{ \, {\phi} \, y }^{ \phantom{\, {\phi}}\phantom{\, y} } & = & -\frac{2 \, \sqrt{a^{2} - 2 \, m r + r^{2}} {\left(y^{2} - 1\right)} a^{3} m r y}{\sqrt{-\frac{2 \, {\left(y^{2} - 1\right)} a^{2} m r}{a^{2} y^{2} + r^{2}} + a^{2} + r^{2}} {\left(a^{2} y^{2} + r^{2}\right)}^{2}} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The type-(1,1) tensor $K^\sharp$ of components $K^i_{\ \, j} = \gamma^{ik} K_{kj}$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Ku</span> <span class="o">=</span> <span class="n">K</span><span class="o">.</span><span class="n">up</span><span class="p">(</span><span class="n">gam</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Ku</span><span class="p">)</span> <span class="p">;</span> <span class="n">Ku</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field of type (1,1) on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[20]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left( \frac{{\left(a^{5} m r^{2} - 2 \, a^{3} m^{2} r^{3} + 4 \, a^{3} m r^{4} - 6 \, a m^{2} r^{5} + 3 \, a m r^{6} + {\left(a^{7} m - 2 \, a^{5} m^{2} r + 2 \, a^{3} m^{2} r^{3} - a^{3} m r^{4}\right)} y^{4} - {\left(a^{7} m - 2 \, a^{5} m^{2} r + a^{5} m r^{2} + 3 \, a^{3} m r^{4} - 6 \, a m^{2} r^{5} + 3 \, a m r^{6}\right)} y^{2}\right)} \sqrt{a^{2} y^{2} + r^{2}}}{{\left(a^{6} y^{6} + 3 \, a^{4} r^{2} y^{4} + 3 \, a^{2} r^{4} y^{2} + r^{6}\right)} \sqrt{2 \, a^{2} m r + a^{2} r^{2} + r^{4} + {\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{2}} \sqrt{a^{2} - 2 \, m r + r^{2}}} \right) \frac{\partial}{\partial r }\otimes \mathrm{d} {\phi} + \left( \frac{2 \, {\left(a^{3} m r y^{5} - 2 \, a^{3} m r y^{3} + a^{3} m r y\right)} \sqrt{a^{2} y^{2} + r^{2}} \sqrt{a^{2} - 2 \, m r + r^{2}}}{{\left(a^{6} y^{6} + 3 \, a^{4} r^{2} y^{4} + 3 \, a^{2} r^{4} y^{2} + r^{6}\right)} \sqrt{2 \, a^{2} m r + a^{2} r^{2} + r^{4} + {\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{2}}} \right) \frac{\partial}{\partial y }\otimes \mathrm{d} {\phi} + \left( \frac{{\left(a^{3} m r^{2} + 3 \, a m r^{4} - {\left(a^{5} m - a^{3} m r^{2}\right)} y^{2}\right)} \sqrt{a^{2} y^{2} + r^{2}}}{{\left(2 \, a^{2} m r^{3} + a^{2} r^{4} + r^{6} + {\left(a^{6} - 2 \, a^{4} m r + a^{4} r^{2}\right)} y^{4} + 2 \, {\left(a^{4} m r + a^{4} r^{2} - a^{2} m r^{3} + a^{2} r^{4}\right)} y^{2}\right)} \sqrt{2 \, a^{2} m r + a^{2} r^{2} + r^{4} + {\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{2}} \sqrt{a^{2} - 2 \, m r + r^{2}}} \right) \frac{\partial}{\partial {\phi} }\otimes \mathrm{d} r + \left( \frac{2 \, \sqrt{a^{2} y^{2} + r^{2}} \sqrt{a^{2} - 2 \, m r + r^{2}} a^{3} m r y}{{\left(2 \, a^{2} m r^{3} + a^{2} r^{4} + r^{6} + {\left(a^{6} - 2 \, a^{4} m r + a^{4} r^{2}\right)} y^{4} + 2 \, {\left(a^{4} m r + a^{4} r^{2} - a^{2} m r^{3} + a^{2} r^{4}\right)} y^{2}\right)} \sqrt{2 \, a^{2} m r + a^{2} r^{2} + r^{4} + {\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{2}}} \right) \frac{\partial}{\partial {\phi} }\otimes \mathrm{d} y</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We may check that the hypersurface $\Sigma$ is maximal, i.e. that $K^k_{\ \, k} = 0$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">trK</span> <span class="o">=</span> <span class="n">Ku</span><span class="o">.</span><span class="n">trace</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">trK</span><span class="p">)</span>
+<span class="n">trK</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Scalar field zero on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[21]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{llcl} 0:& \Sigma & \longrightarrow & \mathbb{R} \\ & \left(r, y, {\phi}\right) & \longmapsto & 0 \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3>Connection and curvature</h3></p>
+<p>Let us call $D$ the Levi-Civita connection associated with $\gamma$: </p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">gam</span><span class="o">.</span><span class="n">connection</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">D</span><span class="p">)</span> <span class="p">;</span> <span class="n">D</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Levi-Civita connection D associated with the Riemannian metric gam on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[22]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}D</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Ricci tensor associated with $\gamma$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Ric</span> <span class="o">=</span> <span class="n">gam</span><span class="o">.</span><span class="n">ricci</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Ric</span><span class="p">)</span> <span class="p">;</span> <span class="n">Ric</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Field of symmetric bilinear forms Ric(gam) on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[23]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{Ric}\left(\gamma\right)</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Ric</span><span class="o">.</span><span class="n">display_comp</span><span class="p">(</span><span class="n">only_nonredundant</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[24]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{lcl} \mathrm{Ric}\left(\gamma\right)_{ \, r \, r }^{ \phantom{\, r}\phantom{\, r} } & = & -\frac{5 \, a^{6} m^{2} r^{4} + 2 \, a^{4} m^{2} r^{6} + 8 \, a^{4} m r^{7} - 7 \, a^{2} m^{2} r^{8} + 7 \, a^{2} m r^{9} + 2 \, m r^{11} + {\left(a^{10} m^{2} + 3 \, a^{10} m r - 14 \, a^{8} m^{2} r^{2} - 11 \, a^{6} m^{2} r^{4} + 3 \, a^{6} m r^{5} + 6 \, {\left(a^{8} m + 2 \, a^{6} m^{3}\right)} r^{3}\right)} y^{6} + {\left(3 \, a^{6} m - 4 \, a^{4} m^{3}\right)} r^{5} - {\left(a^{10} m^{2} + 9 \, a^{10} m r - 30 \, a^{8} m^{2} r^{2} - 35 \, a^{6} m^{2} r^{4} - 16 \, a^{4} m^{2} r^{6} + 4 \, a^{4} m r^{7} + {\left(17 \, a^{6} m + 4 \, a^{4} m^{3}\right)} r^{5} + 2 \, {\left(11 \, a^{8} m + 12 \, a^{6} m^{3}\right)} r^{3}\right)} y^{4} - {\left(16 \, a^{8} m^{2} r^{2} + 29 \, a^{6} m^{2} r^{4} + 18 \, a^{4} m^{2} r^{6} + 16 \, a^{4} m r^{7} - 7 \, a^{2} m^{2} r^{8} + 5 \, a^{2} m r^{9} + {\left(17 \, a^{6} m - 8 \, a^{4} m^{3}\right)} r^{5} + 6 \, {\left(a^{8} m - 2 \, a^{6} m^{3}\right)} r^{3}\right)} y^{2}}{4 \, a^{6} m^{2} r^{6} + 6 \, a^{4} m r^{9} + 3 \, a^{2} r^{12} - 2 \, m r^{13} + r^{14} + {\left(3 \, a^{4} - 8 \, a^{2} m^{2}\right)} r^{10} + {\left(a^{6} - 4 \, a^{4} m^{2}\right)} r^{8} + {\left(a^{14} - 6 \, a^{12} m r - 6 \, a^{8} m r^{5} + a^{8} r^{6} + 3 \, {\left(a^{10} + 4 \, a^{8} m^{2}\right)} r^{4} - 4 \, {\left(3 \, a^{10} m + 2 \, a^{8} m^{3}\right)} r^{3} + 3 \, {\left(a^{12} + 4 \, a^{10} m^{2}\right)} r^{2}\right)} y^{8} + 4 \, {\left(a^{6} m - 2 \, a^{4} m^{3}\right)} r^{7} + 4 \, {\left(a^{12} m r - 5 \, a^{6} m r^{7} + a^{6} r^{8} + {\left(3 \, a^{8} + 8 \, a^{6} m^{2}\right)} r^{6} - {\left(9 \, a^{8} m + 4 \, a^{6} m^{3}\right)} r^{5} + {\left(3 \, a^{10} + 4 \, a^{8} m^{2}\right)} r^{4} - {\left(3 \, a^{10} m - 4 \, a^{8} m^{3}\right)} r^{3} + {\left(a^{12} - 4 \, a^{10} m^{2}\right)} r^{2}\right)} y^{6} + 2 \, {\left(2 \, a^{10} m^{2} r^{2} + 16 \, a^{6} m^{3} r^{5} - 12 \, a^{4} m r^{9} + 3 \, a^{4} r^{10} + {\left(9 \, a^{6} + 14 \, a^{4} m^{2}\right)} r^{8} - 2 \, {\left(9 \, a^{6} m + 2 \, a^{4} m^{3}\right)} r^{7} + 3 \, {\left(3 \, a^{8} - 2 \, a^{6} m^{2}\right)} r^{6} + 3 \, {\left(a^{10} - 6 \, a^{8} m^{2}\right)} r^{4} + 2 \, {\left(3 \, a^{10} m - 2 \, a^{8} m^{3}\right)} r^{3}\right)} y^{4} + 4 \, {\left(2 \, a^{8} m^{2} r^{4} - 3 \, a^{4} m r^{9} - 3 \, a^{2} m r^{11} + a^{2} r^{12} + {\left(3 \, a^{4} + 2 \, a^{2} m^{2}\right)} r^{10} + 3 \, {\left(a^{6} - 2 \, a^{4} m^{2}\right)} r^{8} + {\left(3 \, a^{6} m + 4 \, a^{4} m^{3}\right)} r^{7} + {\left(a^{8} - 6 \, a^{6} m^{2}\right)} r^{6} + {\left(3 \, a^{8} m - 4 \, a^{6} m^{3}\right)} r^{5}\right)} y^{2}} \\ \mathrm{Ric}\left(\gamma\right)_{ \, r \, y }^{ \phantom{\, r}\phantom{\, y} } & = & \frac{{\left(3 \, a^{10} m - 4 \, a^{8} m^{2} r + 6 \, a^{8} m r^{2} - 8 \, a^{6} m^{2} r^{3} + 3 \, a^{6} m r^{4}\right)} y^{5} + 2 \, {\left(2 \, a^{8} m^{2} r - 3 \, a^{8} m r^{2} + 12 \, a^{6} m^{2} r^{3} - 6 \, a^{6} m r^{4} + 6 \, a^{4} m^{2} r^{5} - 3 \, a^{4} m r^{6}\right)} y^{3} - {\left(16 \, a^{6} m^{2} r^{3} + 9 \, a^{6} m r^{4} + 12 \, a^{4} m^{2} r^{5} + 18 \, a^{4} m r^{6} + 9 \, a^{2} m r^{8}\right)} y}{4 \, a^{4} m^{2} r^{6} + 4 \, a^{4} m r^{7} + a^{4} r^{8} + 4 \, a^{2} m r^{9} + 2 \, a^{2} r^{10} + r^{12} + {\left(a^{12} - 4 \, a^{10} m r - 4 \, a^{8} m r^{3} + a^{8} r^{4} + 2 \, {\left(a^{10} + 2 \, a^{8} m^{2}\right)} r^{2}\right)} y^{8} + 4 \, {\left(a^{10} m r - 2 \, a^{8} m r^{3} - 3 \, a^{6} m r^{5} + a^{6} r^{6} + 2 \, {\left(a^{8} + a^{6} m^{2}\right)} r^{4} + {\left(a^{10} - 2 \, a^{8} m^{2}\right)} r^{2}\right)} y^{6} + 2 \, {\left(2 \, a^{8} m^{2} r^{2} + 6 \, a^{8} m r^{3} - 6 \, a^{4} m r^{7} + 3 \, a^{4} r^{8} + 2 \, {\left(3 \, a^{6} + a^{4} m^{2}\right)} r^{6} + {\left(3 \, a^{8} - 8 \, a^{6} m^{2}\right)} r^{4}\right)} y^{4} + 4 \, {\left(2 \, a^{6} m^{2} r^{4} + 3 \, a^{6} m r^{5} + 2 \, a^{4} m r^{7} + 2 \, a^{4} r^{8} - a^{2} m r^{9} + a^{2} r^{10} + {\left(a^{6} - 2 \, a^{4} m^{2}\right)} r^{6}\right)} y^{2}} \\ \mathrm{Ric}\left(\gamma\right)_{ \, y \, y }^{ \phantom{\, y}\phantom{\, y} } & = & \frac{6 \, a^{6} m^{2} r^{4} + 4 \, a^{4} m^{2} r^{6} + 7 \, a^{4} m r^{7} - 2 \, a^{2} m^{2} r^{8} + 5 \, a^{2} m r^{9} + m r^{11} + 2 \, {\left(3 \, a^{10} m r - 10 \, a^{8} m^{2} r^{2} - 10 \, a^{6} m^{2} r^{4} + 3 \, a^{6} m r^{5} + 2 \, {\left(3 \, a^{8} m + 4 \, a^{6} m^{3}\right)} r^{3}\right)} y^{6} + {\left(3 \, a^{6} m - 8 \, a^{4} m^{3}\right)} r^{5} - {\left(9 \, a^{10} m r - 34 \, a^{8} m^{2} r^{2} - 36 \, a^{6} m^{2} r^{4} - 2 \, a^{4} m^{2} r^{6} - a^{4} m r^{7} + {\left(7 \, a^{6} m + 8 \, a^{4} m^{3}\right)} r^{5} + {\left(17 \, a^{8} m + 32 \, a^{6} m^{3}\right)} r^{3}\right)} y^{4} - 2 \, {\left(7 \, a^{8} m^{2} r^{2} + 11 \, a^{6} m^{2} r^{4} + 3 \, a^{4} m^{2} r^{6} + 7 \, a^{4} m r^{7} - a^{2} m^{2} r^{8} + 2 \, a^{2} m r^{9} + 8 \, {\left(a^{6} m - a^{4} m^{3}\right)} r^{5} + {\left(3 \, a^{8} m - 8 \, a^{6} m^{3}\right)} r^{3}\right)} y^{2}}{4 \, a^{4} m^{2} r^{6} + 4 \, a^{4} m r^{7} + a^{4} r^{8} + 4 \, a^{2} m r^{9} + 2 \, a^{2} r^{10} + r^{12} - {\left(a^{12} - 4 \, a^{10} m r - 4 \, a^{8} m r^{3} + a^{8} r^{4} + 2 \, {\left(a^{10} + 2 \, a^{8} m^{2}\right)} r^{2}\right)} y^{10} + {\left(a^{12} - 8 \, a^{10} m r + 4 \, a^{8} m r^{3} + 12 \, a^{6} m r^{5} - 4 \, a^{6} r^{6} - {\left(7 \, a^{8} + 8 \, a^{6} m^{2}\right)} r^{4} - 2 \, {\left(a^{10} - 6 \, a^{8} m^{2}\right)} r^{2}\right)} y^{8} + 2 \, {\left(2 \, a^{10} m r - 10 \, a^{8} m r^{3} - 6 \, a^{6} m r^{5} + 6 \, a^{4} m r^{7} - 3 \, a^{4} r^{8} - 2 \, {\left(2 \, a^{6} + a^{4} m^{2}\right)} r^{6} + {\left(a^{8} + 12 \, a^{6} m^{2}\right)} r^{4} + 2 \, {\left(a^{10} - 3 \, a^{8} m^{2}\right)} r^{2}\right)} y^{6} + 2 \, {\left(2 \, a^{8} m^{2} r^{2} + 6 \, a^{8} m r^{3} - 6 \, a^{6} m r^{5} - 10 \, a^{4} m r^{7} - a^{4} r^{8} + 2 \, a^{2} m r^{9} - 2 \, a^{2} r^{10} + 2 \, {\left(2 \, a^{6} + 3 \, a^{4} m^{2}\right)} r^{6} + 3 \, {\left(a^{8} - 4 \, a^{6} m^{2}\right)} r^{4}\right)} y^{4} + {\left(8 \, a^{6} m^{2} r^{4} + 12 \, a^{6} m r^{5} + 4 \, a^{4} m r^{7} + 7 \, a^{4} r^{8} - 8 \, a^{2} m r^{9} + 2 \, a^{2} r^{10} - r^{12} + 4 \, {\left(a^{6} - 3 \, a^{4} m^{2}\right)} r^{6}\right)} y^{2}} \\ \mathrm{Ric}\left(\gamma\right)_{ \, {\phi} \, {\phi} }^{ \phantom{\, {\phi}}\phantom{\, {\phi}} } & = & \frac{a^{6} m^{2} r^{4} + 4 \, a^{4} m^{3} r^{5} + 10 \, a^{4} m^{2} r^{6} + a^{4} m r^{7} + 13 \, a^{2} m^{2} r^{8} + 2 \, a^{2} m r^{9} + m r^{11} + {\left(a^{10} m^{2} + 3 \, a^{10} m r - 18 \, a^{8} m^{2} r^{2} - 15 \, a^{6} m^{2} r^{4} + 3 \, a^{6} m r^{5} + 2 \, {\left(3 \, a^{8} m + 10 \, a^{6} m^{3}\right)} r^{3}\right)} y^{8} - {\left(2 \, a^{10} m^{2} + 3 \, a^{10} m r - 38 \, a^{8} m^{2} r^{2} - 22 \, a^{6} m^{2} r^{4} + 2 \, a^{4} m^{2} r^{6} - 5 \, a^{4} m r^{7} - {\left(7 \, a^{6} m - 4 \, a^{4} m^{3}\right)} r^{5} + {\left(a^{8} m + 60 \, a^{6} m^{3}\right)} r^{3}\right)} y^{6} + {\left(a^{10} m^{2} - 22 \, a^{8} m^{2} r^{2} + 2 \, a^{6} m^{2} r^{4} + 14 \, a^{4} m^{2} r^{6} - 3 \, a^{4} m r^{7} + 13 \, a^{2} m^{2} r^{8} + a^{2} m r^{9} - 3 \, {\left(3 \, a^{6} m - 4 \, a^{4} m^{3}\right)} r^{5} - 5 \, {\left(a^{8} m - 12 \, a^{6} m^{3}\right)} r^{3}\right)} y^{4} + {\left(2 \, a^{8} m^{2} r^{2} - 20 \, a^{6} m^{3} r^{3} - 10 \, a^{6} m^{2} r^{4} - 22 \, a^{4} m^{2} r^{6} - 3 \, a^{4} m r^{7} - 26 \, a^{2} m^{2} r^{8} - 3 \, a^{2} m r^{9} - m r^{11} - {\left(a^{6} m + 12 \, a^{4} m^{3}\right)} r^{5}\right)} y^{2}}{2 \, a^{2} m r^{9} + a^{2} r^{10} + r^{12} + {\left(a^{12} - 2 \, a^{10} m r + a^{10} r^{2}\right)} y^{10} + {\left(2 \, a^{10} m r + 5 \, a^{10} r^{2} - 8 \, a^{8} m r^{3} + 5 \, a^{8} r^{4}\right)} y^{8} + 2 \, {\left(4 \, a^{8} m r^{3} + 5 \, a^{8} r^{4} - 6 \, a^{6} m r^{5} + 5 \, a^{6} r^{6}\right)} y^{6} + 2 \, {\left(6 \, a^{6} m r^{5} + 5 \, a^{6} r^{6} - 4 \, a^{4} m r^{7} + 5 \, a^{4} r^{8}\right)} y^{4} + {\left(8 \, a^{4} m r^{7} + 5 \, a^{4} r^{8} - 2 \, a^{2} m r^{9} + 5 \, a^{2} r^{10}\right)} y^{2}} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Ric</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[25]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}-\frac{5 \, a^{6} m^{2} r^{4} + 2 \, a^{4} m^{2} r^{6} + 8 \, a^{4} m r^{7} - 7 \, a^{2} m^{2} r^{8} + 7 \, a^{2} m r^{9} + 2 \, m r^{11} + {\left(a^{10} m^{2} + 3 \, a^{10} m r - 14 \, a^{8} m^{2} r^{2} - 11 \, a^{6} m^{2} r^{4} + 3 \, a^{6} m r^{5} + 6 \, {\left(a^{8} m + 2 \, a^{6} m^{3}\right)} r^{3}\right)} y^{6} + {\left(3 \, a^{6} m - 4 \, a^{4} m^{3}\right)} r^{5} - {\left(a^{10} m^{2} + 9 \, a^{10} m r - 30 \, a^{8} m^{2} r^{2} - 35 \, a^{6} m^{2} r^{4} - 16 \, a^{4} m^{2} r^{6} + 4 \, a^{4} m r^{7} + {\left(17 \, a^{6} m + 4 \, a^{4} m^{3}\right)} r^{5} + 2 \, {\left(11 \, a^{8} m + 12 \, a^{6} m^{3}\right)} r^{3}\right)} y^{4} - {\left(16 \, a^{8} m^{2} r^{2} + 29 \, a^{6} m^{2} r^{4} + 18 \, a^{4} m^{2} r^{6} + 16 \, a^{4} m r^{7} - 7 \, a^{2} m^{2} r^{8} + 5 \, a^{2} m r^{9} + {\left(17 \, a^{6} m - 8 \, a^{4} m^{3}\right)} r^{5} + 6 \, {\left(a^{8} m - 2 \, a^{6} m^{3}\right)} r^{3}\right)} y^{2}}{4 \, a^{6} m^{2} r^{6} + 6 \, a^{4} m r^{9} + 3 \, a^{2} r^{12} - 2 \, m r^{13} + r^{14} + {\left(3 \, a^{4} - 8 \, a^{2} m^{2}\right)} r^{10} + {\left(a^{6} - 4 \, a^{4} m^{2}\right)} r^{8} + {\left(a^{14} - 6 \, a^{12} m r - 6 \, a^{8} m r^{5} + a^{8} r^{6} + 3 \, {\left(a^{10} + 4 \, a^{8} m^{2}\right)} r^{4} - 4 \, {\left(3 \, a^{10} m + 2 \, a^{8} m^{3}\right)} r^{3} + 3 \, {\left(a^{12} + 4 \, a^{10} m^{2}\right)} r^{2}\right)} y^{8} + 4 \, {\left(a^{6} m - 2 \, a^{4} m^{3}\right)} r^{7} + 4 \, {\left(a^{12} m r - 5 \, a^{6} m r^{7} + a^{6} r^{8} + {\left(3 \, a^{8} + 8 \, a^{6} m^{2}\right)} r^{6} - {\left(9 \, a^{8} m + 4 \, a^{6} m^{3}\right)} r^{5} + {\left(3 \, a^{10} + 4 \, a^{8} m^{2}\right)} r^{4} - {\left(3 \, a^{10} m - 4 \, a^{8} m^{3}\right)} r^{3} + {\left(a^{12} - 4 \, a^{10} m^{2}\right)} r^{2}\right)} y^{6} + 2 \, {\left(2 \, a^{10} m^{2} r^{2} + 16 \, a^{6} m^{3} r^{5} - 12 \, a^{4} m r^{9} + 3 \, a^{4} r^{10} + {\left(9 \, a^{6} + 14 \, a^{4} m^{2}\right)} r^{8} - 2 \, {\left(9 \, a^{6} m + 2 \, a^{4} m^{3}\right)} r^{7} + 3 \, {\left(3 \, a^{8} - 2 \, a^{6} m^{2}\right)} r^{6} + 3 \, {\left(a^{10} - 6 \, a^{8} m^{2}\right)} r^{4} + 2 \, {\left(3 \, a^{10} m - 2 \, a^{8} m^{3}\right)} r^{3}\right)} y^{4} + 4 \, {\left(2 \, a^{8} m^{2} r^{4} - 3 \, a^{4} m r^{9} - 3 \, a^{2} m r^{11} + a^{2} r^{12} + {\left(3 \, a^{4} + 2 \, a^{2} m^{2}\right)} r^{10} + 3 \, {\left(a^{6} - 2 \, a^{4} m^{2}\right)} r^{8} + {\left(3 \, a^{6} m + 4 \, a^{4} m^{3}\right)} r^{7} + {\left(a^{8} - 6 \, a^{6} m^{2}\right)} r^{6} + {\left(3 \, a^{8} m - 4 \, a^{6} m^{3}\right)} r^{5}\right)} y^{2}}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Ric</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[26]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{{\left(3 \, a^{10} m - 4 \, a^{8} m^{2} r + 6 \, a^{8} m r^{2} - 8 \, a^{6} m^{2} r^{3} + 3 \, a^{6} m r^{4}\right)} y^{5} + 2 \, {\left(2 \, a^{8} m^{2} r - 3 \, a^{8} m r^{2} + 12 \, a^{6} m^{2} r^{3} - 6 \, a^{6} m r^{4} + 6 \, a^{4} m^{2} r^{5} - 3 \, a^{4} m r^{6}\right)} y^{3} - {\left(16 \, a^{6} m^{2} r^{3} + 9 \, a^{6} m r^{4} + 12 \, a^{4} m^{2} r^{5} + 18 \, a^{4} m r^{6} + 9 \, a^{2} m r^{8}\right)} y}{4 \, a^{4} m^{2} r^{6} + 4 \, a^{4} m r^{7} + a^{4} r^{8} + 4 \, a^{2} m r^{9} + 2 \, a^{2} r^{10} + r^{12} + {\left(a^{12} - 4 \, a^{10} m r - 4 \, a^{8} m r^{3} + a^{8} r^{4} + 2 \, {\left(a^{10} + 2 \, a^{8} m^{2}\right)} r^{2}\right)} y^{8} + 4 \, {\left(a^{10} m r - 2 \, a^{8} m r^{3} - 3 \, a^{6} m r^{5} + a^{6} r^{6} + 2 \, {\left(a^{8} + a^{6} m^{2}\right)} r^{4} + {\left(a^{10} - 2 \, a^{8} m^{2}\right)} r^{2}\right)} y^{6} + 2 \, {\left(2 \, a^{8} m^{2} r^{2} + 6 \, a^{8} m r^{3} - 6 \, a^{4} m r^{7} + 3 \, a^{4} r^{8} + 2 \, {\left(3 \, a^{6} + a^{4} m^{2}\right)} r^{6} + {\left(3 \, a^{8} - 8 \, a^{6} m^{2}\right)} r^{4}\right)} y^{4} + 4 \, {\left(2 \, a^{6} m^{2} r^{4} + 3 \, a^{6} m r^{5} + 2 \, a^{4} m r^{7} + 2 \, a^{4} r^{8} - a^{2} m r^{9} + a^{2} r^{10} + {\left(a^{6} - 2 \, a^{4} m^{2}\right)} r^{6}\right)} y^{2}}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Ric</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[27]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}0</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Ric</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[28]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{6 \, a^{6} m^{2} r^{4} + 4 \, a^{4} m^{2} r^{6} + 7 \, a^{4} m r^{7} - 2 \, a^{2} m^{2} r^{8} + 5 \, a^{2} m r^{9} + m r^{11} + 2 \, {\left(3 \, a^{10} m r - 10 \, a^{8} m^{2} r^{2} - 10 \, a^{6} m^{2} r^{4} + 3 \, a^{6} m r^{5} + 2 \, {\left(3 \, a^{8} m + 4 \, a^{6} m^{3}\right)} r^{3}\right)} y^{6} + {\left(3 \, a^{6} m - 8 \, a^{4} m^{3}\right)} r^{5} - {\left(9 \, a^{10} m r - 34 \, a^{8} m^{2} r^{2} - 36 \, a^{6} m^{2} r^{4} - 2 \, a^{4} m^{2} r^{6} - a^{4} m r^{7} + {\left(7 \, a^{6} m + 8 \, a^{4} m^{3}\right)} r^{5} + {\left(17 \, a^{8} m + 32 \, a^{6} m^{3}\right)} r^{3}\right)} y^{4} - 2 \, {\left(7 \, a^{8} m^{2} r^{2} + 11 \, a^{6} m^{2} r^{4} + 3 \, a^{4} m^{2} r^{6} + 7 \, a^{4} m r^{7} - a^{2} m^{2} r^{8} + 2 \, a^{2} m r^{9} + 8 \, {\left(a^{6} m - a^{4} m^{3}\right)} r^{5} + {\left(3 \, a^{8} m - 8 \, a^{6} m^{3}\right)} r^{3}\right)} y^{2}}{4 \, a^{4} m^{2} r^{6} + 4 \, a^{4} m r^{7} + a^{4} r^{8} + 4 \, a^{2} m r^{9} + 2 \, a^{2} r^{10} + r^{12} - {\left(a^{12} - 4 \, a^{10} m r - 4 \, a^{8} m r^{3} + a^{8} r^{4} + 2 \, {\left(a^{10} + 2 \, a^{8} m^{2}\right)} r^{2}\right)} y^{10} + {\left(a^{12} - 8 \, a^{10} m r + 4 \, a^{8} m r^{3} + 12 \, a^{6} m r^{5} - 4 \, a^{6} r^{6} - {\left(7 \, a^{8} + 8 \, a^{6} m^{2}\right)} r^{4} - 2 \, {\left(a^{10} - 6 \, a^{8} m^{2}\right)} r^{2}\right)} y^{8} + 2 \, {\left(2 \, a^{10} m r - 10 \, a^{8} m r^{3} - 6 \, a^{6} m r^{5} + 6 \, a^{4} m r^{7} - 3 \, a^{4} r^{8} - 2 \, {\left(2 \, a^{6} + a^{4} m^{2}\right)} r^{6} + {\left(a^{8} + 12 \, a^{6} m^{2}\right)} r^{4} + 2 \, {\left(a^{10} - 3 \, a^{8} m^{2}\right)} r^{2}\right)} y^{6} + 2 \, {\left(2 \, a^{8} m^{2} r^{2} + 6 \, a^{8} m r^{3} - 6 \, a^{6} m r^{5} - 10 \, a^{4} m r^{7} - a^{4} r^{8} + 2 \, a^{2} m r^{9} - 2 \, a^{2} r^{10} + 2 \, {\left(2 \, a^{6} + 3 \, a^{4} m^{2}\right)} r^{6} + 3 \, {\left(a^{8} - 4 \, a^{6} m^{2}\right)} r^{4}\right)} y^{4} + {\left(8 \, a^{6} m^{2} r^{4} + 12 \, a^{6} m r^{5} + 4 \, a^{4} m r^{7} + 7 \, a^{4} r^{8} - 8 \, a^{2} m r^{9} + 2 \, a^{2} r^{10} - r^{12} + 4 \, {\left(a^{6} - 3 \, a^{4} m^{2}\right)} r^{6}\right)} y^{2}}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Ric</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[29]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}0</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Ric</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[30]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\frac{a^{6} m^{2} r^{4} + 4 \, a^{4} m^{3} r^{5} + 10 \, a^{4} m^{2} r^{6} + a^{4} m r^{7} + 13 \, a^{2} m^{2} r^{8} + 2 \, a^{2} m r^{9} + m r^{11} + {\left(a^{10} m^{2} + 3 \, a^{10} m r - 18 \, a^{8} m^{2} r^{2} - 15 \, a^{6} m^{2} r^{4} + 3 \, a^{6} m r^{5} + 2 \, {\left(3 \, a^{8} m + 10 \, a^{6} m^{3}\right)} r^{3}\right)} y^{8} - {\left(2 \, a^{10} m^{2} + 3 \, a^{10} m r - 38 \, a^{8} m^{2} r^{2} - 22 \, a^{6} m^{2} r^{4} + 2 \, a^{4} m^{2} r^{6} - 5 \, a^{4} m r^{7} - {\left(7 \, a^{6} m - 4 \, a^{4} m^{3}\right)} r^{5} + {\left(a^{8} m + 60 \, a^{6} m^{3}\right)} r^{3}\right)} y^{6} + {\left(a^{10} m^{2} - 22 \, a^{8} m^{2} r^{2} + 2 \, a^{6} m^{2} r^{4} + 14 \, a^{4} m^{2} r^{6} - 3 \, a^{4} m r^{7} + 13 \, a^{2} m^{2} r^{8} + a^{2} m r^{9} - 3 \, {\left(3 \, a^{6} m - 4 \, a^{4} m^{3}\right)} r^{5} - 5 \, {\left(a^{8} m - 12 \, a^{6} m^{3}\right)} r^{3}\right)} y^{4} + {\left(2 \, a^{8} m^{2} r^{2} - 20 \, a^{6} m^{3} r^{3} - 10 \, a^{6} m^{2} r^{4} - 22 \, a^{4} m^{2} r^{6} - 3 \, a^{4} m r^{7} - 26 \, a^{2} m^{2} r^{8} - 3 \, a^{2} m r^{9} - m r^{11} - {\left(a^{6} m + 12 \, a^{4} m^{3}\right)} r^{5}\right)} y^{2}}{2 \, a^{2} m r^{9} + a^{2} r^{10} + r^{12} + {\left(a^{12} - 2 \, a^{10} m r + a^{10} r^{2}\right)} y^{10} + {\left(2 \, a^{10} m r + 5 \, a^{10} r^{2} - 8 \, a^{8} m r^{3} + 5 \, a^{8} r^{4}\right)} y^{8} + 2 \, {\left(4 \, a^{8} m r^{3} + 5 \, a^{8} r^{4} - 6 \, a^{6} m r^{5} + 5 \, a^{6} r^{6}\right)} y^{6} + 2 \, {\left(6 \, a^{6} m r^{5} + 5 \, a^{6} r^{6} - 4 \, a^{4} m r^{7} + 5 \, a^{4} r^{8}\right)} y^{4} + {\left(8 \, a^{4} m r^{7} + 5 \, a^{4} r^{8} - 2 \, a^{2} m r^{9} + 5 \, a^{2} r^{10}\right)} y^{2}}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The scalar curvature $R = \gamma^{ij} R_{ij}$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">gam</span><span class="o">.</span><span class="n">ricci_scalar</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;R&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+<span class="n">R</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Scalar field R on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[31]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{llcl} \mathrm{r}\left(\gamma\right):& \Sigma & \longrightarrow & \mathbb{R} \\ & \left(r, y, {\phi}\right) & \longmapsto & \frac{2 \, {\left(a^{6} m^{2} r^{4} + 6 \, a^{4} m^{2} r^{6} + 9 \, a^{2} m^{2} r^{8} - {\left(a^{10} m^{2} - 6 \, a^{8} m^{2} r^{2} + 8 \, a^{6} m^{3} r^{3} - 3 \, a^{6} m^{2} r^{4}\right)} y^{6} + {\left(a^{10} m^{2} - 8 \, a^{8} m^{2} r^{2} + 16 \, a^{6} m^{3} r^{3} - 3 \, a^{6} m^{2} r^{4} - 6 \, a^{4} m^{2} r^{6}\right)} y^{4} + {\left(2 \, a^{8} m^{2} r^{2} - 8 \, a^{6} m^{3} r^{3} - a^{6} m^{2} r^{4} - 9 \, a^{2} m^{2} r^{8}\right)} y^{2}\right)}}{4 \, a^{4} m^{2} r^{8} + 4 \, a^{4} m r^{9} + a^{4} r^{10} + 4 \, a^{2} m r^{11} + 2 \, a^{2} r^{12} + r^{14} + {\left(a^{14} - 4 \, a^{12} m r - 4 \, a^{10} m r^{3} + a^{10} r^{4} + 2 \, {\left(a^{12} + 2 \, a^{10} m^{2}\right)} r^{2}\right)} y^{10} + {\left(4 \, a^{12} m r - 12 \, a^{10} m r^{3} - 16 \, a^{8} m r^{5} + 5 \, a^{8} r^{6} + 2 \, {\left(5 \, a^{10} + 6 \, a^{8} m^{2}\right)} r^{4} + {\left(5 \, a^{12} - 8 \, a^{10} m^{2}\right)} r^{2}\right)} y^{8} + 2 \, {\left(2 \, a^{10} m^{2} r^{2} + 8 \, a^{10} m r^{3} - 4 \, a^{8} m r^{5} - 12 \, a^{6} m r^{7} + 5 \, a^{6} r^{8} + 2 \, {\left(5 \, a^{8} + 3 \, a^{6} m^{2}\right)} r^{6} + {\left(5 \, a^{10} - 12 \, a^{8} m^{2}\right)} r^{4}\right)} y^{6} + 2 \, {\left(6 \, a^{8} m^{2} r^{4} + 12 \, a^{8} m r^{5} + 4 \, a^{6} m r^{7} - 8 \, a^{4} m r^{9} + 5 \, a^{4} r^{10} + 2 \, {\left(5 \, a^{6} + a^{4} m^{2}\right)} r^{8} + {\left(5 \, a^{8} - 12 \, a^{6} m^{2}\right)} r^{6}\right)} y^{4} + {\left(12 \, a^{6} m^{2} r^{6} + 16 \, a^{6} m r^{7} + 12 \, a^{4} m r^{9} + 10 \, a^{4} r^{10} - 4 \, a^{2} m r^{11} + 5 \, a^{2} r^{12} + {\left(5 \, a^{6} - 8 \, a^{4} m^{2}\right)} r^{8}\right)} y^{2}} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h2>3+1 Einstein equations</h2></p>
+<p>Let us check that the vacuum 3+1 Einstein equations are satisfied.</p>
+<p>We start by the contraint equations:</p>
+<h3>Hamiltonian constraint</h3>
+
+<p>Let us first evaluate the term $K_{ij} K^{ij}$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Kuu</span> <span class="o">=</span> <span class="n">Ku</span><span class="o">.</span><span class="n">up</span><span class="p">(</span><span class="n">gam</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">trKK</span> <span class="o">=</span> <span class="n">K</span><span class="p">[</span><span class="s1">&#39;_ij&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">Kuu</span><span class="p">[</span><span class="s1">&#39;^ij&#39;</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">trKK</span><span class="p">)</span> <span class="p">;</span> <span class="n">trKK</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Scalar field on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[32]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{llcl} & \Sigma & \longrightarrow & \mathbb{R} \\ & \left(r, y, {\phi}\right) & \longmapsto & \frac{2 \, {\left(a^{6} m^{2} r^{4} + 6 \, a^{4} m^{2} r^{6} + 9 \, a^{2} m^{2} r^{8} - {\left(a^{10} m^{2} - 6 \, a^{8} m^{2} r^{2} + 8 \, a^{6} m^{3} r^{3} - 3 \, a^{6} m^{2} r^{4}\right)} y^{6} + {\left(a^{10} m^{2} - 8 \, a^{8} m^{2} r^{2} + 16 \, a^{6} m^{3} r^{3} - 3 \, a^{6} m^{2} r^{4} - 6 \, a^{4} m^{2} r^{6}\right)} y^{4} + {\left(2 \, a^{8} m^{2} r^{2} - 8 \, a^{6} m^{3} r^{3} - a^{6} m^{2} r^{4} - 9 \, a^{2} m^{2} r^{8}\right)} y^{2}\right)}}{4 \, a^{4} m^{2} r^{8} + 4 \, a^{4} m r^{9} + a^{4} r^{10} + 4 \, a^{2} m r^{11} + 2 \, a^{2} r^{12} + r^{14} + {\left(a^{14} - 4 \, a^{12} m r - 4 \, a^{10} m r^{3} + a^{10} r^{4} + 2 \, {\left(a^{12} + 2 \, a^{10} m^{2}\right)} r^{2}\right)} y^{10} + {\left(4 \, a^{12} m r - 12 \, a^{10} m r^{3} - 16 \, a^{8} m r^{5} + 5 \, a^{8} r^{6} + 2 \, {\left(5 \, a^{10} + 6 \, a^{8} m^{2}\right)} r^{4} + {\left(5 \, a^{12} - 8 \, a^{10} m^{2}\right)} r^{2}\right)} y^{8} + 2 \, {\left(2 \, a^{10} m^{2} r^{2} + 8 \, a^{10} m r^{3} - 4 \, a^{8} m r^{5} - 12 \, a^{6} m r^{7} + 5 \, a^{6} r^{8} + 2 \, {\left(5 \, a^{8} + 3 \, a^{6} m^{2}\right)} r^{6} + {\left(5 \, a^{10} - 12 \, a^{8} m^{2}\right)} r^{4}\right)} y^{6} + 2 \, {\left(6 \, a^{8} m^{2} r^{4} + 12 \, a^{8} m r^{5} + 4 \, a^{6} m r^{7} - 8 \, a^{4} m r^{9} + 5 \, a^{4} r^{10} + 2 \, {\left(5 \, a^{6} + a^{4} m^{2}\right)} r^{8} + {\left(5 \, a^{8} - 12 \, a^{6} m^{2}\right)} r^{6}\right)} y^{4} + {\left(12 \, a^{6} m^{2} r^{6} + 16 \, a^{6} m r^{7} + 12 \, a^{4} m r^{9} + 10 \, a^{4} r^{10} - 4 \, a^{2} m r^{11} + 5 \, a^{2} r^{12} + {\left(5 \, a^{6} - 8 \, a^{4} m^{2}\right)} r^{8}\right)} y^{2}} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The vacuum Hamiltonian constraint equation is 
+$$ R + K^2 -K_{ij} K^{ij} = 0 $$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">Ham</span> <span class="o">=</span> <span class="n">R</span> <span class="o">+</span> <span class="n">trK</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">trKK</span>
+<span class="k">print</span><span class="p">(</span><span class="n">Ham</span><span class="p">)</span> <span class="p">;</span> <span class="n">Ham</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Scalar field zero on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[33]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{llcl} 0:& \Sigma & \longrightarrow & \mathbb{R} \\ & \left(r, y, {\phi}\right) & \longmapsto & 0 \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Momentum-constraint">Momentum constraint<a class="anchor-link" href="#Momentum-constraint">&#182;</a></h3><p>In vaccum, the momentum constraint is
+$$ D_j K^j_{\ \, i} - D_i K = 0 $$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">mom</span> <span class="o">=</span> <span class="n">D</span><span class="p">(</span><span class="n">Ku</span><span class="p">)</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">D</span><span class="p">(</span><span class="n">trK</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mom</span><span class="p">)</span>
+<span class="n">mom</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1-form on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[34]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}0</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h3>Dynamical Einstein equations</h3></p>
+<p>Let us first evaluate the symmetric bilinear form $k_{ij} := K_{ik} K^k_{\ \, j}$:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">KK</span> <span class="o">=</span> <span class="n">K</span><span class="p">[</span><span class="s1">&#39;_ik&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">Ku</span><span class="p">[</span><span class="s1">&#39;^k_j&#39;</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">KK</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field of type (0,2) on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">KK1</span> <span class="o">=</span> <span class="n">KK</span><span class="o">.</span><span class="n">symmetrize</span><span class="p">()</span>
+<span class="n">KK</span> <span class="o">==</span> <span class="n">KK1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[36]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">KK</span> <span class="o">=</span> <span class="n">KK1</span>
+<span class="k">print</span><span class="p">(</span><span class="n">KK</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Field of symmetric bilinear forms on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">KK</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;(KK)&#39;</span><span class="p">)</span>
+<span class="n">KK</span><span class="o">.</span><span class="n">display_comp</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[38]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{lcl} (KK)_{ \, r \, r }^{ \phantom{\, r}\phantom{\, r} } & = & \frac{a^{6} m^{2} r^{4} + 6 \, a^{4} m^{2} r^{6} + 9 \, a^{2} m^{2} r^{8} - {\left(a^{10} m^{2} - 2 \, a^{8} m^{2} r^{2} + a^{6} m^{2} r^{4}\right)} y^{6} + {\left(a^{10} m^{2} + 5 \, a^{6} m^{2} r^{4} - 6 \, a^{4} m^{2} r^{6}\right)} y^{4} - {\left(2 \, a^{8} m^{2} r^{2} + 5 \, a^{6} m^{2} r^{4} + 9 \, a^{2} m^{2} r^{8}\right)} y^{2}}{4 \, a^{6} m^{2} r^{6} + 6 \, a^{4} m r^{9} + 3 \, a^{2} r^{12} - 2 \, m r^{13} + r^{14} + {\left(3 \, a^{4} - 8 \, a^{2} m^{2}\right)} r^{10} + {\left(a^{6} - 4 \, a^{4} m^{2}\right)} r^{8} + {\left(a^{14} - 6 \, a^{12} m r - 6 \, a^{8} m r^{5} + a^{8} r^{6} + 3 \, {\left(a^{10} + 4 \, a^{8} m^{2}\right)} r^{4} - 4 \, {\left(3 \, a^{10} m + 2 \, a^{8} m^{3}\right)} r^{3} + 3 \, {\left(a^{12} + 4 \, a^{10} m^{2}\right)} r^{2}\right)} y^{8} + 4 \, {\left(a^{6} m - 2 \, a^{4} m^{3}\right)} r^{7} + 4 \, {\left(a^{12} m r - 5 \, a^{6} m r^{7} + a^{6} r^{8} + {\left(3 \, a^{8} + 8 \, a^{6} m^{2}\right)} r^{6} - {\left(9 \, a^{8} m + 4 \, a^{6} m^{3}\right)} r^{5} + {\left(3 \, a^{10} + 4 \, a^{8} m^{2}\right)} r^{4} - {\left(3 \, a^{10} m - 4 \, a^{8} m^{3}\right)} r^{3} + {\left(a^{12} - 4 \, a^{10} m^{2}\right)} r^{2}\right)} y^{6} + 2 \, {\left(2 \, a^{10} m^{2} r^{2} + 16 \, a^{6} m^{3} r^{5} - 12 \, a^{4} m r^{9} + 3 \, a^{4} r^{10} + {\left(9 \, a^{6} + 14 \, a^{4} m^{2}\right)} r^{8} - 2 \, {\left(9 \, a^{6} m + 2 \, a^{4} m^{3}\right)} r^{7} + 3 \, {\left(3 \, a^{8} - 2 \, a^{6} m^{2}\right)} r^{6} + 3 \, {\left(a^{10} - 6 \, a^{8} m^{2}\right)} r^{4} + 2 \, {\left(3 \, a^{10} m - 2 \, a^{8} m^{3}\right)} r^{3}\right)} y^{4} + 4 \, {\left(2 \, a^{8} m^{2} r^{4} - 3 \, a^{4} m r^{9} - 3 \, a^{2} m r^{11} + a^{2} r^{12} + {\left(3 \, a^{4} + 2 \, a^{2} m^{2}\right)} r^{10} + 3 \, {\left(a^{6} - 2 \, a^{4} m^{2}\right)} r^{8} + {\left(3 \, a^{6} m + 4 \, a^{4} m^{3}\right)} r^{7} + {\left(a^{8} - 6 \, a^{6} m^{2}\right)} r^{6} + {\left(3 \, a^{8} m - 4 \, a^{6} m^{3}\right)} r^{5}\right)} y^{2}} \\ (KK)_{ \, r \, y }^{ \phantom{\, r}\phantom{\, y} } & = & \frac{2 \, {\left({\left(a^{8} m^{2} r - a^{6} m^{2} r^{3}\right)} y^{5} - {\left(a^{8} m^{2} r + 3 \, a^{4} m^{2} r^{5}\right)} y^{3} + {\left(a^{6} m^{2} r^{3} + 3 \, a^{4} m^{2} r^{5}\right)} y\right)}}{4 \, a^{4} m^{2} r^{6} + 4 \, a^{4} m r^{7} + a^{4} r^{8} + 4 \, a^{2} m r^{9} + 2 \, a^{2} r^{10} + r^{12} + {\left(a^{12} - 4 \, a^{10} m r - 4 \, a^{8} m r^{3} + a^{8} r^{4} + 2 \, {\left(a^{10} + 2 \, a^{8} m^{2}\right)} r^{2}\right)} y^{8} + 4 \, {\left(a^{10} m r - 2 \, a^{8} m r^{3} - 3 \, a^{6} m r^{5} + a^{6} r^{6} + 2 \, {\left(a^{8} + a^{6} m^{2}\right)} r^{4} + {\left(a^{10} - 2 \, a^{8} m^{2}\right)} r^{2}\right)} y^{6} + 2 \, {\left(2 \, a^{8} m^{2} r^{2} + 6 \, a^{8} m r^{3} - 6 \, a^{4} m r^{7} + 3 \, a^{4} r^{8} + 2 \, {\left(3 \, a^{6} + a^{4} m^{2}\right)} r^{6} + {\left(3 \, a^{8} - 8 \, a^{6} m^{2}\right)} r^{4}\right)} y^{4} + 4 \, {\left(2 \, a^{6} m^{2} r^{4} + 3 \, a^{6} m r^{5} + 2 \, a^{4} m r^{7} + 2 \, a^{4} r^{8} - a^{2} m r^{9} + a^{2} r^{10} + {\left(a^{6} - 2 \, a^{4} m^{2}\right)} r^{6}\right)} y^{2}} \\ (KK)_{ \, y \, r }^{ \phantom{\, y}\phantom{\, r} } & = & \frac{2 \, {\left({\left(a^{8} m^{2} r - a^{6} m^{2} r^{3}\right)} y^{5} - {\left(a^{8} m^{2} r + 3 \, a^{4} m^{2} r^{5}\right)} y^{3} + {\left(a^{6} m^{2} r^{3} + 3 \, a^{4} m^{2} r^{5}\right)} y\right)}}{4 \, a^{4} m^{2} r^{6} + 4 \, a^{4} m r^{7} + a^{4} r^{8} + 4 \, a^{2} m r^{9} + 2 \, a^{2} r^{10} + r^{12} + {\left(a^{12} - 4 \, a^{10} m r - 4 \, a^{8} m r^{3} + a^{8} r^{4} + 2 \, {\left(a^{10} + 2 \, a^{8} m^{2}\right)} r^{2}\right)} y^{8} + 4 \, {\left(a^{10} m r - 2 \, a^{8} m r^{3} - 3 \, a^{6} m r^{5} + a^{6} r^{6} + 2 \, {\left(a^{8} + a^{6} m^{2}\right)} r^{4} + {\left(a^{10} - 2 \, a^{8} m^{2}\right)} r^{2}\right)} y^{6} + 2 \, {\left(2 \, a^{8} m^{2} r^{2} + 6 \, a^{8} m r^{3} - 6 \, a^{4} m r^{7} + 3 \, a^{4} r^{8} + 2 \, {\left(3 \, a^{6} + a^{4} m^{2}\right)} r^{6} + {\left(3 \, a^{8} - 8 \, a^{6} m^{2}\right)} r^{4}\right)} y^{4} + 4 \, {\left(2 \, a^{6} m^{2} r^{4} + 3 \, a^{6} m r^{5} + 2 \, a^{4} m r^{7} + 2 \, a^{4} r^{8} - a^{2} m r^{9} + a^{2} r^{10} + {\left(a^{6} - 2 \, a^{4} m^{2}\right)} r^{6}\right)} y^{2}} \\ (KK)_{ \, y \, y }^{ \phantom{\, y}\phantom{\, y} } & = & -\frac{4 \, {\left({\left(a^{8} m^{2} r^{2} - 2 \, a^{6} m^{3} r^{3} + a^{6} m^{2} r^{4}\right)} y^{4} - {\left(a^{8} m^{2} r^{2} - 2 \, a^{6} m^{3} r^{3} + a^{6} m^{2} r^{4}\right)} y^{2}\right)}}{4 \, a^{4} m^{2} r^{6} + 4 \, a^{4} m r^{7} + a^{4} r^{8} + 4 \, a^{2} m r^{9} + 2 \, a^{2} r^{10} + r^{12} + {\left(a^{12} - 4 \, a^{10} m r - 4 \, a^{8} m r^{3} + a^{8} r^{4} + 2 \, {\left(a^{10} + 2 \, a^{8} m^{2}\right)} r^{2}\right)} y^{8} + 4 \, {\left(a^{10} m r - 2 \, a^{8} m r^{3} - 3 \, a^{6} m r^{5} + a^{6} r^{6} + 2 \, {\left(a^{8} + a^{6} m^{2}\right)} r^{4} + {\left(a^{10} - 2 \, a^{8} m^{2}\right)} r^{2}\right)} y^{6} + 2 \, {\left(2 \, a^{8} m^{2} r^{2} + 6 \, a^{8} m r^{3} - 6 \, a^{4} m r^{7} + 3 \, a^{4} r^{8} + 2 \, {\left(3 \, a^{6} + a^{4} m^{2}\right)} r^{6} + {\left(3 \, a^{8} - 8 \, a^{6} m^{2}\right)} r^{4}\right)} y^{4} + 4 \, {\left(2 \, a^{6} m^{2} r^{4} + 3 \, a^{6} m r^{5} + 2 \, a^{4} m r^{7} + 2 \, a^{4} r^{8} - a^{2} m r^{9} + a^{2} r^{10} + {\left(a^{6} - 2 \, a^{4} m^{2}\right)} r^{6}\right)} y^{2}} \\ (KK)_{ \, {\phi} \, {\phi} }^{ \phantom{\, {\phi}}\phantom{\, {\phi}} } & = & \frac{a^{6} m^{2} r^{4} + 6 \, a^{4} m^{2} r^{6} + 9 \, a^{2} m^{2} r^{8} + {\left(a^{10} m^{2} - 6 \, a^{8} m^{2} r^{2} + 8 \, a^{6} m^{3} r^{3} - 3 \, a^{6} m^{2} r^{4}\right)} y^{8} - 2 \, {\left(a^{10} m^{2} - 7 \, a^{8} m^{2} r^{2} + 12 \, a^{6} m^{3} r^{3} - 3 \, a^{6} m^{2} r^{4} - 3 \, a^{4} m^{2} r^{6}\right)} y^{6} + {\left(a^{10} m^{2} - 10 \, a^{8} m^{2} r^{2} + 24 \, a^{6} m^{3} r^{3} - 2 \, a^{6} m^{2} r^{4} - 6 \, a^{4} m^{2} r^{6} + 9 \, a^{2} m^{2} r^{8}\right)} y^{4} + 2 \, {\left(a^{8} m^{2} r^{2} - 4 \, a^{6} m^{3} r^{3} - a^{6} m^{2} r^{4} - 3 \, a^{4} m^{2} r^{6} - 9 \, a^{2} m^{2} r^{8}\right)} y^{2}}{2 \, a^{2} m r^{9} + a^{2} r^{10} + r^{12} + {\left(a^{12} - 2 \, a^{10} m r + a^{10} r^{2}\right)} y^{10} + {\left(2 \, a^{10} m r + 5 \, a^{10} r^{2} - 8 \, a^{8} m r^{3} + 5 \, a^{8} r^{4}\right)} y^{8} + 2 \, {\left(4 \, a^{8} m r^{3} + 5 \, a^{8} r^{4} - 6 \, a^{6} m r^{5} + 5 \, a^{6} r^{6}\right)} y^{6} + 2 \, {\left(6 \, a^{6} m r^{5} + 5 \, a^{6} r^{6} - 4 \, a^{4} m r^{7} + 5 \, a^{4} r^{8}\right)} y^{4} + {\left(8 \, a^{4} m r^{7} + 5 \, a^{4} r^{8} - 2 \, a^{2} m r^{9} + 5 \, a^{2} r^{10}\right)} y^{2}} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><p>In vacuum and for stationary spacetimes, the dynamical Einstein equations are
+$$ \mathcal{L}_\beta K_{ij} - D_i D_j N + N \left( R_{ij} + K K_{ij} - 2 K_{ik} K^k_{\ \, j}\right) = 0 $$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">dyn</span> <span class="o">=</span> <span class="n">K</span><span class="o">.</span><span class="n">lie_der</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="n">D</span><span class="p">(</span><span class="n">D</span><span class="p">(</span><span class="n">N</span><span class="p">))</span> <span class="o">+</span> <span class="n">N</span><span class="o">*</span><span class="p">(</span> <span class="n">Ric</span> <span class="o">+</span> <span class="n">trK</span><span class="o">*</span><span class="n">K</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">KK</span> <span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dyn</span><span class="p">)</span>
+<span class="n">dyn</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field of type (0,2) on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[39]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}0</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Electric-and-magnetic-parts-of-the-Weyl-tensor">Electric and magnetic parts of the Weyl tensor<a class="anchor-link" href="#Electric-and-magnetic-parts-of-the-Weyl-tensor">&#182;</a></h2><p>The <strong>electric part</strong> is the bilinear form $E$ given by 
+$$ E_{ij} = R_{ij} + K K_{ij} - K_{ik} K^k_{\ \, j} $$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">E</span> <span class="o">=</span> <span class="n">Ric</span> <span class="o">+</span> <span class="n">trK</span><span class="o">*</span><span class="n">K</span> <span class="o">-</span> <span class="n">KK</span>
+<span class="k">print</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Field of symmetric bilinear forms +Ric(gam)-(KK) on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">E</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">)</span>
+<span class="n">E</span><span class="o">.</span><span class="n">display_comp</span><span class="p">(</span><span class="n">only_nonzero</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[41]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{lcl} E_{ \, r \, r }^{ \phantom{\, r}\phantom{\, r} } & = & -\frac{3 \, a^{4} m r^{3} - 2 \, a^{2} m^{2} r^{4} + 5 \, a^{2} m r^{5} + 2 \, m r^{7} + 3 \, {\left(a^{6} m r - 2 \, a^{4} m^{2} r^{2} + a^{4} m r^{3}\right)} y^{4} - {\left(9 \, a^{6} m r - 6 \, a^{4} m^{2} r^{2} + 16 \, a^{4} m r^{3} - 2 \, a^{2} m^{2} r^{4} + 7 \, a^{2} m r^{5}\right)} y^{2}}{2 \, a^{4} m r^{5} + 2 \, a^{2} r^{8} - 2 \, m r^{9} + r^{10} + {\left(a^{4} - 4 \, a^{2} m^{2}\right)} r^{6} + {\left(a^{10} - 4 \, a^{8} m r - 4 \, a^{6} m r^{3} + a^{6} r^{4} + 2 \, {\left(a^{8} + 2 \, a^{6} m^{2}\right)} r^{2}\right)} y^{6} + {\left(2 \, a^{8} m r - 8 \, a^{6} m r^{3} - 10 \, a^{4} m r^{5} + 3 \, a^{4} r^{6} + 2 \, {\left(3 \, a^{6} + 4 \, a^{4} m^{2}\right)} r^{4} + {\left(3 \, a^{8} - 4 \, a^{6} m^{2}\right)} r^{2}\right)} y^{4} + {\left(4 \, a^{6} m r^{3} - 4 \, a^{4} m r^{5} - 8 \, a^{2} m r^{7} + 3 \, a^{2} r^{8} + 2 \, {\left(3 \, a^{4} + 2 \, a^{2} m^{2}\right)} r^{6} + {\left(3 \, a^{6} - 8 \, a^{4} m^{2}\right)} r^{4}\right)} y^{2}} \\ E_{ \, r \, y }^{ \phantom{\, r}\phantom{\, y} } & = & \frac{3 \, {\left({\left(a^{6} m + a^{4} m r^{2}\right)} y^{3} - 3 \, {\left(a^{4} m r^{2} + a^{2} m r^{4}\right)} y\right)}}{2 \, a^{2} m r^{5} + a^{2} r^{6} + r^{8} + {\left(a^{8} - 2 \, a^{6} m r + a^{6} r^{2}\right)} y^{6} + {\left(2 \, a^{6} m r + 3 \, a^{6} r^{2} - 4 \, a^{4} m r^{3} + 3 \, a^{4} r^{4}\right)} y^{4} + {\left(4 \, a^{4} m r^{3} + 3 \, a^{4} r^{4} - 2 \, a^{2} m r^{5} + 3 \, a^{2} r^{6}\right)} y^{2}} \\ E_{ \, r \, {\phi} }^{ \phantom{\, r}\phantom{\, {\phi}} } & = & 0 \\ E_{ \, y \, r }^{ \phantom{\, y}\phantom{\, r} } & = & \frac{3 \, {\left({\left(a^{6} m + a^{4} m r^{2}\right)} y^{3} - 3 \, {\left(a^{4} m r^{2} + a^{2} m r^{4}\right)} y\right)}}{2 \, a^{2} m r^{5} + a^{2} r^{6} + r^{8} + {\left(a^{8} - 2 \, a^{6} m r + a^{6} r^{2}\right)} y^{6} + {\left(2 \, a^{6} m r + 3 \, a^{6} r^{2} - 4 \, a^{4} m r^{3} + 3 \, a^{4} r^{4}\right)} y^{4} + {\left(4 \, a^{4} m r^{3} + 3 \, a^{4} r^{4} - 2 \, a^{2} m r^{5} + 3 \, a^{2} r^{6}\right)} y^{2}} \\ E_{ \, y \, y }^{ \phantom{\, y}\phantom{\, y} } & = & -\frac{3 \, a^{4} m r^{3} - 4 \, a^{2} m^{2} r^{4} + 4 \, a^{2} m r^{5} + m r^{7} + 6 \, {\left(a^{6} m r - 2 \, a^{4} m^{2} r^{2} + a^{4} m r^{3}\right)} y^{4} - {\left(9 \, a^{6} m r - 12 \, a^{4} m^{2} r^{2} + 14 \, a^{4} m r^{3} - 4 \, a^{2} m^{2} r^{4} + 5 \, a^{2} m r^{5}\right)} y^{2}}{{\left(a^{8} - 2 \, a^{6} m r + a^{6} r^{2}\right)} y^{8} - 2 \, a^{2} m r^{5} - a^{2} r^{6} - r^{8} - {\left(a^{8} - 4 \, a^{6} m r - 2 \, a^{6} r^{2} + 4 \, a^{4} m r^{3} - 3 \, a^{4} r^{4}\right)} y^{6} - {\left(2 \, a^{6} m r + 3 \, a^{6} r^{2} - 8 \, a^{4} m r^{3} + 2 \, a^{2} m r^{5} - 3 \, a^{2} r^{6}\right)} y^{4} - {\left(4 \, a^{4} m r^{3} + 3 \, a^{4} r^{4} - 4 \, a^{2} m r^{5} + 2 \, a^{2} r^{6} - r^{8}\right)} y^{2}} \\ E_{ \, y \, {\phi} }^{ \phantom{\, y}\phantom{\, {\phi}} } & = & 0 \\ E_{ \, {\phi} \, r }^{ \phantom{\, {\phi}}\phantom{\, r} } & = & 0 \\ E_{ \, {\phi} \, y }^{ \phantom{\, {\phi}}\phantom{\, y} } & = & 0 \\ E_{ \, {\phi} \, {\phi} }^{ \phantom{\, {\phi}}\phantom{\, {\phi}} } & = & \frac{2 \, a^{2} m^{2} r^{4} + a^{2} m r^{5} + m r^{7} + 3 \, {\left(a^{6} m r - 2 \, a^{4} m^{2} r^{2} + a^{4} m r^{3}\right)} y^{6} - {\left(3 \, a^{6} m r - 12 \, a^{4} m^{2} r^{2} + a^{4} m r^{3} - 2 \, a^{2} m^{2} r^{4} - 2 \, a^{2} m r^{5}\right)} y^{4} - {\left(6 \, a^{4} m^{2} r^{2} + 2 \, a^{4} m r^{3} + 4 \, a^{2} m^{2} r^{4} + 3 \, a^{2} m r^{5} + m r^{7}\right)} y^{2}}{a^{8} y^{8} + 4 \, a^{6} r^{2} y^{6} + 6 \, a^{4} r^{4} y^{4} + 4 \, a^{2} r^{6} y^{2} + r^{8}} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The <strong>magnetic part</strong> is the bilinear form $B$ defined by
+$$ B_{ij} = \epsilon^k_{\ \, i l} D_k K^l_{\ \, j}, $$
+where $\epsilon^k_{\ \, i l}$ are the components of the type-(1,2) tensor $\epsilon^\sharp$, related to the Levi-Civita alternating tensor $\epsilon$ associated with $\gamma$ by $\epsilon^k_{\ \, i l} = \gamma^{km} \epsilon_{m i l}$. In SageManifolds, $\epsilon$ is obtained by the command <code>volume_form()</code> and $\epsilon^\sharp$ by the command <code>volume_form(1)</code> (<code>1</code> = one index raised):</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">eps</span> <span class="o">=</span> <span class="n">gam</span><span class="o">.</span><span class="n">volume_form</span><span class="p">()</span> 
+<span class="k">print</span><span class="p">(</span><span class="n">eps</span><span class="p">)</span> <span class="p">;</span> <span class="n">eps</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3-form eps_gam on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[42]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\epsilon_{\gamma} = \left( \frac{\sqrt{2 \, a^{2} m r + a^{2} r^{2} + r^{4} + {\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{2}} \sqrt{a^{2} y^{2} + r^{2}}}{\sqrt{a^{2} - 2 \, m r + r^{2}}} \right) \mathrm{d} r\wedge \mathrm{d} y\wedge \mathrm{d} {\phi}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">epsu</span> <span class="o">=</span> <span class="n">gam</span><span class="o">.</span><span class="n">volume_form</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">epsu</span><span class="p">)</span> <span class="p">;</span> <span class="n">epsu</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field of type (1,2) on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[43]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\left( \frac{\sqrt{2 \, a^{2} m r + a^{2} r^{2} + r^{4} + {\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{2}} \sqrt{a^{2} - 2 \, m r + r^{2}}}{\sqrt{a^{2} y^{2} + r^{2}}} \right) \frac{\partial}{\partial r }\otimes \mathrm{d} y\otimes \mathrm{d} {\phi} + \left( -\frac{\sqrt{2 \, a^{2} m r + a^{2} r^{2} + r^{4} + {\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{2}} \sqrt{a^{2} - 2 \, m r + r^{2}}}{\sqrt{a^{2} y^{2} + r^{2}}} \right) \frac{\partial}{\partial r }\otimes \mathrm{d} {\phi}\otimes \mathrm{d} y + \left( \frac{\sqrt{2 \, a^{2} m r + a^{2} r^{2} + r^{4} + {\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{2}} {\left(y^{2} - 1\right)}}{\sqrt{a^{2} y^{2} + r^{2}} \sqrt{a^{2} - 2 \, m r + r^{2}}} \right) \frac{\partial}{\partial y }\otimes \mathrm{d} r\otimes \mathrm{d} {\phi} + \left( -\frac{\sqrt{2 \, a^{2} m r + a^{2} r^{2} + r^{4} + {\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{2}} {\left(y^{2} - 1\right)}}{\sqrt{a^{2} y^{2} + r^{2}} \sqrt{a^{2} - 2 \, m r + r^{2}}} \right) \frac{\partial}{\partial y }\otimes \mathrm{d} {\phi}\otimes \mathrm{d} r + \left( -\frac{\sqrt{2 \, a^{2} m r + a^{2} r^{2} + r^{4} + {\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{2}} {\left(a^{2} y^{2} + r^{2}\right)}^{\frac{3}{2}}}{{\left({\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{4} - 2 \, a^{2} m r - a^{2} r^{2} - r^{4} - {\left(a^{4} - 4 \, a^{2} m r - r^{4}\right)} y^{2}\right)} \sqrt{a^{2} - 2 \, m r + r^{2}}} \right) \frac{\partial}{\partial {\phi} }\otimes \mathrm{d} r\otimes \mathrm{d} y + \left( \frac{\sqrt{2 \, a^{2} m r + a^{2} r^{2} + r^{4} + {\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{2}} {\left(a^{2} y^{2} + r^{2}\right)}^{\frac{3}{2}}}{{\left({\left(a^{4} - 2 \, a^{2} m r + a^{2} r^{2}\right)} y^{4} - 2 \, a^{2} m r - a^{2} r^{2} - r^{4} - {\left(a^{4} - 4 \, a^{2} m r - r^{4}\right)} y^{2}\right)} \sqrt{a^{2} - 2 \, m r + r^{2}}} \right) \frac{\partial}{\partial {\phi} }\otimes \mathrm{d} y\otimes \mathrm{d} r</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">DKu</span> <span class="o">=</span> <span class="n">D</span><span class="p">(</span><span class="n">Ku</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">epsu</span><span class="p">[</span><span class="s1">&#39;^k_il&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">DKu</span><span class="p">[</span><span class="s1">&#39;^l_jk&#39;</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tensor field of type (0,2) on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let us check that $B$ is symmetric:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">B1</span> <span class="o">=</span> <span class="n">B</span><span class="o">.</span><span class="n">symmetrize</span><span class="p">()</span>
+<span class="n">B</span> <span class="o">==</span> <span class="n">B1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[45]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\mathrm{True}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Accordingly, we set</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">B1</span>
+<span class="n">B</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Field of symmetric bilinear forms B on the 3-dimensional differentiable manifold Sigma
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">B</span><span class="o">.</span><span class="n">display_comp</span><span class="p">(</span><span class="n">only_nonzero</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[47]:</div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<html><script type="math/tex; mode=display">\newcommand{\Bold}[1]{\mathbf{#1}}\begin{array}{lcl} B_{ \, r \, r }^{ \phantom{\, r}\phantom{\, r} } & = & \frac{{\left(a^{7} m - 2 \, a^{5} m^{2} r + a^{5} m r^{2}\right)} y^{5} - {\left(3 \, a^{7} m - 2 \, a^{5} m^{2} r + 8 \, a^{5} m r^{2} - 6 \, a^{3} m^{2} r^{3} + 5 \, a^{3} m r^{4}\right)} y^{3} + 3 \, {\left(3 \, a^{5} m r^{2} - 2 \, a^{3} m^{2} r^{3} + 5 \, a^{3} m r^{4} + 2 \, a m r^{6}\right)} y}{2 \, a^{4} m r^{5} + 2 \, a^{2} r^{8} - 2 \, m r^{9} + r^{10} + {\left(a^{4} - 4 \, a^{2} m^{2}\right)} r^{6} + {\left(a^{10} - 4 \, a^{8} m r - 4 \, a^{6} m r^{3} + a^{6} r^{4} + 2 \, {\left(a^{8} + 2 \, a^{6} m^{2}\right)} r^{2}\right)} y^{6} + {\left(2 \, a^{8} m r - 8 \, a^{6} m r^{3} - 10 \, a^{4} m r^{5} + 3 \, a^{4} r^{6} + 2 \, {\left(3 \, a^{6} + 4 \, a^{4} m^{2}\right)} r^{4} + {\left(3 \, a^{8} - 4 \, a^{6} m^{2}\right)} r^{2}\right)} y^{4} + {\left(4 \, a^{6} m r^{3} - 4 \, a^{4} m r^{5} - 8 \, a^{2} m r^{7} + 3 \, a^{2} r^{8} + 2 \, {\left(3 \, a^{4} + 2 \, a^{2} m^{2}\right)} r^{6} + {\left(3 \, a^{6} - 8 \, a^{4} m^{2}\right)} r^{4}\right)} y^{2}} \\ B_{ \, r \, y }^{ \phantom{\, r}\phantom{\, y} } & = & -\frac{3 \, {\left(a^{3} m r^{3} + a m r^{5} - 3 \, {\left(a^{5} m r + a^{3} m r^{3}\right)} y^{2}\right)}}{2 \, a^{2} m r^{5} + a^{2} r^{6} + r^{8} + {\left(a^{8} - 2 \, a^{6} m r + a^{6} r^{2}\right)} y^{6} + {\left(2 \, a^{6} m r + 3 \, a^{6} r^{2} - 4 \, a^{4} m r^{3} + 3 \, a^{4} r^{4}\right)} y^{4} + {\left(4 \, a^{4} m r^{3} + 3 \, a^{4} r^{4} - 2 \, a^{2} m r^{5} + 3 \, a^{2} r^{6}\right)} y^{2}} \\ B_{ \, r \, {\phi} }^{ \phantom{\, r}\phantom{\, {\phi}} } & = & 0 \\ B_{ \, y \, r }^{ \phantom{\, y}\phantom{\, r} } & = & -\frac{3 \, {\left(a^{3} m r^{3} + a m r^{5} - 3 \, {\left(a^{5} m r + a^{3} m r^{3}\right)} y^{2}\right)}}{2 \, a^{2} m r^{5} + a^{2} r^{6} + r^{8} + {\left(a^{8} - 2 \, a^{6} m r + a^{6} r^{2}\right)} y^{6} + {\left(2 \, a^{6} m r + 3 \, a^{6} r^{2} - 4 \, a^{4} m r^{3} + 3 \, a^{4} r^{4}\right)} y^{4} + {\left(4 \, a^{4} m r^{3} + 3 \, a^{4} r^{4} - 2 \, a^{2} m r^{5} + 3 \, a^{2} r^{6}\right)} y^{2}} \\ B_{ \, y \, y }^{ \phantom{\, y}\phantom{\, y} } & = & \frac{2 \, {\left(a^{7} m - 2 \, a^{5} m^{2} r + a^{5} m r^{2}\right)} y^{5} - {\left(3 \, a^{7} m - 4 \, a^{5} m^{2} r + 10 \, a^{5} m r^{2} - 12 \, a^{3} m^{2} r^{3} + 7 \, a^{3} m r^{4}\right)} y^{3} + 3 \, {\left(3 \, a^{5} m r^{2} - 4 \, a^{3} m^{2} r^{3} + 4 \, a^{3} m r^{4} + a m r^{6}\right)} y}{{\left(a^{8} - 2 \, a^{6} m r + a^{6} r^{2}\right)} y^{8} - 2 \, a^{2} m r^{5} - a^{2} r^{6} - r^{8} - {\left(a^{8} - 4 \, a^{6} m r - 2 \, a^{6} r^{2} + 4 \, a^{4} m r^{3} - 3 \, a^{4} r^{4}\right)} y^{6} - {\left(2 \, a^{6} m r + 3 \, a^{6} r^{2} - 8 \, a^{4} m r^{3} + 2 \, a^{2} m r^{5} - 3 \, a^{2} r^{6}\right)} y^{4} - {\left(4 \, a^{4} m r^{3} + 3 \, a^{4} r^{4} - 4 \, a^{2} m r^{5} + 2 \, a^{2} r^{6} - r^{8}\right)} y^{2}} \\ B_{ \, y \, {\phi} }^{ \phantom{\, y}\phantom{\, {\phi}} } & = & 0 \\ B_{ \, {\phi} \, r }^{ \phantom{\, {\phi}}\phantom{\, r} } & = & 0 \\ B_{ \, {\phi} \, y }^{ \phantom{\, {\phi}}\phantom{\, y} } & = & 0 \\ B_{ \, {\phi} \, {\phi} }^{ \phantom{\, {\phi}}\phantom{\, {\phi}} } & = & -\frac{{\left(a^{7} m - 2 \, a^{5} m^{2} r + a^{5} m r^{2}\right)} y^{7} - {\left(a^{7} m - 4 \, a^{5} m^{2} r + 3 \, a^{5} m r^{2} - 6 \, a^{3} m^{2} r^{3} + 2 \, a^{3} m r^{4}\right)} y^{5} - {\left(2 \, a^{5} m^{2} r - 2 \, a^{5} m r^{2} + 12 \, a^{3} m^{2} r^{3} + a^{3} m r^{4} + 3 \, a m r^{6}\right)} y^{3} + 3 \, {\left(2 \, a^{3} m^{2} r^{3} + a^{3} m r^{4} + a m r^{6}\right)} y}{a^{8} y^{8} + 4 \, a^{6} r^{2} y^{6} + 6 \, a^{4} r^{4} y^{4} + 4 \, a^{2} r^{6} y^{2} + r^{8}} \end{array}</script></html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+ 
+
+
+    </div>
+  </div>
+
+  </div>
+
+
+  
+    <footer class="footer hidden-print">
+      <div class="container">
+        <div class="col-md-4">
+          <p>
+            This website does not host notebooks, it only renders notebooks
+            available on other websites.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <p>
+            Delivered by <a href="http://www.fastly.com/">Fastly</a>,
+            Rendered by <a href="https://developer.rackspace.com/?nbviewer=awesome">Rackspace</a>
+          </p>
+          <p>
+            nbviewer GitHub <a href="https://github.com/jupyter/nbviewer">repository</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          
+  
+            
+              <p>
+                nbviewer version:
+                <a href="https://github.com/jupyter/nbviewer/commit/4f5d1d8a2539c1c8dc92873d3a775d34f0a3d417">
+                  4f5d1d8
+                </a>
+              </p>
+            
+          
+  
+  <p>
+    nbconvert version: <a href="https://github.com/jupyter/nbconvert/releases/tag/5.1.1">
+      5.1.1
+    </a>
+  </p>
+  
+
+          
+  
+  
+  <p>
+    Rendered
+    <span class='date' data-date='Fri, 07 Apr 2017 17:51:56 UTC' title='Fri, 07 Apr 2017 17:51:56 UTC'>(Fri, 07 Apr 2017 17:51:56 UTC)</span>
+  </p>
+  
+
+        </div>
+      </div>
+    </footer>
+  
+
+  <script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script>
+  <script src="/static/components/bootstrap/js/bootstrap.min.js?v=5869c96cc8f19086aee625d670d741f9"></script>
+  <script src="/static/components/headroom.js/dist/headroom.min.js?v=b0a311ea668f8e768ea375f4a7abb81c"></script>
+  <script src="/static/components/headroom.js/dist/jQuery.headroom.min.js?v=f3a1bae118315d0c234afc74dc6aab71"></script>
+
+  
+  
+  <script>
+    $(function(){ $("#menubar").headroom({
+      tolerance: 5,
+      offset: 205,
+      classes: {
+        initial: "animated",
+        pinned: "slideInDown",
+        unpinned: "slideOutUp"
+      }
+    })});
+  </script>
+
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-52617120-5', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+  <script>
+    require({
+        paths: {
+          moment: "/static/components/moment/min/moment.min.js?v=89f87298ad94aa1e6b92f42eb66da043"
+        }
+      }, ["moment"], function(moment){
+      var date = $("footer .date"),
+        m = moment(new Date(date.data('date'))),
+        update = function(){ date.text(m.fromNow()); };
+      setInterval(update, 61*1000);
+      update();
+      var w = $(window).scroll(function(event){
+        $("body").toggleClass("scrolled", w.scrollTop() > 0);
+      });
+    });
+  </script>
+  <!--NEW RELIC Stop Perf Measurement-->
+  
+  <!--NEW RELIC End-->
+</body>
+</html>
